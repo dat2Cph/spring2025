@@ -9,7 +9,7 @@ RUN gem install jekyll bundler
 # RUN gem install jekyll-sitemap
 
 # Set the working directory
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app/
 
 # Copy the Gemfile and Gemfile.lock to ensure they're cached
 COPY Gemfile Gemfile.lock ./
@@ -24,4 +24,7 @@ COPY . .
 EXPOSE 4000
 
 # Serve the Jekyll site
-CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--force_polling"]
+
+CMD ["sh", "-c", "bundle exec jekyll clean && bundle exec jekyll serve --host 0.0.0.0 --force_polling --livereload"]
+
+# CMD ["bundle", "exec", "jekyll", "serve", "--host", "0.0.0.0", "--force_polling", "--livereload"]
