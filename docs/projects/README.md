@@ -6,17 +6,3 @@ has_children: true
 nav_order: 16
 permalink: /projekter/
 ---
-
-# Projekter
-
-## LifeHack
-
-Her kan du læse om [Lifehack](lifehack/README.md)
-
-## Cupcake
-
-Her kan du læse om [Cupcake](cupcake/README.md)
-
-## Semesterprojekt
-
-Her kan du læse om semesterprojektet [Fog carport](carport/README.md)
