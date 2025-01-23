@@ -3,7 +3,7 @@ title: Eksamen
 description: Praktiske oplysninger om alt vedrørende eksamen
 layout: default
 has_children: true
-nav_order: 17
+nav_order: 18
 permalink: /exam/
 ---
 
