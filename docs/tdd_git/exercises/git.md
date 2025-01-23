@@ -1,9 +1,9 @@
 ---
-title: Git oversigt
-description: Git oversigt
+title: Git Overview
+descrititle: Git Overview
 layout: default
-parent: Øvelser
-grand_parent: OOP, GIT og TDD
+parent: Exercises
+grand_parent: GIT og TDD
 nav_order: 2
 permalink: /tdd-git/exercises/git
 ---

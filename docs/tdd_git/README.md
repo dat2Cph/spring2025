@@ -1,15 +1,15 @@
 ---
-title: TDD og GIT
-description: Introduktion til 2. semester
+title: TDD and GIT
+description: Introduction to 2nd semester
 layout: default
 nav_order: 3
 has_children: true
 permalink: /tdd-git/
 ---
 
-# GIT og TDD
+# GIT and TDD
 
-## Læringsmål for GIT og TDD
+## Learning objectives for GIT and TDD
 
 - [Læringsmål](./laeringsmaal.md)
 

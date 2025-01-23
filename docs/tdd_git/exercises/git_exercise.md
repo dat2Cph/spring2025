@@ -1,10 +1,10 @@
 ---
 title: Git exercise
-description: Git øvelse
+description: Git Exercise
 layout: default
 nav_order: 5
-parent: Øvelser
-grand_parent: TDD og GIT
+parent: Exercises
+grand_parent: TDD and GIT
 permalink: /tdd-git/exercises/git-exercise
 ---
 

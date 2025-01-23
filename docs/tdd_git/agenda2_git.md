@@ -1,6 +1,6 @@
 ---
 title: Git agenda
-description: Agenda for Git undervisning
+description: Agenda for Git Class
 layout: default
 nav_order: 1
 permalink: /tdd-git/git-agenda/

@@ -1,13 +1,14 @@
 ---
-title: Git Ressourcer
-description: Diverse kilder til OOP, GIT og TDD
+title: Git Ressources
+description: Various sources for GIT and TDD
 layout: default
-parent: OOP, GIT og TDD
+parent: GIT and TDD
 nav_order: 3
 permalink: /tdd-git/resources/
 ---
 
-# Ressources for Object Oriented Programming, Git, TDD
+# Ressources for Git and TDD
+
 
 ## GIT
 

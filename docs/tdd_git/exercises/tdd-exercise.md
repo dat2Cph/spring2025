@@ -2,8 +2,8 @@
 title: TDD
 description: Test Driven Development with Unit test
 layout: default
-parent: Øvelser
-grand_parent: Java, OOP og GIT
+parent: Exercises
+grand_parent: OOP and GIT
 nav_order: 2
 permalink: /tdd-git/tdd
 ---
