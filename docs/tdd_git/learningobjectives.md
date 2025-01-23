@@ -14,6 +14,7 @@ After this week you should be able to:
 
 ## GIT
 
+- Be able to use bash commands to navigate the file system (cd, ls, pwd, mkdir, rm, cat, nano, touch, mv, cp, echo, clear, etc.)
 - Be able to use the command line to interact with git
 - Create a new git repository
 - Clone an existing git repository from github

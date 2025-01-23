@@ -23,7 +23,7 @@ permalink: /tdd-git/
 ## Thursday: GIT
 ### Prepare for the class
 
-Watch the [3 videos about git and batch command](resources.md#videos) before the class.
+Watch the [4 videos about git and bash commands](resources.md#videos) before the class.
 
 ### In-class exercises
 
