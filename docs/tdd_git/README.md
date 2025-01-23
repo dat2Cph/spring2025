@@ -11,7 +11,7 @@ permalink: /tdd-git/
 
 ## Learning objectives for GIT and TDD
 
-- [Læringsmål](./laeringsmaal.md)
+- [Learning objectives](./learningobjectives.md)
 
 ## Tuesday: Introduction to 2. semester
 
@@ -27,12 +27,8 @@ Watch the [3 videos about git and batch command](resources.md#videos) before the
 
 ### In-class exercises
 
-
-
-### A Class Agenda
-
 0. Introduction and Demo of Collaboration with Git
-1. Install Git with Git Bash
+1. (If not already done) Install Git and Git Bash
 2. Configure Git and setup token for GitHub
 3. Working in pairs:
 

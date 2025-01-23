@@ -8,7 +8,7 @@ nav_exclude: true
 ---
 # Agenda
 
-## Setup
+## Setup and testing
 
 - Make sure everybody can use the commandline to push and pull from GitHub
 - 2 by 2: Create a test repository on GitHub and invite your partner as a collaborator (both ways)
@@ -27,3 +27,6 @@ nav_exclude: true
 - Create branch from commit
 - Revert commit
 - Accept all incoming changes:
+
+## Class exercise
+See [Git exercise](tdd-git)
