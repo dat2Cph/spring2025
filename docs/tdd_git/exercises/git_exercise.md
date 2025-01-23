@@ -4,8 +4,8 @@ description: Git øvelse
 layout: default
 nav_order: 5
 parent: Øvelser
-grand_parent: Java, OOP og GIT
-permalink: /java-oop-git/exercise/git
+grand_parent: TDD og GIT
+permalink: /tdd-git/exercises/git-exercise
 ---
 
 # Git exercises

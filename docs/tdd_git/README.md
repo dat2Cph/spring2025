@@ -1,25 +1,33 @@
 ---
-title: Java, OOP og GIT
+title: TDD og GIT
 description: Introduktion til 2. semester
 layout: default
 nav_order: 3
 has_children: true
-permalink: /java-oop-git/
+permalink: /tdd-git/
 ---
 
-# OOP, GIT og TDD
+# GIT og TDD
 
-## Læringsmål for OOP, GIT og TDD
+## Læringsmål for GIT og TDD
 
 - [Læringsmål](./laeringsmaal.md)
 
-## Before the class you should
+## Tuesday: Introduction to 2. semester
 
-### Monday: TDD
+### Prepare for the class
+### In-class exercises
 
-### Wednesday: GIT
+## Wednesday: GodeLab with TDD
 
-Important: Watch the [3 videos about git](resources.md#videos) before the class.
+## Thursday: GIT
+### Prepare for the class
+
+Watch the [3 videos about git and batch command](resources.md#videos) before the class.
+
+### In-class exercises
+
+
 
 ### A Class Agenda
 

@@ -5,7 +5,7 @@ layout: default
 parent: Øvelser
 grand_parent: Java, OOP og GIT
 nav_order: 2
-permalink: /java-oop-git/tdd
+permalink: /tdd-git/tdd
 ---
 
 # Test Driven Development (TDD)

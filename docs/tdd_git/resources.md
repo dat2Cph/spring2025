@@ -4,7 +4,7 @@ description: Diverse kilder til OOP, GIT og TDD
 layout: default
 parent: OOP, GIT og TDD
 nav_order: 3
-permalink: /oop-git-tdd/resources/
+permalink: /tdd-git/resources/
 ---
 
 # Ressources for Object Oriented Programming, Git, TDD

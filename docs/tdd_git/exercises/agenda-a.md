@@ -3,7 +3,7 @@ title: Git agenda
 description: Agenda for Git undervisning
 layout: default
 nav_order: 1
-permalink: /java-oop-git/git-agenda/
+permalink: /tdd-git/git-agenda/
 nav_exclude: true
 ---
 # Agenda

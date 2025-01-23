@@ -1,36 +1,16 @@
 ---
 title: Læringsmål
-description: Læringsmål for introduktionsuge med OOP, GIT og TDD
+description: Læringsmål for introduktionsuge med GIT og TDD
 layout: default
-parent: Java, OOP og GIT
+parent: TDD og GIT
 nav_order: 1
-permalink: /java-oop-git/learningobjectives/
+permalink: /tdd-git/learningobjectives/
 ---
 
 
-# Læringsmål for OOP, GIT og TDD uge
+# Læringsmål for GIT og TDD uge
 
-Efter denne uge er det meningen at du kan:
-
-## OOP
-
-- Forklare følgende begreber:
-  - Klasser
-  - Objekt
-  - Reference
-  - Constructor
-  - Metode
-  - Klasse variabel
-  - Instans variabel
-  - Lokal variabel
-  - Statisk metode
-  - Instans metode
-  - Statisk import
-  - Pakke
-  - Polymorfi
-  - Nedarving
-  - Interfaces
-  - Exceptions
+Efter denne uge er det meningen at du har følgende færdigheder:
 
 ## GIT
 

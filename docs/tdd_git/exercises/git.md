@@ -5,7 +5,7 @@ layout: default
 parent: Øvelser
 grand_parent: OOP, GIT og TDD
 nav_order: 2
-permalink: /java-oop-git/exercises/git
+permalink: /tdd-git/exercises/git
 ---
 
 # Git Overview
