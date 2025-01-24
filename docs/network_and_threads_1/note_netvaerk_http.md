@@ -1,103 +1,102 @@
 ---
-title: Teori
-description: Netværksteori
-layout: default
-nav_order: 2
-permalink: /network/theory/
-parent: HTTP og netværk
+Title: Theory
+Description: Network Theory
+Layout: Default
+Nav Order: 2
+Permalink: /network/theory/
+Parent: HTTP and Network I
 ---
 
+# Network & HTTP (Week 1 Notes)
 
+This note consists of three parts: 
+1. one about networks, 
+2. one about HTTP, and finally, 
+3. one about Java resources (since we need them to make the examples work).
 
-# Netværk & http (note uge 1)
+## Network
 
-Denne note indeholder tre dele, en del om netværk, en del om http, og endelig en del om java resourcer (fordi vi har brug for dem til at få eksemplerne til at virke).
+The key concepts you need to understand network programming are:
 
-## Netværk
+- IP Addresses - the computer's "phone number" on the internet
+- Port Numbers - which program on the computer you want to communicate with
+- Protocol - how we should communicate once the connection is established
+- Local Networks - e.g., Wi-Fi or phone hotspots
 
-Det centrale du skal kende til for at kunne forstå netværksprogrammering er:
+- This week’s exercises will cover all these elements. We'll focus on one protocol only: HTTP.
 
-* IP-adresser - computerens "telefon nummer" på internettet
-* Port-numre - hvilket program på computeren ønsker man at tale med
-* Protokol - hvordan skal vi snakke når der er oprettet forbindelse
-* Lokale netværk - f.eks. et wifi, eller telefon hotspot
+## How the Internet Works
 
-I øvelserne til denne uge kommer vi omkring alle dele. Vi kommer kun til at se på en protokol, nemlig den der hedder http.
+When you type a URL in the browser and get a response from the server, all these elements come into play.
 
-### Internettets opbyning
+An HTTP URL looks like this: `http://ipaddress:port/path?quer`.
 
-Når man skriver en URL i browseren og får svar tilbage fra serveren kommer alle dele i brug.
+### IP Address
 
-En http URL ser ud på denne måde: `http://ipaddress:port/path?query`.
+- There are two ways to specify an IP address. You can directly enter the IP address, which consists of four numbers between 0 and 255. For example, the website for Denmark’s Radio has the IP address 159.20.6.38, and Facebook has 31.13.64.35.
 
-#### IP-adresse
+- However, you don’t need to type http://159.20.6.38 to visit Denmark’s Radio’s website. Your computer uses special computers on the internet called "DNS" (Domain Name System). A DNS server is a computer on the internet that has a table of which IP address corresponds to which name. Your browser has several built-in, well-known DNS servers (Google, for instance, has a DNS at 8.8.8.8).
 
-Der er to forskellige måder at angive en IP adresse på. Dels kan man angive selve IP adressen. Det er fire tal mellem 0 og 255. Et eksempel kunne være Danmarks Radios hjemmeside, som har 159.20.6.38, eller facebook, der har 31.13.64.35.
+- Using an IP address, you can reach another computer on the internet.
+Server, Port, Socket
 
-Som bekendt behøver man ikke at skrive <http://159.20.6.38> hvis man vil se Danmarks Radios hjemmeside. Din computer benytter sig af nogle specielle computere, der er på nettet, der hedder "DNS" (Domain Name System). En DNS er en computer på nettet som har en tabel over hvilken IP adresse, der hører til hvilket navn. Din browser har inbygget en række velkendte DNS (Google har f.eks. en DNS på 8.8.8.8).
+- A server is, first and foremost, a program running "in the background" on a machine. In everyday language, we often refer to machines housed in large server rooms as servers, but this is slightly misleading, as you can also run server programs on your own laptop. Practically, however, both are called "servers," and we’ll follow this convention.
 
-Ved hjælp af en IP adresse kan du få fat i en anden computer på internettet.
+- Typically, we ask our browser to retrieve an HTML page from a server (using its IP address). If you don’t specify anything, the browser will contact port 80, the default port for a web server. But servers can do much more than just deliver HTML pages. You can request emails from a mail server, send emails through a mail server, share screens, download files from an FTP server, print a document through a printer server, etc.
 
-### Server, Port, Socket
+- When contacting a server, there must be a program ready to handle the request. To allow servers to handle multiple types of requests, different programs run simultaneously, each assigned a port number. A web server typically listens on port 80, but any port number can be used (with some restrictions below 1024, as these are reserved for standard protocols).
 
-En server er først og fremmest et program, der kører i "baggrunden" på en maskine. I daglig tale kalder man ofte maskiner, som står gemt væk i store serverrum for servere, men det er egentlig lidt misvisende, da man også kan køre serverprogrammer på sin egen lille laptop. I praksis bruger man dog ordet "server" om begge dele, og det gør vi også.
+- You might encounter the terms "port" and "socket" used interchangeably. For our purposes, this is acceptable.
 
-Normalt beder vi vores browser om at hente en html side på en server (ud fra dens IP addresse). Hvis man ikke skriver noget specielt, så vil browseren henvende sig på port 80, som er standard porten for en web server. Men vi kan bede servere om meget andet end html sider. Vi kan bede en mail server om at levere os emails, vi kan bede en mail server om at sende emails, vi kan bede om skærmdeling, en ftp-server om at sende en fil, en printerserver om at udskrive et dokument osv.
+  - Note - You can run both the client and server on the same machine. There’s a special name for this: localhost (with IP address 127.0.0.1). For example, if you want to fetch an HTML page named index.html from a local web server, you can enter http://localhost/index.html or http://127.0.0.1/index.html in your browser.
 
-Når vi prøver at få fat i en server, så skal der være et program på denne server der er parat til at håndtere denne henvendelse. For at serveren kan håndtere mere end en type af henvendelser, så er der flere programmer, der kan køre samtidigt, og de får så hver et port nummer. En webserver lytter ofte på port 80, men kan man kan bruge et vilkårligt portnummer (Der er visse begrænsninger på portnumre under 1024 da de er [reserveret til diverse standarder](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)).
+### Client and Server
 
-Du vil sikkert opleve, at port og socket bruges i flæng. Til vores brug er "i flæng" godt nok.
+In the examples above, the browser communicates with a web server. The server is the program waiting for incoming requests, while the client is the program initiating the request.
 
-> Bemærk - man kan godt have klient og server på samme maskine. Der er et særligt navn, der hedder **localhost** (som har ip nummer 127.0.0.1). Dvs, at hvis man vil hente en html side med navnet index.html fra en lokal webserver, så skriver man `http://localhost/index.html` eller `http://127.0.0.1/index.html` i sin browser.
-
-### Klient og Server
-
-I eksemplerne ovenfor er det en browser, der snakker med en webserver. Serveren er den der har et program der sidder og venter på at der kommer en henvendelse. Klienten er det program der henvender sig.
-
-Java programmet nedenfor er en simpel webserver der lytter på port 8080.
-
+Below is a simple Java program for a web server listening on port 8080:
 ```java
-    private static void main(String args...) throws Exception {
-        final int port = 8080;
-        final ServerSocket server = new ServerSocket( port );
-        System.out.println( "Listening for connection on port "+ port + " ...." );
-        while ( true ) { // keep listening (as is normal for a server)
-            try ( Socket socket = server.accept() ) {
-                System.out.println( "-----------------" );
-                System.out.println( "Client: " + 
-                   socket.getInetAddress().getHostName() );
-                System.out.println( "-----------------" );
-                BufferedReader br = new BufferedReader( 
-                   new InputStreamReader( socket.getInputStream() ) );
-                String line;
-                while ( !( ( line = br.readLine() ).isEmpty() ) ) {
-                    System.out.println( line );
-                }                
-                String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" + "Hello 2. Sem";
-                socket.getOutputStream().write( httpResponse.getBytes( "UTF-8" ) );
+private static void main(String args...) throws Exception {
+    final int port = 8080;
+    final ServerSocket server = new ServerSocket(port);
+    System.out.println("Listening for connection on port " + port + " ....");
+    while (true) { // keep listening (as is normal for a server)
+        try (Socket socket = server.accept()) {
+            System.out.println("-----------------");
+            System.out.println("Client: " + socket.getInetAddress().getHostName());
+            System.out.println("-----------------");
+            BufferedReader br = new BufferedReader(
+                new InputStreamReader(socket.getInputStream())
+            );
+            String line;
+            while (!((line = br.readLine()).isEmpty())) {
+                System.out.println(line);
             }
+            String httpResponse = "HTTP/1.1 200 OK\r\n\r\nHello 2. Sem";
+            socket.getOutputStream().write(httpResponse.getBytes("UTF-8"));
         }
     }
+}
 ```
 
-1. I linje 3 laves et `ServerSocket` objekt der kan lytte på port 8080.
-2. I linje 6 kaldes metoden `server.accept`. Denne metode sætter programmet til at vente på at et klient program henvender sig på port 8080 på den maskine som programmet kører på.
-3. Når klienten så henvender sig, oprettes der et Java `Socket` objekt som holder forbindelsen mellem serveren (dette program) og klienten (f.eks. browseren).
-4. Ud fra et socket objekt kan man få fat i andre objekter og informationer. F.eks.
+- Line 3 creates a ServerSocket object that listens on port 8080.
+- Line 6 calls server.accept, making the program wait for a client program to connect to port 8080 on the same machine.
+- When a client connects, a Java Socket object is created to manage the connection between the server and the client (e.g., a browser).
+- From a Socket object, other objects and information can be accessed:
 
-* I linje 9 henter man info om hvilken klient der er i den anden ende af forbindelsen.
-* I linje 11 og 12 oprettes en `BufferedReader` der kan læse hvad klienten sender (Vi får denne forbindelse gennem `socket.getInputStream()` i linje 12). Et HTTP request følger et helt specielt format. I linje 13-16 læser vi indtil første blanke linje (det kaldes headeren - se mere om HTTP protokollen nedenfor).
-* I line 18 bruger vi socket til at få fat på en output stream så vi kan sende et svar tilbage til klienten (`socket.getOutputStream()`).
+- Line 9 retrieves information about the client.
+- Lines 11–12 create a BufferedReader to read what the client sends. (We access this connection via socket.getInputStream() in line 12.) The first blank line marks the end of the HTTP header (explained below).
+- Line 18 uses the socket’s output stream (socket.getOutputStream()) to send a response back to the client.
 
-### http
+### HTTP
 
-HTTP er en protokol, som bruges mellem en browser (klienten) og en webserver.
+HTTP is a protocol used between a browser (client) and a web server.
 
-Generelt beskriver en protokol hvad serveren regner med at klienten skriver til serveren, og hvad klienten kan forvente at serveren svarer.
+A protocol defines what the server expects the client to send and what the client can expect in return.
 
-Hvis vi kører serveren ovenfor, og fra en browser skriver `http://localhost:8080/hokus/pokus.html?moria=Mellon` sender browseren følgende besked til server programmet:
+If we run the server above and enter http://localhost:8080/hokus/pokus.html?moria=Mellon in the browser, the browser sends the following message to the server program:
 
-```text
+```http
 GET /hokus/pokus.html?moria=Mellon HTTP/1.1
 Host: localhost:8080
 Cookie: Idea-a4e040fd=7ba0ca53-a320-4c62-9c1c-ea3467502c81
@@ -110,22 +109,27 @@ DNT: 1
 Accept-Encoding: gzip, deflate
 ```
 
-Det vi skal bruge er den første linje. Den siger at browseren er interesseret i at vi henter noget information - GET. Vi kommer senere til også at bruge POST som bruges af browseren til at bede serveren om at opdatere data.
+- The key part is the first line: it states the browser wants to retrieve information (GET). Later, we’ll also use POST for updating data.
 
-Den første linje siger også at browseren snakker HTTP version 1.1. Der findes også en version 2.
+- The first line specifies that the browser communicates using HTTP version 1.1 (version 2 also exists).
 
-Det centrale i første linje er dog `/hokus/pokus.html?moria=Mellon`, som er beskrivelsen af hvad browseren gerne vil have retur fra webserveren. Teknisk kaldes `/hokus/pokus.html` for **path** (sti på dansk), og `moria=Mellon` kaldes for **parameters**. Det typiske er at stien angiver hvilken html side der skal returneres til browseren, og parametrene giver information fra browseren om hvilke tilpasninger der skal laves på denne side før den returneres.
+- The crucial part of the first line is /hokus/pokus.html?moria=Mellon. Here:
+
+- /hokus/pokus.html is the path (the file location).
+- moria=Mellon are the parameters (data sent to the server for customization).
+
+- Typically, the path indicates which HTML page to return, while parameters adjust its contents.
 
 ### HttpRequest
 
-I den kode vi bruger i denne uge, er der en særlig Java klasse der hedder `HttpRequest` der kan bruges i serveren til at læse en forespørgsel og pille header, path, parametre osv. ud af den tekst som browseren sender.
+- In this week’s code, a special Java class called HttpRequest helps read a request and extract headers, paths, parameters, etc., from the message sent by the browser.
 
-Der er lavet mange klasser til Java der kan hjælpe med at håndtere http request beskeder fra klienter. Senere når vi går over til at bruge tomcat serveren, så vil vi bruge en der hedder HttpServerRequest.
+- There are many Java classes designed to handle HTTP request messages. When we transition to the Tomcat server, we’ll use one called HttpServerRequest.
 
 ### HttpResponse
 
-På samme måde som vi har en klasse der kan bruges til at læse et request med, så er det nyttigt at have en klasse, der kan bruges til at lave de svar der sendes tilbage fra serveren. Det arbejder vi ikke på i denne uge, men det kommer til at spille en rolle næste uge.
+- Similarly, there are classes for generating server responses. We won’t cover these this week but will explore them in the next.
+Standard Server Protocols
 
-### Standard server protokoller
+- Protocols like HTTP, TCP, UDP, SMTP, FTP, etc., are complex. Usually, you shouldn’t implement them from scratch; instead, rely on libraries to handle the details.
 
-Protokoller som `http, tcp, udp, smtp, ftp` m.fl. er store og komplicerede sager, og man skal som regel ikke forsøge sig med at implementere dem i sin helhed selv, men finde et bibliotek der gør det for dig.

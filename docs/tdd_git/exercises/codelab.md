@@ -1,22 +1,23 @@
 ---
-title: TDD
+title: Codelab TDD
 description: Test Driven Development with Unit test
 layout: default
 parent: Exercises
-grand_parent: OOP and GIT
+grand_parent: TDD and GIT
 nav_order: 2
 permalink: /tdd-git/tdd
 ---
 
-# Test Driven Development (TDD)
+# CodeLab: Test Driven Development (TDD)
 
 ![TDD](./images/tdd.png){: width="300px"}
 
-Purpose of TDD is to write tests before writing code. This is a good way to ensure that the code is testable and that the code is written in small increments and that the code is written to solve the problem and not more.
+Purpose of TDD is to write tests before writing code. This is a good way to ensure that the code is testable and that the code is written in small increments and that the code is written to solve the problem with the minimal necessary code.
 
-## Class exercise: Test Driven Development
+## Test Driven Development
+- For this exercise you should pair up with another student. One of you will be the driver and the other the navigator. The driver writes the code and the navigator tells the driver what to write. The driver is not allowed to write any code unless the navigator tells him to do so. The navigator is not allowed to touch the keyboard. After each test has been written and the code has been implemented, the roles are switched. (This will train you in talking about code and explaining your thoughts and ideas to others).
 
-- The purpose of this exercise is to train yourself in the art of TDD.
+- The purpose of this exercise is to train yourselfes in the art of TDD
 - It is not easy to do so practise it as often as you can.
 
 1. Open up your IDE and create a new maven project: `tdd-koans`
@@ -35,7 +36,7 @@ Purpose of TDD is to write tests before writing code. This is a good way to ensu
 
 9. Repeat steps 3-8 for each of the 8 requirements.
 
-- Hint for requirement 4: Use `Object` type for the parameter and `if(o instanceof String)` and `if(o instanceof String[])`
+- Hint for requirement 4: Use `Object` type for the parameter and `if(o instanceof String)` and `if(o instanceof String[])` or use varargs `String... values` and check the length of the array.
 - Hint: Add the following section to your Pom.xml file to enable JUnit 5:
 
 ```xml

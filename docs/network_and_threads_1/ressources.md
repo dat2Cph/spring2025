@@ -1,17 +1,17 @@
 ---
-title: Ressourcer
-description: Diverse kilder om netværk og http
+title: Ressources
+description: Various sources for learning about network and http
 layout: default
 nav_order: 3
 permalink: /network/resources/
-parent: HTTP og netværk
+parent: Network and Threads I
 ---
 
-# Udvalgte resourcer om netværk og http
+# Some resources for learning about network and http
 
-## Generelt
+## General
 
-- [Introduktion til netværk & http](./note_netvaerk_http.md)
+- [Introduction to network and http](./note_netvaerk_http.md)
 
 ## HTTP
 

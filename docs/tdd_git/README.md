@@ -16,15 +16,19 @@ permalink: /tdd-git/
 ## Tuesday: Introduction to 2. semester
 
 ### Prepare for the class
-### In-class exercises
+### Agenda
+[Agenda](./agenda1_welcome.md)
 
 ## Wednesday: GodeLab with TDD
+- [CodeLab Exercise](./exercises/codelab.md)
 
 ## Thursday: GIT
 ### Prepare for the class
 
 Watch the [4 videos about git and bash commands](resources.md#videos) before the class.
 
+### Agenda
+[Agenda](./agenda2_git.md)
 ### In-class exercises
 
 0. Introduction and Demo of Collaboration with Git
