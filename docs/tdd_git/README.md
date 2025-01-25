@@ -20,6 +20,7 @@ permalink: /tdd-git/
 [Agenda](./agenda1_welcome.md)
 
 ## Wednesday: GodeLab with TDD
+- [What is TDD?](./note_tdd.md)
 - [CodeLab Exercise](./exercises/codelab.md)
 
 ## Thursday: GIT
