@@ -35,3 +35,22 @@ nav_exclude: true
 - Inheritance
 - Interfaces
 - Exceptions
+
+## Create a Unit Test as preparation for CodeLab
+1. Create a new project in IntelliJ
+2. Add JUnit to the project 
+```xml
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-api</artifactId>
+    <version>5.9.1</version>
+    <scope>test</scope>
+</dependency>
+<dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>5.9.1</version>
+    <scope>test</scope>
+</dependency>
+```
+3. Create a new test class
