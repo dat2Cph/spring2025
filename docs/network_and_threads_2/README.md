@@ -1,41 +1,177 @@
 ---
-title: Netværk og tråde II
-description: Samtidighed, tråde og executors
+title: Network and Threads II
+description: Building a Chat Server
 layout: default
 nav_order: 5
 has_children: true
 permalink: /network-threads-2/
 ---
 
-# Samtidighed, tråde og executors
+# Week 2 of the network and threads mini course - Building a Chat Server
+## Week 2 - Tuesday: Chat Server / Design Patterns: Singleton, Observer
+- Chat Server Architecture
+    - Explain the structure of a chat server:
+        - Server: Accepts clients and relays messages.
+        - Clients: Connect to the server, send, and receive messages.
+        - Shared resource: A list of connected clients.
+- Design Pattern: **Singleton** (and **Double-Checked Locking**)
+    - The chat server itself can be a singleton, ensuring that only one server instance is running at a time.
+    - Show how to create a thread-safe singleton using synchronized blocks or volatile.
+```java
+public class ChatServer {
+    private static ChatServer instance;
+    private ChatServer() {}  // Private constructor
+    public static synchronized ChatServer getInstance() {
+        if (instance == null) {
+            instance = new ChatServer();
+        }
+        return instance;
+    }
+}
+```
+OR (using double-checked locking pattern)
+```java
+public class ChatServer {
+    private static volatile ChatServer instance; // Use 'volatile' to ensure visibility of changes across threads.
 
-Når I bruger jeres computer kan man have mere end et program igang på samme tid. Man kan godt skrive en email mens man hører musik. Moderne computere har mere end en "core", din har måske 2,4,6 eller flere. Men på trods af dette faste antal kan du alligevel godt køre mere 2 eller 6 programmer samtidigt.
+    private ChatServer() {}  // Private constructor
 
-Dette sker ved at operativ systemet har flere processer. Den kører så hver process en lille smule (5-50 ms), og skifter så til en anden process. Da mennesker er utroligt langsomme i opfattelsen ser det ud som alle programmerne kører samtidigt. Men operativ systemet skifter altså mellem 20 og 200 gange i sekundet.
+    public static ChatServer getInstance() {
+        if (instance == null) { // First check (no locking)
+            synchronized (ChatServer.class) { // Lock only the first time
+                if (instance == null) { // Second check inside synchronized block
+                    instance = new ChatServer();
+                }
+            }
+        }
+        return instance;
+    }
+}
+```
+- The above insures:
+- **volatile Keyword**:
+    - The volatile keyword ensures that the instance variable is read from main memory and not from a thread's local cache. This guarantees visibility of changes to instance across threads.
+- **Double-Checked Locking**:
+    - The first if (instance == null) avoids synchronization overhead for subsequent calls once the instance is initialized.
+    - The second check inside the synchronized block ensures that only one thread initializes the instance, even when multiple threads access it concurrently during the initialization phase.
+Benefits:
+    - Thread-safe.
+    - Efficient: Synchronization occurs only during the first initialization.
 
-Java tillader os at skrive programmer der benytter sig af mere end en process. I Java kaldes processer for **Threads - på dansk tråde**. Programmering med mere end en tråd kaldes **concurrent**, **tråd** eller **parallel** programmering. Der er nogle der mener der er forskel på de forskellige betegnelser - I praksis mener alle cirka det samme, og ingen har kunne definere et standard ordbrug alle er blevet enige om.
+- Design Pattern: **Observer**
+    - Clients can be observers that listen for messages from the server.
+    - Demonstrate how to implement the Observer pattern in Java.
+    - Show how the server can broadcast messages to all clients.
+    - Example: When Client A sends a message, the server relays it to Clients B, C, etc.
 
-Vi skal i denne uge arbejde med **concurrency**. Vi begynder med at anvende den helt primitive Java tråd (Thread), men hurtigt går vi over til at bruge et bibliotek, der tilbyder noget der kaldes **Executors**, som gør det nemmere at programmere de opgaver man typisk har brug for at løse vha. tråde.
+```java
+public interface ClientObserver {
+    void update(String message);
+}
 
-<figure>
-  <img src="img/threads.webp" alt="Alt text for the image">
-  <figcaption><small>This image represents Java threads as skilled weavers working together on a large, intricate tapestry. Each weaver (thread) contributes to the overall design, symbolizing the collaborative and interconnected nature of Java threads in executing (DALL-E)</small> </figcaption>
-</figure>
+public class ChatServer {
+    private List<ClientObserver> clients = new ArrayList<>();
+    public void addClient(ClientObserver client) { clients.add(client); }
+    public void broadcast(String message) {
+        for (ClientObserver client : clients) {
+            client.update(message);
+        }
+    }
+}
+```
+u
+- Thread Safety
+    - Use synchronized blocks or CopyOnWriteArrayList for thread-safe operations.
 
-## Den røde tråd for ugen ;-)
+- Protocol for Chat
+    - Define a simple text-based protocol:
+    - Messages like JOIN, MESSAGE, LEAVE.
 
-Vi begynder rejsen med at identificere hvornår det kan være nyttigt at anvende tråde. Derefter tager vi fat på en række øvelser, hvor vi skal køre flere samtidige tråde i Java. Hurtigt løber vi ind i en række problemer. En del af dem er ret oplagte og andre af mere akademisk interesse. Vi vil koncentrere os om de mest oplagte.
+### Preparation before class
+- Watch video: 
+    - Video 7: Singleton and Observer Design Patterns
+    - Video 8: Chat Server Architecture
+- Read material
+    - [Design Patterns](https://www.javatpoint.com/design-patterns-in-java)
 
-1. Hvordan undgår vi at tråde konkurrerer om adgangen til de samme ressourcer (**race condition / datakapløb**)?
-2. Hvordan undgår vi at data kommer ude af sync (**visibility problem / opdatering af delt lager**)?
-3. Hvordan undgår vi at processer bliver udsultede (**starvation problem / udsultning**)?
-4. Hvordan undgår vi baglås (**deadlocks**)
+### Exercises
+- Exercise 3: TBD
 
-Vi begynder forholdsvist hurtigt at benytte os af Javas bibliotekster for at gøre trådprogrammeringen mere overskuelig. Først og fremmest Executor frameworking. Det gør arbejdet med at oprette tråde lettere.
+- 
+## Week 2 - Wednesday - Codelab: Building Chat Server
+- Building the Chat Server
+    - Task 1: Modify the multithreaded server to maintain a list of active clients.
+    - Task 2: Implement message broadcasting (server relays messages to all clients).
+- Optional Tasks:
+    - Task 3: Add client nicknames.
+    - Task 4: Allow private messages (e.g., /msg <nickname> <message>).
 
-<hr/>
+## Week 2 - Thursday: ThreadPools and Strategy Pattern
+- Advanced Topics and Best Practices
+    - Error handling: What happens when a client disconnects?
+    - Logging and debugging tips for network applications.
+    - Optimize the server using thread pools (ExecutorService).
+- Refactor the Chat Server
+    - Introduce thread pools for better performance.
+    - Improve code structure and modularity.
+- Wrap-Up and Showcase
+    - Showcase example features: colored text, command handling (/help, /users).
 
-1. [Øvelser med simple tråde](./exercises/exercises_threads.md)
-2. [Øvelser med brug af Executor frameworket](./exercises/exercises_executor.md)
-3. [Øvelser i samtidighedsproblematikker](./exercises/exercises_concurrency_problems.md)
-4. [Oplæg til større opgave med udvikling af en chat-server](./exercises/exercises_chatserver.md)
+- Design Pattern: **Thread Pool**
+    - Use an ExecutorService to manage threads efficiently.
+    - Example: Create a fixed-size thread pool for handling client connections.
+
+```java
+ExecutorService threadPool = Executors.newFixedThreadPool(10);
+while (true) {
+    Socket clientSocket = serverSocket.accept();
+    threadPool.execute(new ClientHandler(clientSocket));
+}
+
+```
+- Design Pattern: **Strategy Pattern**
+    - Implement a command handler using the Strategy pattern.
+    - Example: When a client sends a message starting with "/", the server uses a CommandStrategy to handle it.
+```java
+public interface Command {
+    void execute(String[] args, ClientHandler handler);
+}
+
+public class BroadcastCommand implements Command {
+    @Override
+    public void execute(String[] args, ClientHandler handler) {
+        handler.getServer().broadcast(String.join(" ", args));
+    }
+}
+
+public class CommandProcessor {
+    private Map<String, Command> commands = new HashMap<>();
+    public void register(String commandName, Command command) {
+        commands.put(commandName, command);
+    }
+    public void process(String input, ClientHandler handler) {
+        String[] parts = input.split(" ", 2);
+        Command command = commands.get(parts[0]);
+        if (command != null) command.execute(parts[1].split(" "), handler);
+    }
+}
+```
+
+### Preparation before class
+- Watch video: 
+    - Video 9: Thread Pools and Strategy Pattern
+  
+- Read material
+
+### Exercises
+- Exercise 4: TBD
+
+## Week 2 - Friday: Strategy Pattern, Factory Pattern and Decorator Pattern
+- Final Assignment: Complete the Chat Server
+    - Add finishing touches to the server (e.g., nicknames, private messages).
+    - Implement a **Strategy pattern** for handling commands.
+    - Use the **Factory pattern** to create different types of commands.
+    - Add a **Decorator pattern** for additional features (e.g., colored text).
+- Deliverables:
+    - Fully working chat server and client.
+    - Test cases to demonstrate features.

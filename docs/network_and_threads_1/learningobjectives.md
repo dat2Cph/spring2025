@@ -38,4 +38,9 @@ After this week you should be able to:
    - What does a HTTP response contain?
    - Provide examples in java of how to use the above concepts
 
+6. Explain and demonstrate the use of threads in Java
+   - What is a thread?
+   - Why do we need threads?
+   - What is the difference between threads and processes?
+  
 ![Network](./img/steampunkserver.webp)
