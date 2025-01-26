@@ -1,37 +1,35 @@
 ---
 title: HTTP
-description: Øvelser i brug af http
+description: Exercises in using HTTP
 layout: default
 nav_order: 2
 permalink: /network-threads-1/exercises/http/
-parent: Øvelser
-grand_parent: Netværk og tråde I
+parent: Exercises
+grand_parent: Networking and Threads I
 ---
-# Netværksøvelser del 2: HTTP
+# Network Exercises Part 2: HTTP
 
-## Opgave 1: Demo 03
+## Task 1: Demo 03
 
-I demo 03 tager vi første kig på HTTP protokollen. Vi skal studere HTTP-request-og-response headere - og sende HTML afsted fra serveren.
+In Demo 03, we take our first look at the HTTP protocol. We will study HTTP request and response headers and send HTML from the server.
 
-1.1 Kør demo 03. Det gøres ved at starte serveren, åbne en browser,
-og sende et HTTP request: <http://localhost:9090>. Hvad sker der?
+1.1 Run Demo 03. Do this by starting the server, opening a browser, and sending an HTTP request: <http://localhost:9090>. What happens?
 
-1.2 Prøv også med <http://127.0.0.1:9090>. Hvad sker der - og hvorfor?
+1.2 Also try <http://127.0.0.1:9090>. What happens—and why?
 
-1.3 Kig koden igennem - for forsøg at forklare din side-makker hvad der foregår. Lad dig evt. inspirere af README filen, der hører til projektet.
+1.3 Review the code and try to explain to your partner what is happening. Use the README file that comes with the project for inspiration, if needed.
 
-1.4 Der mangler en unit-test til demo 03. Prøv at lave den.
+1.4 There is no unit test for Demo 03. Try creating one.
 
-1.5 Prøv at udvide HTML-teksten, så du returnerer en lille ekstra
-besked. F.eks. dit navn. Få hjælp til HTML her: [https://www.w3schools.com/html/html_elements.asp](https://www.w3schools.com/html/html_elements.asp)
+1.5 Try extending the HTML text so that it returns a small extra message, e.g., your name. Get help with HTML here: [https://www.w3schools.com/html/html_elements.asp](https://www.w3schools.com/html/html_elements.asp)
 
-## Opgave 2: Parsing af headere
+## Task 2: Parsing Headers
 
-Begrebet `[parsing](https://ordnet.dk/ddo/ordbog?entry_id=11038980&query=parsing)` stammer fra datalogien. Det betyder at man tager en input-tekst og analyserer den ud fra en given syntaks. Formålet er at bruge teksten til noget fornuftigt, men først bliver vi nødt til at sørge for at teksten overholder nogle regler (syntaks). Mens vi parser teksten igennem, kan vi sørge for at gemme indholdet, eller betydningen, i nogle brugbare datastrukturer, som senere kan anvendes.
+The concept of `[parsing](https://ordnet.dk/ddo/ordbog?entry_id=11038980&query=parsing)` comes from computer science. It means taking input text and analyzing it based on a given syntax. The goal is to use the text for something meaningful, but first, we need to ensure that the text follows some rules (syntax). While parsing the text, we can store its content or meaning in usable data structures, which can then be used later.
 
-2.1 Analyser en header
+2.1 Analyze a Header
 
-Forestil dig disse tekstlinier:
+Imagine these lines of text:
 
 ```text
 GET /pages/index.html HTTP/1.1
@@ -42,42 +40,39 @@ Accept-Language: en-US,en;q=0.5
 Accept-Encoding: gzip, deflate, br
 Connection: keep-alive
 Upgrade-Insecure-Requests: 1
-```
+````
 
 Se nøje på teksten. Hvordan er den bygget op? Kan du identificere nogle simple regler? Se om du kan formulere dem.
 
-2.2 Lav en klasse, der hedder `HttpRequest`. Smæk den i en package du kalder `parsers`. Du skal nu vælge nogle attributter og datastrukturer, der kan holde dine elementer fra headerteksten. Et godt bud kunne være at behandle den først linie specielt. Du skal gemme HTTP-metoden i en `String`, url'en i en `String` og HTTP versionen også i en separat `String` variabel. Resten er (key: value) par. Hvad kender vi som er yderst velegnet til at rumme den slags?
+2.2 Create a class called `HttpRequest`. Place it in a package named `parsers`. You now need to select some attributes and data structures to hold the elements from the header text. A good approach could be to handle the first line specially. You should store the HTTP method in a `String`, the URL in a `String`, and the HTTP version also in a separate `String` variable. The rest are (key: value) pairs. What do we know that is highly suitable for storing such data?
 
-Med de hints, så skriv nu metoden `parse(String header)`, æd dig igennem teksten og gem indholdet i de respektive datastrukturer.
+With these hints, write the method `parse(String header)`. Process the text and store the content in the respective data structures.
 
-Når det er gjort, kan du evt. skrive en metode til at udskrive de forskellige elementer fra dine datastrukturer. Efter denne øvelse, hvis du være godt klædt på til at gennemskue de næste.
+When done, you can optionally write a method to print the various elements from your data structures. After this exercise, you will be well-equipped to understand the next steps.
 
-## Opgave 3: Demo 04
+## Task 3: Demo 04
 
-3.1 Kør demo 04 ved at køre main i både `RequestDataServer` og bagefter `RequestDataClient`.
+3.1 Run Demo 04 by executing the `main` method in both `RequestDataServer` and then `RequestDataClient`.
 
-3.2 Kig i linie 26 i `RequestDataClient`. Den første såkaldte `request-line` hedder: `POST /path/to/endpoint HTTP/1.1`. Hvad betyder det? Og specielt hvad betyder `POST`?
+3.2 Look at line 26 in `RequestDataClient`. The first so-called request line reads: `POST /path/to/endpoint HTTP/1.1`. What does it mean? And specifically, what does `POST` mean?
 
-3.3 Kig i linie 25 i `RequestDataClient`. Kan du forklare hvad `key1=value1&key2=value2` repræsenterer? Altså hvad de kan bruges til? Hint: det har noget med `POST` at gøre.
+3.3 Look at line 25 in `RequestDataClient`. Can you explain what `key1=value1&key2=value2` represents? What can it be used for? Hint: It has something to do with `POST`.
 
-3.4 Se nøje på hvordan `RequestDTO` opbygges. Prøv at flytte al kode, der har med den del at gøre ud i sin egen klasse, som foreslået i koden. Få demo 04 til at fungere med den eksterne klasse.
+3.4 Take a close look at how `RequestDTO` is constructed. Try moving all the code related to this part into its own class, as suggested in the code. Make Demo 04 work with the external class.
 
-## Opgave 3: Demo 05
+## Task 4: Demo 05
 
-4.1 Kør demo 05 ved at eksekvere main i både `RequestFileServer` og `RequestFileClient`. Prøv også at køre unit-testen.
+4.1 Run Demo 05 by executing the `main` method in both `RequestFileServer` and `RequestFileClient`. Also, try running the unit test.
 
-4.2 Prøv at forklare hvad der sker til din sidemakker. Lad jer inspirere af teksten i projektets README fil.
+4.2 Try explaining what happens to your partner. Use the text in the project’s README file for inspiration.
 
-4.3 Refaktorer koden, så `RequestDTO` og den kode som hører dertil
-anvender samme klasse som den du lavede i demo 04.
+4.3 Refactor the code so that `RequestDTO` and the related code use the same class you created in Demo 04.
 
-4.4 I linie 57-61 er indsat en TODO note, der beskriver hvordan
-du kan ændre demo 05, så du i stedet for klienten, kan kalde serveren
-fra en browser. Brug IntelliJ's TODO fanebladsfunktion til at finde de steder du skal refaktorere. Du skal bare udkommentere linie 54+55 og indkommentere 57-61. Så ruller det.
+4.4 In lines 57–61, there is a TODO note describing how you can modify Demo 05 so that, instead of using the client, you can call the server from a browser. Use IntelliJ’s TODO tab to locate the places you need to refactor. You simply need to comment out lines 54+55 and uncomment lines 57–61. That should do it.
 
-4.5 Kør `RequestFileServer` og send et request fra din favoritbrowser. Du skal hente [http://localhost:9090/pages/index.html](http://localhost:9090/pages/index.html). Klik evt. bare her.
+4.5 Run `RequestFileServer` and send a request from your favorite browser. You need to fetch [http://localhost:9090/pages/index.html](http://localhost:9090/pages/index.html). Just click the link.
 
-4.6 Lav en ekstra fil i `resources/pages og kald den`login.html`. Lav en htmlside med indholdet:
+4.6 Create an extra file in `resources/pages` and name it `login.html`. Create an HTML page with the following content:
 
 ```html
 <!DOCTYPE html>
@@ -94,22 +89,18 @@ fra en browser. Brug IntelliJ's TODO fanebladsfunktion til at finde de steder du
     <input type="submit" value="Login">
 </form>
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "/pages/login.html".</p>
+<p>If you click the "Submit" button, the form data will be sent to a page called "/pages/login.html".</p>
 
 </body>
 </html>
-```
 
-4.7 Kør `RequestFileServer` og derefter fyr [http://localhost:9090/pages/login.html](http://localhost:9090/pages/login.html) af i din browser. Hvad sker der?
+4.7 Run RequestFileServer and then load http://localhost:9090/pages/login.html in your browser. What happens?
 
-4.8 Kør `RequestFileServer` og klik på `login` knappen. Sørg for at have "Network" fanebladet åbent i dev-tools i browseren. Tjek diverse headere og payload. Hvad ser du?
+4.8 Run RequestFileServer and click the login button. Be sure to have the "Network" tab open in the browser's developer tools. Check the various headers and payload. What do you see?
 
-4.9 Det er lidt bøvlet, at vi hele tiden skal genstarte webserveren.
-Altså demo 05 `RequestFileServer`. Se om ikke du kan lade den stå
-åben og vente på flere requests. I stil med vores `EchoServer` i demo 02.
+4.9 It’s a bit inconvenient that we need to keep restarting the web server—i.e., Demo 05 RequestFileServer. See if you can let it remain open and wait for multiple requests, similar to our EchoServer in Demo 02.
 
-4.10 Se om ikke du kan udskrive request variablerne ud (hvis der er nogle). I dette tilfælde firstname=john&lastname=doe.
-
+4.10 See if you can print out the request variables (if any). In this case, `firstname=john&lastname=doe`.
 <hr/>
 
-[Tilbage til overblik](./README.md)
+[Back to the overview](./README.md)
