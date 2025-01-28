@@ -1,3 +1,13 @@
+---
+title: Friday Exercise TDD and GIT
+description: Friday Exercise
+layout: default
+parent: Exercises
+grand_parent: TDD and GIT
+nav_order: 3
+permalink: /tdd-git/tdd
+---
+
 # Week 1 - Friday Exercise
 
 ## Create a new Project
