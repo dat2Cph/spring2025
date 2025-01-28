@@ -2,7 +2,7 @@
 title: HTTP
 description: Exercises in using HTTP
 layout: default
-nav_order: 2
+nav_order: 3
 permalink: /network-threads-1/exercises/http/
 parent: Exercises
 grand_parent: Networking and Threads I
