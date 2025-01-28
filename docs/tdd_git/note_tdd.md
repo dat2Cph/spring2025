@@ -1,3 +1,12 @@
+---
+title: Note on TDD
+description: Detailed note on TDD
+layout: default
+parent: TDD and GIT
+nav_order: 2
+permalink: /tdd-git/note_tdd/
+---
+
 # TDD (Test Driven Development)
 ![](https://developer.ibm.com/developer/default/articles/5-steps-of-test-driven-development/images/tdd-red-green-refactoring-v3.png)
 
