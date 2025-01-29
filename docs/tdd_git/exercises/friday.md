@@ -4,7 +4,7 @@ description: Friday Exercise
 layout: default
 parent: Exercises
 grand_parent: TDD and GIT
-nav_order: 3
+nav_order: 4
 permalink: /tdd-git/exercises/friday/
 ---
 

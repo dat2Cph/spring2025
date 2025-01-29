@@ -2,7 +2,7 @@
 title: Git exercise
 description: Git Exercise
 layout: default
-nav_order: 5
+nav_order: 3
 parent: Exercises
 grand_parent: TDD and GIT
 permalink: /tdd-git/exercises/git-exercise

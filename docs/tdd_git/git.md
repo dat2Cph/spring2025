@@ -5,7 +5,7 @@ layout: default
 parent: Exercises
 grand_parent: TDD and GIT
 nav_order: 2
-permalink: /tdd-git/exercises/git
+permalink: /tdd-git/git
 ---
 
 # Git Overview

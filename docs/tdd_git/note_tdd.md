@@ -3,7 +3,7 @@ title: Note on TDD
 description: Detailed note on TDD
 layout: default
 parent: TDD and GIT
-nav_order: 2
+nav_order: 3
 permalink: /tdd-git/note_tdd/
 ---
 
