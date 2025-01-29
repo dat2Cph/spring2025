@@ -5,7 +5,7 @@ layout: default
 parent: Exercises
 grand_parent: TDD and GIT
 nav_order: 2
-permalink: /tdd-git/tdd
+permalink: /tdd-git/exercises/codelab/
 ---
 
 # CodeLab: Test Driven Development (TDD)

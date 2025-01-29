@@ -5,7 +5,7 @@ layout: default
 parent: Exercises
 grand_parent: TDD and GIT
 nav_order: 3
-permalink: /tdd-git/tdd
+permalink: /tdd-git/exercises/friday/
 ---
 
 # Week 1 - Friday Exercise
