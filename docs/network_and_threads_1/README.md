@@ -26,11 +26,13 @@ permalink: /network-threads-1/
 
 ### Preparation before class
 - Watch video(s): 
-    - Video 1: Networking Basics
-    - Video 2: Client-Server Interaction
-    - Video 3: Protocols and HTTP Basics (The exact format of each part of Request and Response, HTTP methods, HTTP status codes, HTTP headers)
+    - [Video 1: Networking Basics](https://www.youtube.com/watch?v=v4sRKGarh5Q&ab_channel=WhiteboardDoodles)
+    - Video 2: [Protocols and HTTP Basics (The exact format of each part of Request and Response, HTTP methods, HTTP status codes, HTTP headers)](https://www.youtube.com/watch?v=wW2A5SZ3GkI&ab_channel=FollowAndrew)
+    - Video 3: [Client-Server Interaction with Sockets](https://www.youtube.com/watch?v=8J7jS4G6AkE&ab_channel=DavidDobervich)
 
-- [Read about network and the http protocol](./note_netvaerk_http.md)
+- Read about [network and the http protocol](./note_netvaerk_http.md)
+- Install Telnet: `dism /online /Enable-Feature /FeatureName:TelnetClient` from PowerShell as admin
+- Install Telnet: `brew install telnet` on MacOS
 
 ### Exercises to do in class
 - Kahoot Quiz: Networking Basics
