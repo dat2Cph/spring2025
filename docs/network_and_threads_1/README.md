@@ -29,10 +29,13 @@ permalink: /network-threads-1/
     - [Video 1: Networking Basics](https://www.youtube.com/watch?v=v4sRKGarh5Q&ab_channel=WhiteboardDoodles)
     - Video 2: [Protocols and HTTP Basics (The exact format of each part of Request and Response, HTTP methods, HTTP status codes, HTTP headers)](https://www.youtube.com/watch?v=wW2A5SZ3GkI&ab_channel=FollowAndrew)
     - Video 3: [Client-Server Interaction with Sockets](https://www.youtube.com/watch?v=8J7jS4G6AkE&ab_channel=DavidDobervich)
+    - Video 4: [TCP socket programming 1](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=766a7b19-19f9-4bee-8eba-b27700fb84b2)
+    - Video 5: [TCP socket programming 2](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=cca622fd-4f7d-4e2f-985d-b2770109ef62)
+    - Video 6: [HTTP](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f3699294-0a8e-49a5-8eb9-b279007f93fc)
 
 - Read about [network and the http protocol](./note_netvaerk_http.md)
-- Install Telnet: `dism /online /Enable-Feature /FeatureName:TelnetClient` from PowerShell as admin
-- Install Telnet: `brew install telnet` on MacOS
+- Install Telnet on Windows: `dism /online /Enable-Feature /FeatureName:TelnetClient` from PowerShell as admin
+- Install Telnet on Mac: `brew install telnet`.
 
 ### Exercises to do in class
 - Kahoot Quiz: Networking Basics
@@ -143,7 +146,7 @@ permalink: /network-threads-1/
   - video 6: Working with text-based protocols (How to parse requests and send responses in java code)
 - Read material ??
 
-### Exercises
+### Exercise
 - Create a multithreaded "http validation" server, that can handle multiple clients at the same time and handle HTTP with headers like:
     - Request: User-Agent (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36)
     - Response: Status-Line (HTTP/1.1 200 OK),
