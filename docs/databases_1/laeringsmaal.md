@@ -9,16 +9,37 @@ permalink: /databases-1/learningobjectives/
 
 # Læringsmål for databaser
 
-## DB uge 1: Normalisering og SQL
+## DB uge 1: PostgreSQL, SQL og datamodellering
 
-Efter den første uge er det meningen at du kan:
+## Læringsmål for uge 1  
+Efter den første uge vil du kunne:  
 
-1. installere Postgresql og PgAdmin i en Docker container og overordnet forklare hvordan applikationerne er i stand til at køre og arbejde sammen.
-2. designe en database med tabeller og relationer, samt datatyper på kolonnerne og "constraints", der hjælper med at sikre dataintegriteten.
-3. anvende teori om normalformer i praksis og bringe en database på 3NF.
-4. anvende sql til at udføre CRUD (Create, Read, Update og Delete) operationer på databasen for at manipulere data.
-5. forklare forskellen på DDL: Data Definition Language og DML: Data Manipulation Language.
-6. udarbejde et ER-diagram og omsætte det til en fysisk datamodel og til et sql script
-7. udføre komplekse udtræk af data fra en sql-database med flere sammenkædede tabeller.
-8. anvende aggregate funktioner, som SUM, COUNT, GROUP BY til diverse sammentællinger
-9. kan oprette og anvende views
+1. **Opsætte og anvende databaseværktøjer:**  
+   Installere Postgres og pgAdmin i en Docker-container og forklare, hvordan de arbejder sammen.  
+
+2. **Skelne mellem DDL og DML:**  
+   Forklare forskellen på Data Definition Language (DDL) og Data Manipulation Language (DML). 
+
+3. **Udføre grundlæggende SQL-operationer:**  
+   Anvende SQL til at oprette, læse, opdatere og slette data (CRUD). 
+
+4. **Arbejde med aggregerede data:**  
+   Bruge funktioner som 'SUM', 'COUNT', og 'GROUP BY' til at lave opsummeringer.  
+
+5. **Udføre avancerede forespørgsler:**  
+   Skrive SQL-forespørgsler, der kombinerer flere tabeller vha joins.  
+
+6. **Oprette og bruge views:**  
+   Definere views til at forenkle komplekse forespørgsler og forbedre overskueligheden af dataudtræk. 
+
+7. **Modellering med ERD:**  
+   Udarbejde et ER-diagram og angive relationer mellem tabellerne.
+
+8. **Gå fra ERD til database:**  
+   Oprette tabeller med relationer, vælge passende datatyper og nøgler, samt anvende constraints for at sikre dataintegritet.  
+
+9. **Anvende normalisering i praksis:**  
+   Identificere og anvende normalformer for at bringe en database på 3. normalform.  
+ 
+
+    
