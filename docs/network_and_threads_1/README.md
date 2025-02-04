@@ -29,21 +29,24 @@ permalink: /network-threads-1/
     - [Video 1: Networking Basics](https://www.youtube.com/watch?v=v4sRKGarh5Q&ab_channel=WhiteboardDoodles)
     - Video 2: [Protocols and HTTP Basics (The exact format of each part of Request and Response, HTTP methods, HTTP status codes, HTTP headers)](https://www.youtube.com/watch?v=wW2A5SZ3GkI&ab_channel=FollowAndrew)
     - Video 3: [Client-Server Interaction with Sockets](https://www.youtube.com/watch?v=8J7jS4G6AkE&ab_channel=DavidDobervich)
-    - Video 4: [TCP socket programming 1](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=766a7b19-19f9-4bee-8eba-b27700fb84b2)
-    - Video 5: [TCP socket programming 2](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=cca622fd-4f7d-4e2f-985d-b2770109ef62)
-    - Video 6: [HTTP](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f3699294-0a8e-49a5-8eb9-b279007f93fc)
+    - Video 4: [TCP socket programming 1 [11 min]](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=766a7b19-19f9-4bee-8eba-b27700fb84b2)
+    - Video 5: [TCP socket programming 2 [12 min]](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=cca622fd-4f7d-4e2f-985d-b2770109ef62)
+    - Video 6: [HTTP [7 min]](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f3699294-0a8e-49a5-8eb9-b279007f93fc)
 
 - Read about [network and the http protocol](./note_netvaerk_http.md)
 - Install Telnet on Windows: `dism /online /Enable-Feature /FeatureName:TelnetClient` from PowerShell as admin
 - Install Telnet on Mac: `brew install telnet`.
 
 ### Exercises to do in class
+#### Part 1
 - Kahoot Quiz: Networking Basics
-- Exercise 1: Create a simple client-server interaction.
+#### Part 2
+- In IntelliJ build a tcp server that can handle a single client and send a single message to the client.
+- Connect to the server with telnet and see the message.
+- Build a simple client that can connect to the server and receive the message.
+#### Part 3
 - Look at HTTP basics: `curl -v http://www.example.com`
 - And in the browsers network tab
-
-### Home Assignment
 - Explore Real-World Servers
     - Example: Use telnet to interact with a web server or check HTTP headers.
     - Learning Objectives:
@@ -57,35 +60,34 @@ permalink: /network-threads-1/
             - www.example.com
             - www.google.com
             - httpbin.org (great for exploring HTTP)
-
-    - Activity Plan
-        1. Explain the Basics of Telnet
-            - Telnet is a tool that allows you to open a raw TCP connection to a server.
-            - It works at the application layer and lets you send custom requests manually.
-        2. Connect to a Web Server
-            - Demonstrate how to use telnet to connect to a server on port 80 (HTTP).
-            - Example:
-                - telnet www.example.com 80 (type `quit` to exit telnet prompt)
-        - Explain:
-            - www.example.com: The hostname of the web server.
-            - 80: The port number for HTTP communication.
-        3. Manually Send an HTTP Request
-            - Once connected, type an HTTP GET request manually:
-            - ```
-            GET / HTTP/1.1
-            Host: www.example.com
-            ```
-            - Follow this with an empty line (press Enter twice) to signal the end of the request.
-            - Explain the components of the request:
-                - GET: HTTP method to request data.
-                - /: The path (root in this case).
-                - HTTP/1.1: HTTP version.
-                - Host: Specifies the server's domain.
-        4. Analyze the Response
-            - After sending the request, the server will respond with:
-            - HTTP headers (e.g., HTTP/1.1 200 OK, Content-Type, Date, etc.).  
-            - The content of the page (if any).  
-            - Example Response:
+    - Explain the Basics of Telnet
+        - Telnet is a tool that allows you to open a raw TCP connection to a server.
+        - It works at the application layer and lets you send custom requests manually.
+    - Connect to a Web Server
+        - Demonstrate how to use telnet to connect to a server on port 80 (HTTP).
+        - Example:
+            - telnet www.example.com 80 (type `quit` to exit telnet prompt)
+    - Explain:
+        - www.example.com: The hostname of the web server.
+        - 80: The port number for HTTP communication.
+    - Manually Send an HTTP Request
+        - Once connected, type an HTTP GET request manually:
+        - ```
+        GET / HTTP/1.1
+        Host: www.example.com
+        ```
+        - Follow this with an empty line (press Enter twice) to signal the end of the request.
+        - Explain the components of the request:
+            - GET: HTTP method to request data.
+            - /: The path (root in this case).
+            - HTTP/1.1: HTTP version.
+            - Host: Specifies the server's domain.
+        - Use `curl -v http://www.example.com` to show the same request in a more user-friendly way.
+    - Analyze the Response
+        - After sending the request, the server will respond with:
+        - HTTP headers (e.g., HTTP/1.1 200 OK, Content-Type, Date, etc.).  
+        - The content of the page (if any).  
+        - Example Response:
 
     ```
     HTTP/1.1 200 OK
@@ -106,7 +108,7 @@ permalink: /network-threads-1/
         </body>
     </html>
     ```
-        5. Experiment with Other Paths and Methods 
+    - Experiment with Other Paths and Methods 
             - Request a different path:
             ```
             GET /robots.txt HTTP/1.1
@@ -118,10 +120,11 @@ permalink: /network-threads-1/
             Host: www.example.com
             ```
             - Try other methods like HEAD or POST (explain they might behave differently).
-        6. Explore HTTP in the browsers network tab
+    - Explore HTTP in the browsers network tab
             - Open the browser's developer tools (F12) and go to the Network tab.
             - Visit a website and observe the requests and responses.
             - 
+        
 
 ## Week 1 - Wednesday - Codelab
 
@@ -129,9 +132,15 @@ permalink: /network-threads-1/
 
 ## Week 1 - Thursday: Threads
 - Introduction to Multithreading in Java
-    - Explain threads: What are they? Why use them?
-    - How multithreading solves the "one client at a time" problem in networking.
+    - Threads: What are they? Why use them?
     - Java thread basics: Thread class and Runnable interface.
+    - Race conditions, Locks and synchronization.
+    - Volatile keyword.
+    - Threads vs. Processes
+    - Atomic operations
+    - Deadlocks
+    - How multithreading solves the "one client at a time" problem in networking.
+
 - Building a Threaded Server
     - Show how to handle multiple clients using threads.
     - Example: A server where each client connection is handled in its own thread.
@@ -140,13 +149,20 @@ permalink: /network-threads-1/
     - Introduce the concept of shared resources (e.g., a shared List of clients).
 
 ### Preparation before class
+
 - Watch video 
-  - Video 4: Threads in Java (Why and How, Runnable, Thread, Shared Ressources, Thread Safety, Synchronization, Deadlocks, Volatile)
-  - Video 5: Threaded Server (How to handle multiple clients using threads)
-  - video 6: Working with text-based protocols (How to parse requests and send responses in java code)
-- Read material ??
+  - Video 4: [Threads in Java (10:00)](https://www.youtube.com/watch?v=r_MbozD32eo&ab_channel=CodingwithJohn) 
+  - Video 5: [Processes vs Threads (4:00)](https://www.youtube.com/watch?v=gJ9DYC-jswo&ab_channel=CodingwithJohn )
+  - Video 6: [Concurrency vs Paralellism (4:00)](https://www.youtube.com/watch?v=gJ9DYC-jswo&ab_channel=CodingwithJohn )
+  - Video 7: [Threads and Race Conditions - Dining Philosophers Problem(6:00)](https://www.youtube.com/watch?v=JEJdQN0mcG4&ab_channel=Geekific)
+  - Video 8: [Thread Safety and Synchronization (6:00)](https://www.youtube.com/watch?v=71dgtPrbToE&ab_channel=Geekific)
+
+### In-class Exercises
+  - Threaded Server (How to handle multiple clients using threads)
+  - Working with text-based protocols (How to parse requests and send responses in java code)
 
 ### Exercise
+
 - Create a multithreaded "http validation" server, that can handle multiple clients at the same time and handle HTTP with headers like:
     - Request: User-Agent (User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36)
     - Response: Status-Line (HTTP/1.1 200 OK),
