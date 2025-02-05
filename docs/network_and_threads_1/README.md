@@ -152,8 +152,8 @@ permalink: /network-threads-1/
 
 - Watch video 
   - Video 4: [Threads in Java (10:00)](https://www.youtube.com/watch?v=r_MbozD32eo&ab_channel=CodingwithJohn) 
-  - Video 5: [Processes vs Threads (4:00)](https://www.youtube.com/watch?v=gJ9DYC-jswo&ab_channel=CodingwithJohn )
-  - Video 6: [Concurrency vs Paralellism (4:00)](https://www.youtube.com/watch?v=gJ9DYC-jswo&ab_channel=CodingwithJohn )
+  - Video 5: [Processes vs Threads (4:00)](https://www.youtube.com/watch?v=4rLW7zg21gI&ab_channel=ByteByteGo)
+  - Video 6: [Concurrency vs Paralellism (4:00)](https://www.youtube.com/watch?v=RlM9AfWf1WU&ab_channel=ByteByteGo)
   - Video 7: [Threads and Race Conditions - Dining Philosophers Problem(6:00)](https://www.youtube.com/watch?v=JEJdQN0mcG4&ab_channel=Geekific)
   - Video 8: [Thread Safety and Synchronization (6:00)](https://www.youtube.com/watch?v=71dgtPrbToE&ab_channel=Geekific)
 
