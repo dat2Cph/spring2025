@@ -49,7 +49,7 @@ Hello, World!
 
 - Hint: You can use a StringBuilder to build the request from the client over multiple lines like this:
 
-```plaintext
+```java
 StringBuilder requestBuilder = new StringBuilder();
 String newLine;
 while (in.ready() && (newLine = in.readLine()) != null && !newLine.isEmpty()) {
