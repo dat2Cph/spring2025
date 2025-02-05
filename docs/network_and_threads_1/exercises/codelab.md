@@ -23,9 +23,11 @@ permalink: /network-threads-1/exercises/codelab/
         - The stop method should close the server socket, the clientHandler socket, the input- and outputstreams.
 
 - **Part 2** Basic HTTP Simulation
+    - **Task 0**: When making a GET request to the server, the request should have a first line with the method, the path and the protocol version, like: `GET /hello HTTP/1.1`. Make a check to see if the request is upholding that format. If not, return a 400 Bad Request response. like this: `HTTP/1.1 400 Bad Request`
     - **Task 1**: Have the server respond to basic HTTP-like requests, following the protocol with GET and POST methods.
       - Example 1: GET /hello should return "Hello, World!". Like below:
         - server request:
+
 ```
 GET /hello HTTP/1.1
 Host: localhost:8080
@@ -44,7 +46,20 @@ Content-Length: 12345
 
 Hello, World!
 ```
+
+      - Hint: You can use a StringBuilder to build the request from the client over multiple lines like this:
+
+```
+StringBuilder requestBuilder = new StringBuilder();
+String newLine;
+while (in.ready() && (newLine = in.readLine()) != null && !newLine.isEmpty()) {
+    requestBuilder.append(newLine).append("\n");
+}
+
+```
+
   - Example 2: POST /echo with a message should return the message. If you feel for the challenge you can store the POSTed message and return it when a GET request is made to /echo.
+
 ```
 POST /echo HTTP/1.1
 Host: localhost:8080
@@ -53,7 +68,9 @@ Accept: text/html
 
 Hello! This is a POST message. And here is the body of the Post request.
 ```
+
   - and server response:
+
 ```
 HTTP/1.1 200 OK
 Date: Sun, 26 Jan 2025 10:00:00 GMT
@@ -63,6 +80,7 @@ Content-Length: 5
 
 Hello
 ```
+
 ### Part 3: Advanced HTTP Simulation
 
 - **Task 1**: Have the server respond to more advanced HTTP-like requests, following the protocol with a GET method.
