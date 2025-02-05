@@ -96,33 +96,16 @@ SELECT customernumber, count(*) FROM orders
 GROUP BY customernumber
 ORDER BY customernumber;
 
+
 /* Opgave 23 */
-SELECT customername, concat(e.firstName,' ', e.lastName) as salesrep
-FROM customers c 
-INNER JOIN employees e
-ON c.salesRepEmployeeNumber = e.employeeNumber;
-
-/* Opgave 24 */
-SELECT customername, concat(e.firstName,' ', e.lastName) as salesrep
-FROM customers c 
-INNER JOIN employees e
-ON c.salesRepEmployeeNumber = e.employeeNumber WHERE c.country = 'Italy';
-
-/* Opgave 25 */
-SELECT DISTINCT c.country, concat(e.firstName,' ', e.lastName) as salesrep
-FROM customers c 
-INNER JOIN employees e
-ON c.salesRepEmployeeNumber = e.employeeNumber ORDER BY country;
-
-/* Opgave 26 */
 UPDATE employees 
 SET lastname = 'Smith' 
 WHERE employeenumber = '1165';
 
-/* Opgave 27 */
+/* Opgave 24 */
 UPDATE customers SET contactfirstname = 'Dr. Roland' WHERE contactfirstname = 'Roland' AND contactlastname = 'Keitel';
 
-/* Opgave 28 */
+/* Opgave 25 */
 
 /* Find først medarbejderens id: 1702: */ 
 SELECT employeenumber 
@@ -139,23 +122,23 @@ UPDATE customers
 SET salesrepemployeenumber = (SELECT employeenumber FROM employees WHERE firstname = 'Martin' AND lastname = 'Gerard')
 WHERE country = 'Spain';
 
-/* Opgave 29 */
+/* Opgave 26 */
 UPDATE products SET msrp = msrp * 1.1 WHERE productline = 'Motorcycles';
 
-/* Opgave 30 */
+/* Opgave 27 */
 UPDATE customers SET addressline2 = '' WHERE addressline2 IS NULL;
 
-/* Opgave 31 */
+/* Opgave 28 */
 /* You may need to alter the not-null constrains of table products or add more values to the query */
 INSERT INTO productlines (productline, textdescription) VALUES ('Bicycles', 'Check out fine old bikes');
 INSERT INTO products (productcode, productname, productline, productdescription) 
 VALUES ('B12_1212', 'Bike', 'Bicycles', 'En fin budcykel');
 
-/* Opgave 32 */
+/* Opgave 29 */
 INSERT INTO offices (officecode, city, phone, addressline1, state, country, postalcode, territory) 
 VALUES ('8', 'Copenhagen', '+45 23 23 23 23', 'Bredgade 12', 'Cph', 'Denmark', '1354', 'NA');
 
-/* Opgave 33 */
+/* Opgave 30 */
 INSERT INTO products (productcode, productname, productline, productdescription)
 VALUES ('S11_1111', 'Mountainbike', 'Bicycles', 'Beginner bike'), ('S12_1212', 'Triathlonbike', 'Bicycles', 'Lightweight');
 
@@ -174,17 +157,3 @@ WHERE customernumber < 150;
 DELETE FROM customers
 WHERE customernumber < 150;
 
-/* Opgave 36 */
-SELECT c.customerName, o.orderDate, o.orderNumber 
-FROM customers c INNER JOIN orders o
-ON c.customerNumber = o.customerNumber;
-
-/* Opgave 37 (2 løsninger) */
-SELECT c.customername
-FROM customers c LEFT JOIN orders o
-ON c.customernumber = o.customernumber
-WHERE o.customernumber IS NULL;
-
-SELECT customername
-FROM customers
-WHERE customernumber NOT IN (SELECT customerNumber FROM orders);
