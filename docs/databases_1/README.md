@@ -30,7 +30,7 @@ Du skal installere lidt software: Docker, Postgres og PgAdmin. Det er vigtigt, a
 
 Du skal have set to videoer:
 - [Database keys made easy](https://www.youtube.com/watch?v=8wUUMOKAK-c)
-- [Learn SQL Joins](https://www.youtube.com/watch?v=nivyaiCeWjs). Du behøver kun se de første 9:10 minutter om innner join
+- [Learn SQL Joins](https://www.youtube.com/watch?v=nivyaiCeWjs). 
 
 Du skal genopfriske SQL:
 - [Strukturen i SQL queries][./docs/sqlintro.pfd]
