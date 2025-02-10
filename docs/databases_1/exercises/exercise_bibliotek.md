@@ -8,12 +8,12 @@ grand_parent: Databaser I
 permalink: /databases-1/exercises/bibliotek/
 ---
 
-# Databaser og SQL: torsdagsopgave
+# Databaser og SQL: fredagsopgave
 
-Denne torsdag er sat af til følgende:
+Denne fredag er sat af til følgende:
 
 1. Færdiggør de af ugens opgaver, du ikke har nået.
-2. Lav den nedenstående opgave, hvor du skal implementere et bibliotekssystem inspireret af datamodellen fra [normaliseringsartiklen](../docs/normalisering_v1.1.pdf) fra i mandags.
+2. Lav den nedenstående opgave, hvor du skal implementere et bibliotekssystem inspireret af datamodellen fra [normaliseringsartiklen](../docs/Normalisering.pdf).
 
 ## Bibliotekssystem i Postgres
 
@@ -31,10 +31,11 @@ Den overordnede opgavebeskrivelse lyder således:
 
 Her er nogle punkter, som kan hjælpe dig på vej:
 
-1. Kig normaliseringsartiklen igennem og byg en database i Postgres' diagram-editor, som svarer til biblioteksdatabasen på 3NF. Fordi artiklen gradvist normaliserer tabellerne, skal du holde tungen lige i munden. Hint: Det virker fornuftigt med 5 tabeller
-2. "Forward engineer" diagrammet til en database.
-3. Fyld lidt data i tabellerne. Kig evt. i artiklen for at finde inspiration til bogtitler og lånere.'
-4. Lav følgende SQL-forespørgsler i Query Tool:
+1. Kig normaliseringsartiklen igennem og lav en skitse på papir over hvilke tabeller, du har brug for for at bygge bibliotekssystemet. Fordi artiklen gradvist normaliserer tabellerne, skal du holde tungen lige i munden. Hint: Det virker fornuftigt med 5 tabeller
+2. Opret database i Postgres. Lav dernæst et ERD i Postgres' diagram-editor, som svarer til din skitse. Den skal naturligvis være på 3NF. 
+3. "Forward engineer" diagrammet til databasen ved at bruge SQL-knappen i din ERD editor, som generer et script.
+4. Fyld lidt data i tabellerne. Kig evt. i artiklen for at finde inspiration til bogtitler og lånere.
+5. Lav følgende SQL-forespørgsler i Query Tool:
    1. Find en låner ud fra et specifikt laaner_id.
    2. Find alle lånere, og vis deres data inklusive postnummer og by.
    3. Find alle bøger, og deres forfattere
@@ -50,5 +51,5 @@ Her er nogle punkter, som kan hjælpe dig på vej:
 
 Her er vejledende løsninger:
 
-- [Bibliotek (opret DB)](../docs/bibliotek_create_db.sql)
-- [Bibliotek (sql)](../docs/bibliotek_sql_queries.sql)
+- [Bibliotek (opret DB)](./solutions_bibliotek_create_db.sql)
+- [Bibliotek (sql queries)](./solutions_bibliotekqueries.sql)

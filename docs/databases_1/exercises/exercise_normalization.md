@@ -15,10 +15,10 @@ Tabellen nedenfor indeholder oplysninger fra revisionsfirmaet "Tørre Tal" omkri
 Der er selvfølgelig en række problemer med den form data forefindes i. Data er bestemt ikke på hverken 1., 2. eller 3. normalform. Det er heller ikke klart hvordan data skal forstås. Du får nok brug for at stille nogle spørgsmål for at få afklaret nogle af sammenhængene. F.eks. har revisionsfirmaet en række kunder, som også har kunder. Det er jo noget rod rent begrebsmæssigt. Så vi vil anbefale, at man ser bort fra selve revisionsfirmaet, og tænker modellen som en samling af firmaer, der har nogle afdelinger, som igen har et antal kunder. At firmaerne så er revisionsfirmaets kunder er så en anden snak.
 
 1. Dan jer selv et overordnet billede af klasserne ved at skitsere et domænediagram.
-2. Begynd at lave et ER diagram i Postgres og opret tabellerne via [værktøjet](https://www.pgadmin.org/docs/pgadmin4/latest/erd_tool.html).
-3. Beskriv hvad der skal gøres for at bringe data på 1NF, og lav det på modellen
-4. Beskriv hvad der skal gøres for at bringe data på 2NF, og lav det på modellen
-5. Beskriv hvad der evt. skal gøres for at bringe data på 3NF, og lav det på modellen
+2. Beskriv hvad der skal gøres for at bringe data på 1NF, og lav det på modellen
+3. Beskriv hvad der skal gøres for at bringe data på 2NF, og lav det på modellen
+4. Beskriv hvad der evt. skal gøres for at bringe data på 3NF, og lav det på modellen
+5. Begynd at lave et ER diagram i Postgres og opret tabellerne via [værktøjet](https://www.pgadmin.org/docs/pgadmin4/latest/erd_tool.html).
 6. Fyld lidt data i tabellerne
 7. Lav et par simple sql forespørgsler:
    1. Vis alle virksomhederne i databasen (vis kun navnet på virksomhederne)
