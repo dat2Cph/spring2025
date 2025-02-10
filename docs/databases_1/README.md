@@ -33,13 +33,12 @@ Du skal have set to videoer:
 - [Learn SQL Joins](https://www.youtube.com/watch?v=nivyaiCeWjs). 
 
 Du skal genopfriske SQL:
-- [Strukturen i SQL queries][./docs/sqlintro.pfd]
+- [Strukturen i SQL queries](./docs/sqlintro.pfd)
 - [SQL tutorial](https://www.w3schools.com/sql/default.asp). Du skal kigge på de første sider: SQL HOME, SQL Intro, SQL Syntax, SQL Select og SQL Where. Læs teksten og lav de små Try It Yourself øvelser. Du er velkommen til at gå videre med flere funktioner, men vi kommer også til at øve det i timen 
 - [DDL, DML og queries](./docs/ddl_dml_queries.md). Du behøver ikke læse alt på Postgres dokumentation, som der linkes til, men du skal have en forståelse for hvad DDL, DML og queries er
 
 ### Andre ressourcer (som er nyttige men ikke obligatoriske)
 - [Postgres' dokumentation](https://www.postgresql.org/docs/16/index.html)
-- [Slides]
 - [Introduktion til databaser (Jon)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0f2388a3-48a8-4a27-9ff8-ae4d00d94ad5)
 
 ### Program
@@ -51,7 +50,7 @@ Du skal genopfriske SQL:
 
 ## Onsdag
 Codelab øvelser
-- [Academy opgaver](./exercises/exercise_academy.pdf)
+- [Opgave: Academy](./exercises/exercise_academy.pdf)
 - [Academy tabeller](./exercises/academy_tabels.pdf) (skal du bruge for at kunne løse opgaverne)
 - [Academy vejledende løsninger](./exercises/solutions_academy.pdf)
 - [Opgave: Classic Cars joins](./exercises/exercise_classicmodels.md). Kun opgaven SQL joins.
@@ -71,9 +70,9 @@ Og læst følgende artikler
 - Hvorfor normalisering?
 - ERD og relationer
 - ERD i Postgres
-- [Opgave: ERD og normalisering](./exercise_normalization.md). Vi starter med opgave 1-4.
+- [Opgave: ERD og normalisering](./exercises/exercise_normalization.md). Vi starter med opgave 1-4.
 - Diskussion af opgave
-- [Opgave: implementer ERD i Postgres](./exercise_normalization.md). Opgave 5-7.
+- [Opgave: implementer ERD i Postgres](./exercises/exercise_normalization.md). Opgave 5-7.
 - Opsamling på opgave + diverse. 
 
 ### Andre ressourcer

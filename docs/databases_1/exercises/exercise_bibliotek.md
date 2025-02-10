@@ -52,4 +52,4 @@ Her er nogle punkter, som kan hjælpe dig på vej:
 Her er vejledende løsninger:
 
 - [Bibliotek (opret DB)](./solutions_bibliotek_create_db.sql)
-- [Bibliotek (sql queries)](./solutions_bibliotekqueries.sql)
+- [Bibliotek (sql queries)](./solutions_bibliotek_queries.sql)
