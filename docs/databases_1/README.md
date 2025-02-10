@@ -47,6 +47,7 @@ Du skal genopfriske SQL:
 - Guidet tour i PgAdmin
 - DDL, DML, CRUD, nøgler og hvad det hedder alt sammen
 - [Opgave: SQL basis][./exercises/classicmodelsbasis.md)]
+- [Vejledende løsninger]
 - Introduktion til joins
 - [Opgave: Simple joins][]
 

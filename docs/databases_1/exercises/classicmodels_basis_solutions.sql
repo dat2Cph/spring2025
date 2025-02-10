@@ -1,3 +1,8 @@
+/* Opgave 3 */
+SELECT customername 
+FROM customers 
+WHERE customernumber = '409'
+
 /* Opgave 4 */
 SELECT * 
 FROM customers
