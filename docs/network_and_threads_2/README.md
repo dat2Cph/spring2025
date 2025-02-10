@@ -89,7 +89,7 @@ u
 
 ### Preparation before class
 - Watch video: 
-    - [Video 7: Singleton and Observer Design Patterns (8:30)](https://www.youtube.com/watch?v=tSZn4wkBIu8&ab_channel=Geekific)
+    - [Video 7: Singleton Design Patterns (8:30)](https://www.youtube.com/watch?v=tSZn4wkBIu8&ab_channel=Geekific)
     - [Video 8: Observer Design Pattern (3:30)](https://www.youtube.com/watch?v=7B1DFe0VBxI&ab_channel=ByteVigor)
     - [Video 9: Chat Server Architecture (39:00)](https://www.youtube.com/watch?v=hIc_9Wbn704&ab_channel=NeuralNine)
 - Read material
