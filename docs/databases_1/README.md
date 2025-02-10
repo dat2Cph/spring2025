@@ -17,8 +17,8 @@ permalink: /databases-1/
 [Læringsmål for uge 1](./laeringsmaal.md#uge-1-normalisering-og-sql)
 
 ## Mandag: 
-Review af sidste uge
-Online hjælp til installation af Docker og Postgres kl. 13-14 
+- Review af sidste uge
+- Online hjælp til installation af Docker og Postgres kl. 13-14 i Signes zoomrum.
 
 ## Tirsdag: Postgres og SQL
 ### Forberedelse
@@ -81,4 +81,3 @@ Og læst følgende artikler
 
 ## Fredag
 - [Fredagsopgave](./exercises/exercise_bibliotek.md)
-
