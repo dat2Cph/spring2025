@@ -48,7 +48,7 @@ public class ChatServer {
     }
 }
 ```
-- The above insures:
+- The above ensures:
 - **volatile Keyword**:
     - The volatile keyword ensures that the instance variable is read from main memory and not from a thread's local cache. This guarantees visibility of changes to instance across threads.
 - **Double-Checked Locking**:
@@ -89,8 +89,9 @@ u
 
 ### Preparation before class
 - Watch video: 
-    - Video 7: Singleton and Observer Design Patterns
-    - Video 8: Chat Server Architecture
+    - [Video 7: Singleton Design Patterns (8:30)](https://www.youtube.com/watch?v=tSZn4wkBIu8&ab_channel=Geekific)
+    - [Video 8: Observer Design Pattern (3:30)](https://www.youtube.com/watch?v=7B1DFe0VBxI&ab_channel=ByteVigor)
+    - [Video 9: Chat Server Architecture (39:00)](https://www.youtube.com/watch?v=hIc_9Wbn704&ab_channel=NeuralNine)
 - Read material
     - [Design Patterns](https://www.javatpoint.com/design-patterns-in-java)
 
