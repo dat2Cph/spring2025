@@ -162,11 +162,12 @@ while (true) {
     Socket clientSocket = serverSocket.accept();
     threadPool.execute(new ClientHandler(clientSocket));
 }
-
 ```
+
 - Design Pattern: **Strategy Pattern**
     - Implement a command handler using the Strategy pattern.
     - Example: When a client sends a message starting with "/", the server uses a CommandStrategy to handle it.
+
 ```java
 public interface Command {
     void execute(String[] args, ClientHandler handler);
