@@ -124,6 +124,7 @@ new Thread(() -> {
 
 - 
 ## Week 2 - Wednesday - Codelab: Building a Chat Server
+- [Video of yesterdays class](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54bca0c7-22c6-4244-9a0b-b28100b34ef9)
 - Building the Chat Server
     - Task 1: Modify the multithreaded server to maintain a list of active clients.
     - Task 2: Implement message broadcasting (server relays messages to all clients), so that when a new client joins, all other clients receive a notification.
