@@ -29,7 +29,9 @@ public class ChatServer {
     }
 }
 ```
+
 OR (using double-checked locking pattern)
+
 ```java
 public class ChatServer {
     private static volatile ChatServer instance; // Use 'volatile' to ensure visibility of changes across threads.
@@ -48,6 +50,7 @@ public class ChatServer {
     }
 }
 ```
+
 - The above ensures:
 - **volatile Keyword**:
     - The volatile keyword ensures that the instance variable is read from main memory and not from a thread's local cache. This guarantees visibility of changes to instance across threads.
