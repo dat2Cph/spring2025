@@ -37,9 +37,9 @@ public class ChatServer {
     private ChatServer() {}  // Private constructor
 
     public static ChatServer getInstance() {
-        if (instance == null) { // First check (no locking)
+        if (instance == null) { // First check (no locking) to avoid synchronization overhead
             synchronized (ChatServer.class) { // Lock only the first time
-                if (instance == null) { // Second check inside synchronized block
+                if (instance == null) { // Second check inside synchronized block, in case another thread initialized the instance
                     instance = new ChatServer();
                 }
             }
@@ -54,8 +54,7 @@ public class ChatServer {
 - **Double-Checked Locking**:
     - The first if (instance == null) avoids synchronization overhead for subsequent calls once the instance is initialized.
     - The second check inside the synchronized block ensures that only one thread initializes the instance, even when multiple threads access it concurrently during the initialization phase.
-Benefits:
-    - Thread-safe.
+    - Benefit: Thread-safe.
     - Efficient: Synchronization occurs only during the first initialization.
 
 - Design Pattern: **Observer**
@@ -66,7 +65,7 @@ Benefits:
 
 ```java
 public interface ClientObserver {
-    void update(String message);
+    void notify(String message);
 }
 
 public class ChatServer {
@@ -74,12 +73,12 @@ public class ChatServer {
     public void addClient(ClientObserver client) { clients.add(client); }
     public void broadcast(String message) {
         for (ClientObserver client : clients) {
-            client.update(message);
+            client.notify(message);
         }
     }
 }
 ```
-u
+
 - Thread Safety
     - Use synchronized blocks or CopyOnWriteArrayList for thread-safe operations.
 
@@ -96,16 +95,47 @@ u
     - [Design Patterns](https://www.javatpoint.com/design-patterns-in-java)
 
 ### Exercises
-- Exercise 3: TBD
+1. Implement a way to store and set a name of the client in each client handler
+2. Maintain a list of active clients in the server
+3. Make the code to handle a client adding her name and store it in the server.
+    - All messages from the server to the client, should subsequently include the name of the client. Like: `ClientName: Message`
+4. Implement a way to send a message to all clients when a new client joins the server.
+5. Implement a way to send private messages to a specific client at random time intervals.
+- Hint: Use the `Random` class to generate
+    - a random number of milliseconds to wait before sending the message
+    - a random client to send the message to
+    - a random message to send
+```java
+Random random = new Random();
+int randomDelay = random.nextInt(5000); // Random number between 0 and 5000
+// start a new thread that waits for the randomDelay before sending the message
+new Thread(() -> {
+    try {
+        Thread.sleep(randomDelay);
+        // send the message
+    } catch (InterruptedException e) {
+        e.printStackTrace();
+    }
+}).start();
+```
 
 - 
-## Week 2 - Wednesday - Codelab: Building Chat Server
+## Week 2 - Wednesday - Codelab: Building a Chat Server
 - Building the Chat Server
     - Task 1: Modify the multithreaded server to maintain a list of active clients.
-    - Task 2: Implement message broadcasting (server relays messages to all clients).
-- Optional Tasks:
-    - Task 3: Add client nicknames.
-    - Task 4: Allow private messages (e.g., /msg <nickname> <message>).
+    - Task 2: Implement message broadcasting (server relays messages to all clients), so that when a new client joins, all other clients receive a notification.
+    - Task 3: Implement the code so that, a client can send a message to the server and the server relays it to all other clients.
+    - Task 4: Implement a simple text-based protocol for chat messages. ALA:
+
+```plaintext
+#JOIN <nickname> - A client joins the chat with a nickname.
+#MESSAGE <message> - A client sends a message to all other clients.
+#LEAVE - A client leaves the chat.
+#PRIVATE <nickname> <message>   - A client sends a private message to another client.
+```
+
+   - Task 5: Allow private messages (e.g., #MESSAGE <nickname> <message>), to that a client can send a message to a specific client.
+   - Task 6: Implement a graceful shutdown mechanism for the server, so that when the server is stopped, all clients are notified and disconnected.
 
 ## Week 2 - Thursday: ThreadPools and Strategy Pattern
 - Advanced Topics and Best Practices
