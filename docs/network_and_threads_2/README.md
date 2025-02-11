@@ -125,10 +125,11 @@ new Thread(() -> {
 - 
 ## Week 2 - Wednesday - Codelab: Building a Chat Server
 - [Video of yesterdays class](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54bca0c7-22c6-4244-9a0b-b28100b34ef9)
+### Tasks
 - Building the Chat Server
     - Task 1: Modify the multithreaded server to maintain a list of active clients.
     - Task 2: Implement message broadcasting (server relays messages to all clients), so that when a new client joins, all other clients receive a notification.
-    - Task 3: Implement the code so that, a client can send a message to the server and the server relays it to all other clients.
+    - Task 3: Enable a client to set a name when joining.
     - Task 4: Implement a simple text-based protocol for chat messages. ALA:
 
 ```plaintext
@@ -136,10 +137,18 @@ new Thread(() -> {
 #MESSAGE <message> - A client sends a message to all other clients.
 #LEAVE - A client leaves the chat.
 #PRIVATE <nickname> <message>   - A client sends a private message to another client.
+#GETLIST - A client requests a list of all active clients.
+#PRIVATESUBLIST "nickname1,nickname2,nickname3" <message> - A client sends a private message to a list of clients.
+#HELP - A client requests a list of available commands.
+#STOPSERVER - A client requests to stop the server (all clients are first notified, then disconnected, removed from the list and all closable resources are closed).
 ```
 
-   - Task 5: Allow private messages (e.g., #MESSAGE <nickname> <message>), to that a client can send a message to a specific client.
-   - Task 6: Implement a graceful shutdown mechanism for the server, so that when the server is stopped, all clients are notified and disconnected.
+- Automatic moderation
+    - Task 5: Implement a simple automatic moderation system that filters out messages containing inappropriate words (replace it with stars like this: ******).
+    - Task 6: Implement a command to add a word to the list of inappropriate words.
+    - Task 7: Implement a command to remove a word from the list of inappropriate words.
+    - Task 8: Implement a command to list all inappropriate words.
+    - Task 9: Implement a mechanism to ban a client after having sent 3 messages containing inappropriate words.
 
 ## Week 2 - Thursday: ThreadPools and Strategy Pattern
 - Advanced Topics and Best Practices
@@ -195,12 +204,15 @@ public class CommandProcessor {
 
 ### Preparation before class
 - Watch video: 
-    - Video 9: Thread Pools and Strategy Pattern
+    - [Video 10: Thread Pools (20:00)](https://www.youtube.com/watch?v=Nb85yJ1fPXM&ab_channel=JakobJenkov)
+    - [Video 11: Strategy Pattern (2:20)](https://www.youtube.com/watch?v=E9-4uaoncVY&ab_channel=JonoWilliams)
+    - [Video 12: Strategy Pattern in java (7:30)](https://www.youtube.com/watch?v=E9-4uaoncVY&ab_channel=JonoWilliams)
   
-- Read material
-
 ### Exercises
-- Exercise 4: TBD
+- Implement a thread pool for handling client connections.
+- Refactor the server to use the Strategy pattern for handling commands.
+- Implement a command handler that processes messages starting with "/".
+
 
 ## Week 2 - Friday: Strategy Pattern, Factory Pattern and Decorator Pattern
 - Final Assignment: Complete the Chat Server
