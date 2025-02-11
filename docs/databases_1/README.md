@@ -17,8 +17,8 @@ permalink: /databases-1/
 [Læringsmål for uge 1](./laeringsmaal.md#uge-1-normalisering-og-sql)
 
 ## Mandag: 
-Review af sidste uge
-Online hjælp til installation af Docker og Postgres kl. 13-14 
+- Review af sidste uge
+- Online hjælp til installation af Docker og Postgres kl. 13-14 i Signes zoomrum.
 
 ## Tirsdag: Postgres og SQL
 ### Forberedelse
@@ -30,12 +30,12 @@ Du skal installere lidt software: Docker, Postgres og PgAdmin. Det er vigtigt, a
 
 Du skal have set to videoer:
 - [Database keys made easy](https://www.youtube.com/watch?v=8wUUMOKAK-c)
-- [Learn SQL Joins](https://www.youtube.com/watch?v=nivyaiCeWjs). Du behøver kun se de første 9:10 minutter om innner join.
+- [Learn SQL Joins](https://www.youtube.com/watch?v=nivyaiCeWjs). 
 
 Du skal genopfriske SQL:
-- [Strukturen i SQL queries][./exercises/docs/sqlintro.pfd]
-- [SQL tutorial](https://www.w3schools.com/sql/default.asp). Du skal kigge på de første sider: SQL HOME, SQL Intro, SQL Syntax, SQL Select og SQL Where. Læs teksten og lav de små Try It Yourself øvelser. Du er velkommen til at gå videre med flere funktioner, men vi kommer også til at øve det i timen. 
-- [DDL, DML og queries](./exercises/docs/ddl_dml_queries.md). Du behøver ikke læse alt på Postgres dokumentation, som der linkes til, men du skal have en forståelse for hvad DDL, DML og queries er. 
+- [Strukturen i SQL queries]./docs/sqlintro.pdf)
+- [SQL tutorial](https://www.w3schools.com/sql/default.asp). Du skal kigge på de første sider: SQL HOME, SQL Intro, SQL Syntax, SQL Select og SQL Where. Læs teksten og lav de små Try It Yourself øvelser. Du er velkommen til at gå videre med flere funktioner, men vi kommer også til at øve det i timen 
+- [DDL, DML og queries](./docs/ddl_dml_queries.md). Du behøver ikke læse alt på Postgres dokumentation, som der linkes til, men du skal have en forståelse for hvad DDL, DML og queries er
 
 ### Andre ressourcer (som er nyttige men ikke obligatoriske)
 - [Postgres' dokumentation](https://www.postgresql.org/docs/16/index.html)
@@ -46,34 +46,38 @@ Du skal genopfriske SQL:
 - Tjek ind. Har alle Docker, Postgres og PgAdmin oppe at køre?
 - Guidet tour i PgAdmin
 - DDL, DML, CRUD, nøgler og hvad det hedder alt sammen
-- [Opgave: SQL basis][./exercises/classicmodelsbasis.md)]
-- [Vejledende løsninger]
+- [Opgave: SQL basis](./exercises/exercise_classicmodels.md). Kun opgaven SQL basis 
 - Introduktion til joins
-- [Opgave: Simple joins][]
 
 ## Onsdag
 Codelab øvelser
-- Joins på papir
-- [Opgave: Classic Cars joins]
+- [Academy opgaver](./exercises/exercise_academy.pdf)
+- [Academy tabeller](./exercises/academy_tabels.pdf) (skal du bruge for at kunne løse opgaverne)
+- [Academy vejledende løsninger](./exercises/solutions_academy.pdf)
+- [Opgave: Classic Cars joins](./exercises/exercise_classicmodels.md). Kun opgaven SQL joins.
+- [Views](./exercises/exercise_views.pdf)
 
 ## Torsdag
 ### Forberedelse
 Du skal have set de to videoer
 - [Entity Relationship Diagrams](https://www.youtube.com/watch?v=LowjDtiNlk4)
-- [Learn Database Normalization](https://www.youtube.com/watch?v=GFQaEYEc8_8). Du behøver ikke se delen om 4NF og 5NF.
+- [Learn Database Normalization](https://www.youtube.com/watch?v=GFQaEYEc8_8). Du behøver ikke se delen om 4NF og 5NF
 
-Og læst følgende artikel
-- [Normalisering](./exercises/doc/Normalisering.pdf)
+Og læst følgende artikler
+- [Normalisering](./docs/Normalisering.pdf)
+- [Crow's Foot Notation](https://www.freecodecamp.org/news/crows-foot-notation-relationship-symbols-and-how-to-read-diagrams/)
 
 ### Program
 - Hvorfor normalisering?
-- [Opgave: ERD og normalisering]
+- ERD og relationer
+- ERD i Postgres
+- [Opgave: ERD og normalisering](./exercise_normalization.md). Vi starter med opgave 1-4.
 - Diskussion af opgave
-- [Opgave: implementer ERD i Postgres]
+- [Opgave: implementer ERD i Postgres](./exercise_normalization.md). Opgave 5-7.
+- Opsamling på opgave + diverse. 
 
 ### Andre ressourcer
-- [Video om normalisering]
+- [Video om normalisering (Jon)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=28d94c37-4010-43e9-aa6d-ae4d00da0670&start=1412). I videoen bruges MySQL. 
 
 ## Fredag
 - [Fredagsopgave](./exercises/exercise_bibliotek.md)
-
