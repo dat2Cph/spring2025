@@ -1,3 +1,10 @@
+/* Opgave 1 */
+SELECT * FROM employees
+WHERE firstname = 'Leslie'
+
+/* Opgave 2 */
+SELECT * FROM offices
+
 /* Opgave 3 */
 SELECT customername 
 FROM customers 

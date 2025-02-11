@@ -11,7 +11,7 @@ permalink: /databases-1/exercises/exercise_classicmodelsbasis/
 ## Forberedelse
 
 - Du skal oprette en ny database kaldet classicmodels i din Postgres.
-- Dernæst skal du hente scriptet [ClassicModels][./ClassicModels.sql] og køre det i PgAdmin, så du får oprettet tabeller med data i din database.
+- Dernæst skal du hente scriptet [ClassicModels](./ClassicModels.sql) og køre det i PgAdmin, så du får oprettet tabeller med data i din database.
 
 ## SQL basis
 - Find opgaven [SQL basis (classic models)](https://cphbusiness.mrooms.net/mod/lesson/view.php?id=774934) på moodle. 
