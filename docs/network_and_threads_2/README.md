@@ -134,7 +134,7 @@ new Thread(() -> {
 
 ```plaintext
 #JOIN <nickname> - A client joins the chat with a nickname.
-#MESSAGE <message> - A client sends a message to all other clients.
+#MESSAGE <message> - A client sends a message to all other clients, not including the sender themselves!
 #LEAVE - A client leaves the chat.
 #PRIVATE <nickname> <message>   - A client sends a private message to another client.
 #GETLIST - A client requests a list of all active clients.
@@ -174,8 +174,12 @@ while (true) {
 ```
 
 - Design Pattern: **Strategy Pattern**
-    - Implement a command handler using the Strategy pattern.
-    - Example: When a client sends a message starting with "/", the server uses a CommandStrategy to handle it.
+- The Strategy Pattern is useful when we want to encapsulate behaviors (strategies) and make them interchangeable at runtime. In our chat server, one area that could benefit from this pattern is message processing, where different commands (#JOIN, #MESSAGE, #PRIVATE, #LEAVE, etc.) are handled in a big if block.
+- By applying the Strategy Pattern, we can:
+    - Encapsulate each message-handling strategy separately.
+    - Avoid large if-else blocks inside the run() method.
+    - Make it easier to add new commands without modifying existing code (Open-Close principle in `SOLID`).
+    - Example: When a client sends a message starting with "#", the server uses a CommandStrategy to handle it.
 
 ```java
 public interface Command {
@@ -212,14 +216,46 @@ public class CommandProcessor {
 - Implement a thread pool for handling client connections.
 - Refactor the server to use the Strategy pattern for handling commands.
 - Implement a command handler that processes messages starting with "/".
+- Look at the decorator pattern for adding e.g. colored text to the messages.
 
 
 ## Week 2 - Friday: Strategy Pattern, Factory Pattern and Decorator Pattern
 - Final Assignment: Complete the Chat Server
-    - Add finishing touches to the server (e.g., nicknames, private messages).
+    - Add finishing touches to the server: finish any tasks from the codelab exercise, that was not done yet.
+    - 
     - Implement a **Strategy pattern** for handling commands.
     - Use the **Factory pattern** to create different types of commands.
     - Add a **Decorator pattern** for additional features (e.g., colored text).
+
+```java
+System.out.println("\u001B[31mThis is red text\u001B[0m");
+System.out.println("\u001B[32mThis is green text\u001B[0m");
+System.out.println("\u001B[34mThis is blue text\u001B[0m");
+```
+    
 - Deliverables:
     - Fully working chat server and client.
     - Test cases to demonstrate features.
+
+<table>
+    <tr>
+        <th>Color</th>
+        <th>ANSI Code</th>
+    </tr>
+    <tr><td style="background-color: black; color: white;">Black</td><td>\u001B[30m</td></tr>
+    <tr><td style="background-color: red; color: white;">Red</td><td>\u001B[31m</td></tr>
+    <tr><td style="background-color: green; color: white;">Green</td><td>\u001B[32m</td></tr>
+    <tr><td style="background-color: yellow; color: black;">Yellow</td><td>\u001B[33m</td></tr>
+    <tr><td style="background-color: blue; color: white;">Blue</td><td>\u001B[34m</td></tr>
+    <tr><td style="background-color: magenta; color: white;">Magenta</td><td>\u001B[35m</td></tr>
+    <tr><td style="background-color: cyan; color: black;">Cyan</td><td>\u001B[36m</td></tr>
+    <tr><td style="background-color: white; color: black;">White</td><td>\u001B[37m</td></tr>
+    <tr><td style="background-color: gray; color: black;">Bright Black (Gray)</td><td>\u001B[90m</td></tr>
+    <tr><td style="background-color: #ff5555; color: white;">Bright Red</td><td>\u001B[91m</td></tr>
+    <tr><td style="background-color: #55ff55; color: black;">Bright Green</td><td>\u001B[92m</td></tr>
+    <tr><td style="background-color: #ffff55; color: black;">Bright Yellow</td><td>\u001B[93m</td></tr>
+    <tr><td style="background-color: #5555ff; color: white;">Bright Blue</td><td>\u001B[94m</td></tr>
+    <tr><td style="background-color: #ff55ff; color: white;">Bright Magenta</td><td>\u001B[95m</td></tr>
+    <tr><td style="background-color: #55ffff; color: black;">Bright Cyan</td><td>\u001B[96m</td></tr>
+    <tr><td style="background-color: #ffffff; color: black;">Bright White</td><td>\u001B[97m</td></tr>
+</table>
