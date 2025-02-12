@@ -150,7 +150,7 @@ new Thread(() -> {
     - Task 8: Implement a command to list all inappropriate words.
     - Task 9: Implement a mechanism to ban a client after having sent 3 messages containing inappropriate words.
 
-## Week 2 - Thursday: ThreadPools and Strategy Pattern
+## Week 2 - Thursday: ThreadPools and Design Patterns: Strategy, Factory and Decorator
 - Advanced Topics and Best Practices
     - Error handling: What happens when a client disconnects?
     - Logging and debugging tips for network applications.
@@ -182,35 +182,81 @@ while (true) {
     - Example: When a client sends a message starting with "#", the server uses a CommandStrategy to handle it.
 
 ```java
-public interface Command {
+public interface Strategy {
     void execute(String[] args, ClientHandler handler);
 }
 
-public class BroadcastCommand implements Command {
+public class BroadcastStrategy implements Strategy {
     @Override
     public void execute(String[] args, ClientHandler handler) {
         handler.getServer().broadcast(String.join(" ", args));
     }
 }
 
-public class CommandProcessor {
-    private Map<String, Command> commands = new HashMap<>();
-    public void register(String commandName, Command command) {
-        commands.put(commandName, command);
+public class StrategyProcessor {
+    private Map<String, Strategy> strategies = new HashMap<>();
+    public void register(String strategyName, Strategy strategy) {
+        commands.put(strategyName, strategy);
     }
     public void process(String input, ClientHandler handler) {
         String[] parts = input.split(" ", 2);
-        Command command = commands.get(parts[0]);
-        if (command != null) command.execute(parts[1].split(" "), handler);
+        Command strategy = strategies.get(parts[0]);
+        if (strategy != null) strategy.execute(parts[1].split(" "), handler);
     }
 }
 ```
+
+- Design Pattern: **Factory Pattern**
+    - The Factory Pattern is useful when we want to create objects without exposing the instantiation logic to the client. In our chat server, we can use a StrategyFactory to create different types of Strategies based on user input.
+    - Example: When a client sends a message starting with "#", the server uses a StrategyFactory to create a Strategy-object.
+
+```java
+
+public class StrategyFactory {
+    private Map<String, Strategy> strategies = new HashMap<>();
+
+    public void register(String strategyName, Strategy strategy) {
+        strategies.put(strategyName, strategy);
+    }
+
+    public Strategy getStrategy(String strategyName) {
+        return strategies.get(strategyName);
+    }
+}
+```
+
+- Design Pattern: **Decorator Pattern**
+    - The Decorator Pattern is useful when we want to add new functionality to an object without changing its structure. In our chat server, we can use a TextDecorator to add features like colored text to messages.
+    - Example: When a client sends a message, the server uses a TextDecorator to add color to the text before broadcasting it to other clients.
+
+```java
+public interface TextDecorator {
+    String decorate(String text);
+}
+
+public class ColorDecorator implements TextDecorator {
+    private String color;
+    public ColorDecorator(String color) {
+        this.color = color;
+    }
+    @Override
+    public String decorate(String text) {
+        return color + text + "\u001B[0m";
+    }
+}
+```
+
 
 ### Preparation before class
 - Watch video: 
     - [Video 10: Thread Pools (20:00)](https://www.youtube.com/watch?v=Nb85yJ1fPXM&ab_channel=JakobJenkov)
     - [Video 11: Strategy Pattern (2:20)](https://www.youtube.com/watch?v=E9-4uaoncVY&ab_channel=JonoWilliams)
     - [Video 12: Strategy Pattern in java (7:30)](https://www.youtube.com/watch?v=E9-4uaoncVY&ab_channel=JonoWilliams)
+
+- Read material
+    - [Strategy Pattern with Java](https://medium.com/@akshatsharma0610/strategy-design-pattern-in-java-6ee96f87d807)
+    - [Factory Pattern with Java](https://www.tutorialspoint.com/design_pattern/factory_pattern.htm)
+    - [Decorator Pattern with Java](https://www.tutorialspoint.com/design_pattern/decorator_pattern.htm)
   
 ### Exercises
 - Implement a thread pool for handling client connections.
