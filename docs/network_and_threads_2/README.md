@@ -268,11 +268,10 @@ public class ColorDecorator implements TextDecorator {
 ## Week 2 - Friday: Strategy Pattern, Factory Pattern and Decorator Pattern
 - Final Assignment: Complete the Chat Server
     - Add finishing touches to the server: finish any tasks from the codelab exercise, that was not done yet.
-    - 
-    - Implement a **Strategy pattern** for handling commands.
-    - Use the **Factory pattern** to create different types of commands.
+    - Also finish refactoring the ClientHandler to use the Strategy pattern and Factory pattern for handling commands (like we did in class)
     - Add a **Decorator pattern** for additional features (e.g., colored text).
 
+- HINT 1: To add colored text to the console, you can use ANSI escape codes. For example, to print red text:
 ```java
 System.out.println("\u001B[31mThis is red text\u001B[0m");
 System.out.println("\u001B[32mThis is green text\u001B[0m");
@@ -305,3 +304,25 @@ System.out.println("\u001B[34mThis is blue text\u001B[0m");
     <tr><td style="background-color: #55ffff; color: black;">Bright Cyan</td><td>\u001B[96m</td></tr>
     <tr><td style="background-color: #ffffff; color: black;">Bright White</td><td>\u001B[97m</td></tr>
 </table>
+
+- HINT 2: 
+- to use a decorator pattern for adding colored text to the messages, you can create a decorator class that adds the color to the text before sending it to the client.
+- Example:
+```java
+public class ColorDecorator implements ITextDecorator {
+    private String color;
+    public ColorDecorator(String color) {
+        this.color = color;
+    }
+    @Override
+    public String decorate(String text) {
+        return color + text + "\u001B[0m";
+    }
+}
+```
+and to use it:
+```java
+String message = "This is a message";
+String coloredMessage = new ColorDecorator("\u001B[31m").decorate(message);
+```
+- Add a new Strategy for handling colored messages and use the decorator to add the color to the message when strategy = "#COLORMESSAGE"
