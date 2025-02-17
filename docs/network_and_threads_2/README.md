@@ -266,10 +266,16 @@ public class ColorDecorator implements TextDecorator {
 
 
 ## Week 2 - Friday: Strategy Pattern, Factory Pattern and Decorator Pattern
-- Final Assignment: Complete the Chat Server
+- Task 1: Final Assignment: Complete the Chat Server
     - Add finishing touches to the server: finish any tasks from the codelab exercise, that was not done yet.
     - Also finish refactoring the ClientHandler to use the Strategy pattern and Factory pattern for handling commands (like we did in class)
-    - Add a **Decorator pattern** for additional features (e.g., colored text).
+- Task 2: Add a **Decorator pattern** for additional features (e.g., colored text).
+    1. Implement a way to add colored text to messages.
+    2. Add a new Strategy for handling colored messages.
+    3. Let the client save settings so all her messages are colored.
+    4. Let the client save settings so the client name always appears colored by a specific color.
+    5. Implement a way to add a timestamp to messages.
+
 
 - HINT 1: To add colored text to the console, you can use ANSI escape codes. For example, to print red text:
 ```java
