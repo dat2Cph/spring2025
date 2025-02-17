@@ -331,4 +331,3 @@ and to use it:
 String message = "This is a message";
 String coloredMessage = new ColorDecorator("\u001B[31m").decorate(message);
 ```
-- Add a new Strategy for handling colored messages and use the decorator to add the color to the message when strategy = "#COLORMESSAGE"
