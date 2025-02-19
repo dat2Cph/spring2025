@@ -92,6 +92,7 @@ Og læst følgende artikler
 - Diskussion af opgave.
 - [Opgave: implementer ERD i Postgres](./exercises/exercise_normalization.md). Opgave 5-7.
 - Opsamling på opgave + diverse.
+
 [Slides](./docs/Datamodellering.pdf)
 
 ### Andre ressourcer
