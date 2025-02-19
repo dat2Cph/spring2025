@@ -44,7 +44,7 @@ Der er en gennemgang af hvordan opgaven kan løses i [denne video](https://cphbu
 
 ## Torsdag
 ### Forberedelse
-Hvis du ikke har lavet biblioteksssystemet fra i tirsdag færdigt, så gør det nu. 
+Hvis du ikke har lavet biblioteksssystemet fra i tirsdags færdigt, så gør det nu. 
 
 ### Program
 Vi laver integrationstests til det system, vi byggede i tirsdags. 
