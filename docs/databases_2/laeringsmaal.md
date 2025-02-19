@@ -9,34 +9,29 @@ permalink: /databases-2/learningobjectives/
 
 # Læringsmål for databaser
 
-## DB uge 2: Java, JDBC og integrationstest
+## DB uge 2: JDBC, mapper og integrationstest
 
-Efter den anden uge er det meningen at du kan:
+Efter den anden uge vil du kunne
 
-1. oprette og benytte en Connection / forbindelse til Postgres via JDBC
+1. oprette og benytte en Connection / forbindelse til Postgres vha JDBC.
 
-2. gøre rede for de mest anvendte strategier for synkronisering af data mellem Java og databasen
-   - Hvilke datatyper- og strukturer bruger vi i Java til at holde data?
-   - Hvad svarer de til i Postgres?
-   - Hvordan "mapper" vi disse data fra Java til Postgres og den anden vej?
-   - Hvordan sørger vi for at data i Java og Postgres er de samme?
-
-3. implementerere CRUD operationer på en database via JDBC via en datamapper.
+2. anvende CRUD operationer på en database vha JDBC.
    - "C" = "Create" = insert statementments i SQL
    - "R" = "Read" = select statements i SQL
    - "U" = "Update" = update statements i SQL
    - "D" = "Delete" = delte statements i SQL
 
-4. håndtere besværlige datatyper i Java og Postgres (fx dato og tid)
-   - Opret attributter i Java, der indeholder en dato, et tidspunkt (klokkeslet) og en der indeholder begge. F.eks. som LocalDate, LocalTime og LocalDateTime.
-   - Vis hvordan man gemmer attributterne i en tabel i Postgres
-   - Vis hvordan man henter de tilsvarende felter fra en række i Postgres og gemmer dem i Java
+3. bruge de to design patterns Mapper og DTO og forklare deres rolle i et design.
 
-5. håndtere autogenerede identiteter ved inserts
-   - Forklar hvorfor vi nogle gange kan have behov for at få et `id` tilbage fra en netop oprettet række i Postgres. Altså når id'et er genereret af Postgres.
-   - Hvordan gør vi i Java? Hint: brug af Statement.RETURN_GENERATED_KEYS og getGeneratedKeys().
+4. håndtere autogenerede nøgler ved inserts, herunder
+   - forklare hvorfor vi nogle gange kan have behov for at få et `id` tilbage fra en netop oprettet række i Postgres. 
+   - vise hvordan man gør det i Java. Hint: brug af Statement.RETURN_GENERATED_KEYS og getGeneratedKeys().
 
-6. indsætte data i parent og child tables ved brug af fremmednøgler
-   - Det betyder, at vi f.eks. i `sportsclub` databasen opretter et nyt medlem, og i samme ombæring tilmelder medlemmet nogle hold ved at indsætte nogle rækker i `registration` tabellen.
+5. opretholde relationer fra Javaprogrammet i din database ved brug af fremmednøgler ved fx
+   - at du i `sportsclub` databasen opretter et nyt medlem, og i samme ombæring tilmelder medlemmet nogle hold ved at indsætte nogle rækker i `registration` tabellen.
 
-7. opsætte og gennemføre integrationstest af databaseapplikationer
+6. forklare hvorfor og hvornår vi skal bruge integrationstests.
+
+7. opsætte og gennemføre integrationstest af databaseapplikationer.
+
+
