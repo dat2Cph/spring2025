@@ -8,23 +8,20 @@ permalink: /databases-2/
 ---
 
 
-# Databaser
+# Databaser på 2. semester
 
-## Uge 2: JDBC, mapper og integrationstest
+## Uge 1: Normalisering og sql
 
-## Læringsmål
-- [Læringsmål for uge 2](./laeringsmaal.md#uge-2-java-jdbc-og-integrationstest).
+- [Læringsmål for uge 1](../databases_1/laeringsmaal.md#uge-1-normalisering-og-sql)
+- [Normalisering og de 3 normalformer - opgave](../databases_1/exercises/exercise_normalization.md)
+- [Artikel om de 3 normalformer](../databases_1/docs/Normalisering.pdf)
+- [Sql - Classic Models - opgave](../databases_1/exercises/exercise_classicmodels.md)
+- [Sql - slides](../databases_1/docs/Slides%20SQL.pdf)
+- [SchoolHack opgave (bibliotek)](../databases_1/exercises/exercise_bibliotek.md)
 
-## Mandag
-- Review af sidste uge.
+## Uge 2: Java, JDBC og integrationstest
 
-## Tirsdag
-### Forberedelse
-- Læs om [Data Mapper design pattern](https://martinfowler.com/eaaCatalog/dataMapper.html).
-- Læs om [Data Transfer Object design pattern](https://martinfowler.com/eaaCatalog/dataTransferObject.html).
-- Lav fredagsopgave færdig.
-
-- [Java og JDBC](./jdbc/README.md)
-- [Integrationstest](./integrationstest/README.md)
-- [SchoolHack opgave (bibliotek)](./integrationstest/exercise_bibliotek_jdbc)
-
+- [Læringsmål for uge 2](./laeringsmaal.md#uge-2-java-jdbc-og-integrationstest)
+- [Java og JDBC](./exercises/jdbc.md)
+- [Integrationstest](./exercises/integrationstest.md)
+- [SchoolHack opgave (bibliotek)](./integrationstest/exercise_bibliotek.md)

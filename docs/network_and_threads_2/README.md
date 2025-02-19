@@ -29,7 +29,9 @@ public class ChatServer {
     }
 }
 ```
+
 OR (using double-checked locking pattern)
+
 ```java
 public class ChatServer {
     private static volatile ChatServer instance; // Use 'volatile' to ensure visibility of changes across threads.
@@ -48,6 +50,7 @@ public class ChatServer {
     }
 }
 ```
+
 - The above ensures:
 - **volatile Keyword**:
     - The volatile keyword ensures that the instance variable is read from main memory and not from a thread's local cache. This guarantees visibility of changes to instance across threads.
@@ -121,23 +124,33 @@ new Thread(() -> {
 
 - 
 ## Week 2 - Wednesday - Codelab: Building a Chat Server
+- [Video of yesterdays class](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=54bca0c7-22c6-4244-9a0b-b28100b34ef9)
+### Tasks
 - Building the Chat Server
     - Task 1: Modify the multithreaded server to maintain a list of active clients.
     - Task 2: Implement message broadcasting (server relays messages to all clients), so that when a new client joins, all other clients receive a notification.
-    - Task 3: Implement the code so that, a client can send a message to the server and the server relays it to all other clients.
+    - Task 3: Enable a client to set a name when joining.
     - Task 4: Implement a simple text-based protocol for chat messages. ALA:
 
 ```plaintext
 #JOIN <nickname> - A client joins the chat with a nickname.
-#MESSAGE <message> - A client sends a message to all other clients.
+#MESSAGE <message> - A client sends a message to all other clients, not including the sender themselves!
 #LEAVE - A client leaves the chat.
 #PRIVATE <nickname> <message>   - A client sends a private message to another client.
+#GETLIST - A client requests a list of all active clients.
+#PRIVATESUBLIST "nickname1,nickname2,nickname3" <message> - A client sends a private message to a list of clients.
+#HELP - A client requests a list of available commands.
+#STOPSERVER - A client requests to stop the server (all clients are first notified, then disconnected, removed from the list and all closable resources are closed).
 ```
 
-   - Task 5: Allow private messages (e.g., #MESSAGE <nickname> <message>), to that a client can send a message to a specific client.
-   - Task 6: Implement a graceful shutdown mechanism for the server, so that when the server is stopped, all clients are notified and disconnected.
+- Automatic moderation
+    - Task 5: Implement a simple automatic moderation system that filters out messages containing inappropriate words (replace it with stars like this: ******).
+    - Task 6: Implement a command to add a word to the list of inappropriate words.
+    - Task 7: Implement a command to remove a word from the list of inappropriate words.
+    - Task 8: Implement a command to list all inappropriate words.
+    - Task 9: Implement a mechanism to ban a client after having sent 3 messages containing inappropriate words.
 
-## Week 2 - Thursday: ThreadPools and Strategy Pattern
+## Week 2 - Thursday: ThreadPools and Design Patterns: Strategy, Factory and Decorator
 - Advanced Topics and Best Practices
     - Error handling: What happens when a client disconnects?
     - Logging and debugging tips for network applications.
@@ -158,51 +171,163 @@ while (true) {
     Socket clientSocket = serverSocket.accept();
     threadPool.execute(new ClientHandler(clientSocket));
 }
-
 ```
+
 - Design Pattern: **Strategy Pattern**
-    - Implement a command handler using the Strategy pattern.
-    - Example: When a client sends a message starting with "/", the server uses a CommandStrategy to handle it.
+- The Strategy Pattern is useful when we want to encapsulate behaviors (strategies) and make them interchangeable at runtime. In our chat server, one area that could benefit from this pattern is message processing, where different commands (#JOIN, #MESSAGE, #PRIVATE, #LEAVE, etc.) are handled in a big if block.
+- By applying the Strategy Pattern, we can:
+    - Encapsulate each message-handling strategy separately.
+    - Avoid large if-else blocks inside the run() method.
+    - Make it easier to add new commands without modifying existing code (Open-Close principle in `SOLID`).
+    - Example: When a client sends a message starting with "#", the server uses a CommandStrategy to handle it.
+
 ```java
-public interface Command {
+public interface Strategy {
     void execute(String[] args, ClientHandler handler);
 }
 
-public class BroadcastCommand implements Command {
+public class BroadcastStrategy implements Strategy {
     @Override
     public void execute(String[] args, ClientHandler handler) {
         handler.getServer().broadcast(String.join(" ", args));
     }
 }
 
-public class CommandProcessor {
-    private Map<String, Command> commands = new HashMap<>();
-    public void register(String commandName, Command command) {
-        commands.put(commandName, command);
+public class StrategyProcessor {
+    private Map<String, Strategy> strategies = new HashMap<>();
+    public void register(String strategyName, Strategy strategy) {
+        commands.put(strategyName, strategy);
     }
     public void process(String input, ClientHandler handler) {
         String[] parts = input.split(" ", 2);
-        Command command = commands.get(parts[0]);
-        if (command != null) command.execute(parts[1].split(" "), handler);
+        Command strategy = strategies.get(parts[0]);
+        if (strategy != null) strategy.execute(parts[1].split(" "), handler);
     }
 }
 ```
 
+- Design Pattern: **Factory Pattern**
+    - The Factory Pattern is useful when we want to create objects without exposing the instantiation logic to the client. In our chat server, we can use a StrategyFactory to create different types of Strategies based on user input.
+    - Example: When a client sends a message starting with "#", the server uses a StrategyFactory to create a Strategy-object.
+
+```java
+
+public class StrategyFactory {
+    private Map<String, Strategy> strategies = new HashMap<>();
+
+    public void register(String strategyName, Strategy strategy) {
+        strategies.put(strategyName, strategy);
+    }
+
+    public Strategy getStrategy(String strategyName) {
+        return strategies.get(strategyName);
+    }
+}
+```
+
+- Design Pattern: **Decorator Pattern**
+    - The Decorator Pattern is useful when we want to add new functionality to an object without changing its structure. In our chat server, we can use a TextDecorator to add features like colored text to messages.
+    - Example: When a client sends a message, the server uses a TextDecorator to add color to the text before broadcasting it to other clients.
+
+```java
+public interface TextDecorator {
+    String decorate(String text);
+}
+
+public class ColorDecorator implements TextDecorator {
+    private String color;
+    public ColorDecorator(String color) {
+        this.color = color;
+    }
+    @Override
+    public String decorate(String text) {
+        return color + text + "\u001B[0m";
+    }
+}
+```
+
+
 ### Preparation before class
 - Watch video: 
-    - Video 9: Thread Pools and Strategy Pattern
-  
-- Read material
+    - [Video 10: Thread Pools (20:00)](https://www.youtube.com/watch?v=Nb85yJ1fPXM&ab_channel=JakobJenkov)
+    - [Video 11: Strategy Pattern (2:20)](https://www.youtube.com/watch?v=E9-4uaoncVY&ab_channel=JonoWilliams)
+    - [Video 12: Strategy Pattern in java (7:30)](https://www.youtube.com/watch?v=E9-4uaoncVY&ab_channel=JonoWilliams)
 
+- Read material
+    - [Strategy Pattern with Java](https://medium.com/@akshatsharma0610/strategy-design-pattern-in-java-6ee96f87d807)
+    - [Factory Pattern with Java](https://www.tutorialspoint.com/design_pattern/factory_pattern.htm)
+    - [Decorator Pattern with Java](https://www.tutorialspoint.com/design_pattern/decorator_pattern.htm)
+  
 ### Exercises
-- Exercise 4: TBD
+- Implement a thread pool for handling client connections.
+- Refactor the server to use the Strategy pattern for handling commands.
+- Implement a command handler that processes messages starting with "/".
+- Look at the decorator pattern for adding e.g. colored text to the messages.
+
 
 ## Week 2 - Friday: Strategy Pattern, Factory Pattern and Decorator Pattern
-- Final Assignment: Complete the Chat Server
-    - Add finishing touches to the server (e.g., nicknames, private messages).
-    - Implement a **Strategy pattern** for handling commands.
-    - Use the **Factory pattern** to create different types of commands.
-    - Add a **Decorator pattern** for additional features (e.g., colored text).
+- Task 1: Final Assignment: Complete the Chat Server
+    - Add finishing touches to the server: finish any tasks from the codelab exercise, that was not done yet.
+    - Also finish refactoring the ClientHandler to use the Strategy pattern and Factory pattern for handling commands (like we did in class)
+- Task 2: Add a **Decorator pattern** for additional features (e.g., colored text).
+    1. Implement a way to add colored text to messages.
+    2. Add a new Strategy for handling colored messages.
+    3. Let the client save settings so all her messages are colored.
+    4. Let the client save settings so the client name always appears colored by a specific color.
+    5. Implement a way to add a timestamp to messages.
+
+
+- HINT 1: To add colored text to the console, you can use ANSI escape codes. For example, to print red text:
+```java
+System.out.println("\u001B[31mThis is red text\u001B[0m");
+System.out.println("\u001B[32mThis is green text\u001B[0m");
+System.out.println("\u001B[34mThis is blue text\u001B[0m");
+```
+    
 - Deliverables:
     - Fully working chat server and client.
     - Test cases to demonstrate features.
+
+<table>
+    <tr>
+        <th>Color</th>
+        <th>ANSI Code</th>
+    </tr>
+    <tr><td style="background-color: black; color: white;">Black</td><td>\u001B[30m</td></tr>
+    <tr><td style="background-color: red; color: white;">Red</td><td>\u001B[31m</td></tr>
+    <tr><td style="background-color: green; color: white;">Green</td><td>\u001B[32m</td></tr>
+    <tr><td style="background-color: yellow; color: black;">Yellow</td><td>\u001B[33m</td></tr>
+    <tr><td style="background-color: blue; color: white;">Blue</td><td>\u001B[34m</td></tr>
+    <tr><td style="background-color: magenta; color: white;">Magenta</td><td>\u001B[35m</td></tr>
+    <tr><td style="background-color: cyan; color: black;">Cyan</td><td>\u001B[36m</td></tr>
+    <tr><td style="background-color: white; color: black;">White</td><td>\u001B[37m</td></tr>
+    <tr><td style="background-color: gray; color: black;">Bright Black (Gray)</td><td>\u001B[90m</td></tr>
+    <tr><td style="background-color: #ff5555; color: white;">Bright Red</td><td>\u001B[91m</td></tr>
+    <tr><td style="background-color: #55ff55; color: black;">Bright Green</td><td>\u001B[92m</td></tr>
+    <tr><td style="background-color: #ffff55; color: black;">Bright Yellow</td><td>\u001B[93m</td></tr>
+    <tr><td style="background-color: #5555ff; color: white;">Bright Blue</td><td>\u001B[94m</td></tr>
+    <tr><td style="background-color: #ff55ff; color: white;">Bright Magenta</td><td>\u001B[95m</td></tr>
+    <tr><td style="background-color: #55ffff; color: black;">Bright Cyan</td><td>\u001B[96m</td></tr>
+    <tr><td style="background-color: #ffffff; color: black;">Bright White</td><td>\u001B[97m</td></tr>
+</table>
+
+- HINT 2: 
+- to use a decorator pattern for adding colored text to the messages, you can create a decorator class that adds the color to the text before sending it to the client.
+- Example:
+```java
+public class ColorDecorator implements ITextDecorator {
+    private String color;
+    public ColorDecorator(String color) {
+        this.color = color;
+    }
+    @Override
+    public String decorate(String text) {
+        return color + text + "\u001B[0m";
+    }
+}
+```
+and to use it:
+```java
+String message = "This is a message";
+String coloredMessage = new ColorDecorator("\u001B[31m").decorate(message);
+```
