@@ -46,7 +46,6 @@ Du skal genopfriske SQL:
 ### Andre ressourcer (som er nyttige men ikke obligatoriske)
 
 - [Postgres' dokumentation](https://www.postgresql.org/docs/16/index.html).
-- Slides (link følger)
 - [Introduktion til databaser (Jon)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=0f2388a3-48a8-4a27-9ff8-ae4d00d94ad5).
 
 ### Program
@@ -88,9 +87,9 @@ Og læst følgende artikler
 - Hvorfor normalisering?
 - ERD og relationer.
 - ERD i Postgres.
-- [Opgave: ERD og normalisering](./exercises/exercise_normalization.md). Vi starter med opgave 1-4.
+- [Opgave: ERD og normalisering](./exercises/exercise_normalization.md). Vi starter med opgave 1-5.
 - Diskussion af opgave.
-- [Opgave: implementer ERD i Postgres](./exercises/exercise_normalization.md). Opgave 5-7.
+- [Opgave: implementer ERD i Postgres](./exercises/exercise_normalization.md). Opgave 6-8.
 - Opsamling på opgave + diverse.
 
 [Slides](./docs/Datamodellering.pdf)
