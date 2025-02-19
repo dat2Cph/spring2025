@@ -30,7 +30,7 @@ Hvis du ikke er blevet færdig med [biblioteksopgaven](../databases_1/exercises/
 
 ### Program
 
-Vi bygger et Javaprogram sammen, som kan tilgå biblioteksdatabasen. Vi gør brug af de to design patterns Mapper og Data Transfer Objects, samt Dependency Injection.
+Vi bygger et Javaprogram sammen, som kan tilgå biblioteksdatabasen. Vi gør brug af de to design patterns Mapper og Data Transfer Objects, og taler om Dependency Injection.
 
 [Dagens opgave](./exercises/Library.md)
 
@@ -44,19 +44,15 @@ Der er en gennemgang af hvordan opgaven kan løses i [denne video](https://cphbu
 
 ## Torsdag
 ### Forberedelse
+Hvis du ikke har lavet biblioteksssystemet fra i tirsdag færdigt, så gør det nu. 
 
+### Program
 Vi laver integrationstests til det system, vi byggede i tirsdags. 
 
 [Dagens opgave](./excercises/Library_integratonstest.md)
-
 
 ## Fredag
 
 [Fredagsopgave](https://github.com/dat2Cph/dat2-sportsclub/tree/integrationtest)
 
 - Der er en gennemgang af hvordan opgaven kan løses i [denne video](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=940330d7-5824-4a97-9ea8-ae550008a069) (og i starten vises også hvordan man cloner startkoden fra git). Bemærk igen, at der bruges MySQL i videoen.
-
-
-- [Java og JDBC](./exercises/jdbc.md)
-- [Integrationstest](./exercises/integrationstest.md)
-- [SchoolHack opgave (bibliotek)](./integrationstest/exercise_bibliotek.md)
