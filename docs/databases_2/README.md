@@ -34,6 +34,9 @@ Vi bygger et Javaprogram sammen, som kan tilgå biblioteksdatabasen. Vi gør bru
 
 [Dagens opgave](./exercises/Library.md)
 
+### Ressourcer
+Her er der kodestumper, som kan hjælpe dig: [JDBC templates](../toolbox/database/jdbc_templates.md)
+
 ## Onsdag
 Codelab øvelse:
 
