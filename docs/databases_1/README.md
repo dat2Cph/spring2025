@@ -54,6 +54,7 @@ Codelab øvelser:
 - [Academy opgaver](./exercises/exercise_academy.pdf). Printet version vil være tilgængelig i Open Learning.
 - [Academy tabeller](./exercises/academy_tabels.pdf) (skal du bruge for at kunne løse opgaverne).
 - [Academy vejledende løsninger](./exercises/solutions_academy.pdf).
+- [SQL script til Academy](./exercises/academy.sql)
 - [Opgave: Classic Models joins](./exercises/exercise_classicmodels.md). Kun opgaven SQL joins.
 - [Views](./exercises/exercise_views.pdf).
 - Hvis du har mere tid, kan du få ChatGPT til at generere opgaver, der passer lige til Classic Models og dig. Tag fx udgangspunkt i [denne prompt](https://chatgpt.com/share/67ab01bc-4e50-8011-9cd3-9abbad34ff87).

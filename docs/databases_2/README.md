@@ -8,18 +8,23 @@ permalink: /databases-2/
 ---
 
 
-# Databaser på 2. semester
+# Databaser
 
-## Uge 1: Normalisering og sql
+## Uge 2: JDBC, mapper og integrationstest
 
-- [Læringsmål for uge 1](./laeringsmaal.md#uge-1-normalisering-og-sql)
-- [Normalisering og de 3 normalformer](./normalisering/README.md)
-- [Sql](./sql/README.md)
-- [SchoolHack opgave (bibliotek)](./sql/exercise_bibliotek.md)
+## Læringsmål
+- [Læringsmål for uge 2](./laeringsmaal.md#uge-2-java-jdbc-og-integrationstest).
 
-## Uge 2: Java, JDBC og integrationstest
+## Mandag
+- Review af sidste uge.
 
-- [Læringsmål for uge 2](./laeringsmaal.md#uge-2-java-jdbc-og-integrationstest)
+## Tirsdag
+### Forberedelse
+- Læs om [Data Mapper design pattern](https://martinfowler.com/eaaCatalog/dataMapper.html).
+- Læs om [Data Transfer Object design pattern](https://martinfowler.com/eaaCatalog/dataTransferObject.html).
+- Lav fredagsopgave færdig.
+
 - [Java og JDBC](./jdbc/README.md)
 - [Integrationstest](./integrationstest/README.md)
 - [SchoolHack opgave (bibliotek)](./integrationstest/exercise_bibliotek_jdbc)
+
