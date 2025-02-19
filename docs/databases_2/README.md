@@ -10,7 +10,7 @@ permalink: /databases-2/
 
 # Databaser 
 
-## Uge 2: JDBC, mapper og integrationstest
+## Uge 2: JDBC og integrationstest
 
 ## Læringsmål
 - [Læringsmål for uge 2](./laeringsmaal.md#uge-2-java-jdbc-og-integrationstest)
@@ -26,7 +26,7 @@ Du skal læse følgende
 - [Data Mapper](https://martinfowler.com/eaaCatalog/dataMapper.html)
 - [Data Transfer Object](https://martinfowler.com/eaaCatalog/dataTransferObject.html)
 
-Hvis du ikke er blevet færdig med [biblioteksopgaven](../../databases1/exercises/exercise_bibliotek.md) fra i fredags, så lav den, da vi skal bruge den i undervisningen. Alternativt kan du hente et [script](../../databases1/exercise/solutions_bibliotek_create_db.sql) som kan generere tabellerne for dig og fylde dem med data. 
+Hvis du ikke er blevet færdig med [biblioteksopgaven](../../databases_1/exercises/exercise_bibliotek.md) fra i fredags, så lav den, da vi skal bruge den i undervisningen. Alternativt kan du hente et [script](../../databases_1/exercise/solutions_bibliotek_create_db.sql) som kan generere tabellerne for dig og fylde dem med data. 
 
 ### Program
 
