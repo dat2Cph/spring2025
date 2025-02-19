@@ -49,7 +49,7 @@ Hvis du ikke har lavet biblioteksssystemet fra i tirsdags færdigt, så gør det
 ### Program
 Vi laver integrationstests til det system, vi byggede i tirsdags. 
 
-[Dagens opgave](./excercises/Library_integrationstest.md)
+[Dagens opgave](./exercises/Library_integrationstest.md)
 
 ## Fredag
 
