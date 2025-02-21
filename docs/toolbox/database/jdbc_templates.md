@@ -28,6 +28,7 @@ Disse beskrivelser er generelle anvisninger i brugen af JDBC. Først vises hvord
 
 <!-- /TOC -->
 
+<a id="jdbc-driver-dependency"></a>
 ## JDBC driver dependency
 
 Tilføj denne til din pom.xml fil:
@@ -61,6 +62,7 @@ CREATE TABLE IF NOT EXISTS public.users
 )
 ```
 
+<a id="database-connector"></a>
 ## JDBC Connection
 
 For at få adgang til databasen skal der oprettes en connection.
@@ -110,6 +112,7 @@ Class.forName("org.postgresql.Driver");
 
 Så på den måde er metoden nyttig uanset om den er strengt nødvendig.
 
+<a id="database-exception"></a>
 ## Skræddersyet DatabaseException og fejlhåndtering
 
 Når vi skal tilgå en database kan der opstå alverdens fejl. Sådan er det altid med I/O. Derfor skal mange metoder omsluttes af try/catch for at kunne håndtere fejl. I catch-delen vil vi gerne kunne angive en fejlmeddelelse, der er så specifik som muligt. Derfor kan det være en fordel at lave sin egen exception-klasse. Vi kalder den for `DatabaseException` og den kan se således ud:
@@ -133,6 +136,7 @@ public class DatabaseException extends Exception
 
 Hvis man anvender constructor'en med to parametre, kan man både angive sin egen hjemmestrikkede fejlmeddelelse og samtidig sende det oprindelige exception objekt videre. Det oprindelige object er af typen SQLException. Herfra kan man grave en detaljeret fejl ud, som kan lede udvikleren på sporet. Den besked som er indeholdt i `errorMessage`, er den som vi selv finder på hvor fejlene opstår. De beskeder er tiltænkt brugergrænsefladen. Altså en brugervenlig besked.
 
+<a id="usermapper-og-getuserbyid"></a>
 ## UserMapper og getUserById
 
 Denne klasse indeholder en række CRUD methoder, der har med `users` tabellen at gøre. Ofte har man en række entiteter i Java med en tilsvarende tabel i Postgres. For at gøre vores kode så overskuelig som muligt, kan vi oprette en såkaldt "Mapper Class" til hver entitet/tabel par. Det er dog ikke muligt at gøre det helt stringent. F.eks. laver vi ofte blandede sql-sætninger, hvor vi ved hjælp af joins blander data fra mange tabeller. I de tilfælde er det op til ens egen fantasi at placere metoderne.
@@ -159,12 +163,12 @@ public class UserMapper
     public User getUserById(int userId) throws DatabaseException
     {
         String sql = "SELECT * FROM users WHERE user_id = ?";
-        try (var connection = databaseConnector.getConnection())
+        try (Connection connection = databaseConnector.getConnection())
         {
-            try (var prepareStatement = connection.prepareStatement(sql))
+            try (PreparedStatement prepareStatement = connection.prepareStatement(sql))
             {
                 prepareStatement.setInt(1, userId);
-                var resultSet = prepareStatement.executeQuery();
+                ResultSet resultSet = prepareStatement.executeQuery();
 
                 if (resultSet.next())
                 {

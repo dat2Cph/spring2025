@@ -45,7 +45,7 @@ Codelab øvelse:
 Der er en gennemgang af hvordan opgaven kan løses i [denne video](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=1d2e2b6c-6a04-4be4-b645-ae54014e2f79) (og i starten vises også hvordan man cloner startkoden fra git). Bemærk, at der bruges MySQL i videoen.
 
 
-## Torsdag
+## Torsdag: Integrationstest
 ### Forberedelse
 Hvis du ikke har lavet biblioteksssystemet fra i tirsdags færdigt, så gør det nu. 
 

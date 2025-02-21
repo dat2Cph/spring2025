@@ -68,7 +68,7 @@ Codelab øvelser:
 - [Views](./exercises/exercise_views.pdf).
 - Hvis du har mere tid, kan du få ChatGPT til at generere opgaver, der passer lige til Classic Models og dig. Tag fx udgangspunkt i [denne prompt](https://chatgpt.com/share/67ab01bc-4e50-8011-9cd3-9abbad34ff87).
 
-## Torsdag
+## Torsdag: Datamodellering
 
 ### Forberedelse
 
