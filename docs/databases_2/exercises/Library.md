@@ -49,13 +49,12 @@ Lav metoden `public Borrower getBorrowerById(int id)` i din `BorrowerMapper`-kla
 
 9. Det er tid til at teste vores kode. I main skal vi have oprettet et `DatabaseConnector`-objekt og et `BorrowerMapper`-objekt. `DatabaseConnector`-objektet skal oprettes med url, user, og password, der passer til den database vi vil bruge. Objektet skal gives til `BorrowerMapper` som argument til konstruktøren (dependency injection).
 
-Test i din main, at du kan kalde metoden `getBorrowerById(int id)` og få et objekt tilbage, som er populeret med data fra databasen. 
+Test i din main, at du kan kalde metoden `getBorrowerById(int id)` og få et objekt tilbage, som er populeret med data fra databasen. Du kan finde inspiration til koden i [Toolbox](../../toolbox/database/jdbc_templates.md#main)
 
 10. Lav nu mapper-metoder til de andre queries vi lavede i pgAdmin. Her skal du være opmærksom på at
 - du har muligvis brug for flere mappere (fx `BookMapper` og `AuthorMapper`).
 - du har brug for at lave joins, hvis du vil medtage både postnummer og by, når du opretter `Borrower`-objekter. 
-
+- du ikke skal sende fx et laaner_id med når du laver INSERT, da postgres selv generer nøglen. Hvis du gerne vil have id tilbage efter INSERT, skal du bruge 
+`Statement.RETURN_GENERATED_KEYS)`. Du kan finde inspiration til koden i [Toolbox]](../../toolbox/database/jdbc_templates.md#createUser)
+   
 11. Prøv at lave mapper-metoder, som returnerer data, som ikke passer til de entiteter du har. Fx kan du lave en metode, der returnerer en låner og en liste af de forfattere vedkommende har lånt bøger af. Lav en [Data Transfer Object](https://martinfowler.com/eaaCatalog/dataTransferObject.html) klasse, som kan bruges til de data. Læg klassen i en pakke kaldet dto. 
-
-
-
