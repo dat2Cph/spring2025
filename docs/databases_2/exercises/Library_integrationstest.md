@@ -15,21 +15,22 @@ Hvis du ikke har en biblioteksdatabase kørende i postgres, skal du lave en nu. 
 
 ![ER-diagram](https://i.imgur.com/9vOkudp.png)
 
-Du finder scriptet til [ovenstående tabeller her 9](../../databases_1/exercises/bibliotek_sql_queries.sql). 
+Du finder scriptet til [ovenstående tabeller her](../../databases_1/exercises/bibliotek_sql_queries.sql). 
+
 
 ## Dagens opgave. 
-1. Åbn dit biblioteksprojekt i IntelliJ.
+1. Åbn dit biblioteksprojekt i IntelliJ. Hvis du ikke har et projekt, der fungerer, kand du [clone et herfra](https://github.com/KongCPH/Library.git).
 2. Under scr har du nok en mappe, der hedder test, med en undermappe java. Hvis ikke, så skal du lave dem nu. 
 3. Lav en pakke i test.java som du kalder persistence. 
 4. Hvis du ikke har en junit dependency i din pom.xml, skal du tilføje den nu og refreshe Maven:
 ```xml
 	
  <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>5.8.2</version>
-            <scope>test</scope>
-        </dependency>
+    <groupId>org.junit.jupiter</groupId>
+    <artifactId>junit-jupiter-engine</artifactId>
+    <version>5.8.2</version
+    <scope>test</scope>
+ </dependency>
 ```
 5. Stil dig nu i klassen BorrowerMapper, højreklik og vælg Generate -> Test og sørg for at testen bliver placeret det korrekte sted (test -> java -> persistence).
 6. Nu er vi klar til at lave test. Start med at lave nogle attributter:
