@@ -58,6 +58,8 @@ Vi laver integrationstests til det system, vi byggede i tirsdags.
 
 ## Fredag
 
-[Fredagsopgave](https://github.com/dat2Cph/dat2-sportsclub/tree/integrationtest)
+Som afslutning på forløbet, skal I gennemføre en lille [quiz](https://cphbusiness.mrooms.net/mod/quiz/view.php?id=779872&forceview=1).
+
+Og så er der naturligvis [Fredagsopgave](https://github.com/dat2Cph/dat2-sportsclub/tree/integrationtest).
 
 - Der er en gennemgang af hvordan opgaven kan løses i [denne video](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=940330d7-5824-4a97-9ea8-ae550008a069) (og i starten vises også hvordan man cloner startkoden fra git). Bemærk igen, at der bruges MySQL i videoen.

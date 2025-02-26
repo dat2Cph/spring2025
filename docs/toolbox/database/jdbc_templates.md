@@ -191,7 +191,7 @@ public class UserMapper
     /* Herefter kommer resten af mapper metoderne */
 }
 ```
-
+<a id="main-metode"></a>
 ## Eksempel på hvordan man fyrer mapper metoderne af fra Main
 
 ```java
@@ -295,7 +295,7 @@ public List<User> getAllUsers() throws DatabaseException
     return users;
 }
 ```
-
+<a id="createUser"></a>
 ## createUser
 
 ```java
