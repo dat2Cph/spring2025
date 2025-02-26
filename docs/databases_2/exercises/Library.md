@@ -27,8 +27,6 @@ Vi lavede også følgende DML sætninger:
    3. Fjern et udlån (delete)
    4. Rediger en bogtitel (update)
 
-Her kan du finde [forslag til løsninger](../../databases_1/exercises/bibliotek_sql_queries.sql).
-
 ## Dagens opgave
 I dag skal vi lave et Javaprojekt, som vha. JDBC kan lave de queries til databasen, som vi lavede vi pgAdmin. 
 
@@ -58,3 +56,5 @@ I dag skal vi lave et Javaprojekt, som vha. JDBC kan lave de queries til databas
 `Statement.RETURN_GENERATED_KEYS`. Du kan finde inspiration til koden i [Toolbox](../../toolbox/database/jdbc_templates.md#createUser)
 
 11. Prøv at lave mapper-metoder, som returnerer data, der ikke er entiteter. Fx kan du lave en metode, der returnerer en låner og en liste af de forfattere vedkommende har lånt bøger af. Lav en [Data Transfer Object](https://martinfowler.com/eaaCatalog/dataTransferObject.html) klasse, som kan bruges til de data. Læg klassen i en pakke kaldet dto. 
+
+Her kan du finde [forslag til løsninger](https://github.com/KongCPH/Library.git).
