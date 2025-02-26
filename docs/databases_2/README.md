@@ -54,6 +54,8 @@ Vi laver integrationstests til det system, vi byggede i tirsdags.
 
 [Dagens opgave](./exercises/Library_integrationstest.md)
 
+[Slides](./docs/Integrationstest.pdf)
+
 ## Fredag
 
 [Fredagsopgave](https://github.com/dat2Cph/dat2-sportsclub/tree/integrationtest)
