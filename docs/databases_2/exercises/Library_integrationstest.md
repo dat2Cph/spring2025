@@ -23,8 +23,8 @@ Du finder scriptet til [ovenstående tabeller her](../../databases_1/exercises/b
 2. Under scr har du nok en mappe, der hedder test, med en undermappe java. Hvis ikke, så skal du lave dem nu. 
 3. Lav en pakke i test.java som du kalder persistence. 
 4. Hvis du ikke har en junit dependency i din pom.xml, skal du tilføje den nu og refreshe Maven:
-```xml
-	
+
+```xml	
  <dependency>
     <groupId>org.junit.jupiter</groupId>
     <artifactId>junit-jupiter-engine</artifactId>
