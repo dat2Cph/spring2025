@@ -32,8 +32,10 @@ Du finder scriptet til [ovenstående tabeller her](../../databases_1/exercises/b
     <scope>test</scope>
  </dependency>
 ```
+
 5. Stil dig nu i klassen BorrowerMapper, højreklik og vælg Generate -> Test og sørg for at testen bliver placeret det korrekte sted (test -> java -> persistence).
 6. Nu er vi klar til at lave test. Start med at lave nogle attributter:
+
 ```java
 	private final static String USER = "postgres";
     private final static String PASSWORD = "postgres";
@@ -42,9 +44,11 @@ Du finder scriptet til [ovenstående tabeller her](../../databases_1/exercises/b
     private static DatabaseConnector connector;
     private static BorrowerMapper borrowerMapper;
 ```
+
 Måske skal du tilpasse URL'en. Det kommer an på hvad din database hedder. Du har også brug for et schema "test" i din database. Der er fordi vi skal bruge tabeller, der hedder det samme som dem, der ligger i public og man kan ikke have flere tabeller med samme navn indenfor et schema. Det er også meget rart at få test- og produktionstabeller adskilt. Lav det nye schema vha. pgAdmin. 
 
 7. Nu skal vi lave en @BeforeEach-metode, som skal køres inden hver test. Metodens opgave er at slette eksisterende tabeller og indsætte nye med testdata. Du kan bruge nedenstående kode:
+
 ```java
  @BeforeAll
     public static void setUpClass() {
@@ -99,6 +103,7 @@ Måske skal du tilpasse URL'en. Det kommer an på hvad din database hedder. Du h
     }
 
 ```
+
 Der kan være noget af kode, du skal tilpasse alt efter hvad dine tabeller hedder og hvilke autogenererede nøgler, du har. 
 
 8. Vi skal også have lagt testdata i tabellerne. Før hver test fjerner vi al data fra tabellerne og indsætter frisk data, så vi ved hvad der ligger i hver tabel, når vi tester. 
@@ -169,6 +174,7 @@ Der kan være noget af kode, du skal tilpasse alt efter hvad dine tabeller hedde
 ```
 
 10. Så er vi klar til at teste vores metoder. Her er et eksempel på en simpel test:
+
 ```java
 @Test
     void testGetBorrowerById() throws DatabaseException{
@@ -176,4 +182,5 @@ Der kan være noget af kode, du skal tilpasse alt efter hvad dine tabeller hedde
 
     }
 ```
+
 Fortsæt med at teste andre mappermetoder. 
