@@ -15,7 +15,7 @@ Hvis du ikke har en biblioteksdatabase kørende i postgres, skal du lave en nu. 
 
 ![ER-diagram](https://i.imgur.com/9vOkudp.png)
 
-Du finder scriptet til [ovenstående tabeller her](../../databases_1/exercises/bibliotek_sql_queries.sql). 
+Du finder scriptet til [ovenstående tabeller her](../databases_1/exercises/bibliotek_sql_queries.sql). 
 
 
 ## Dagens opgave. 
@@ -166,6 +166,7 @@ Der kan være noget af kode, du skal tilpasse alt efter hvad dine tabeller hedde
 ```
 
 9. Vi laver også lige en test på om der er hul igennem til databasen:
+
 ```java
  @Test
     void testConnection() throws SQLException {
