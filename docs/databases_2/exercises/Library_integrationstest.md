@@ -86,6 +86,13 @@ Måske skal du tilpasse URL'en. Det kommer an på hvad din database hedder. Du h
                     stmt.execute("ALTER TABLE test.forfatter ALTER COLUMN forfatter_id SET DEFAULT nextval('test.forfatter_forfatter_id_seq')");
                     stmt.execute("CREATE SEQUENCE test.laaner_laaner_id_seq");
                     stmt.execute("ALTER TABLE test.laaner ALTER COLUMN laaner_id SET DEFAULT nextval('test.laaner_laaner_id_seq')");
+
+                    stmt.execute("INSERT INTO test.postnummer (postnr, by) VALUES " +
+                        "(8000, 'Århus'), " +
+                        "(9000, 'Aalborg'), " +
+                        "(5000, 'Odense'), " +
+                        "(4000, 'Roskilde'), " +
+                        "(6000, 'Kolding') ");
                 }
             }
 
