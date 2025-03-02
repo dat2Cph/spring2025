@@ -9,6 +9,8 @@ permalink: /backend
 
 # Backend
 
+Indholdet er ikke klar endnu.
+
 ## Læringsmål for backend
 
 - [Læringsmål](./laeringsmaal.md)

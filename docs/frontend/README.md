@@ -28,9 +28,9 @@ Der er en del forberedelse I skal have gjort inden tirsdag. Du skal have set 3 v
 
 Se først disse 3 videoer. Det er hyggevideoer, som giver dig et overblik over www's historie, hvad full stack web development er, og hvad UX/UI er. Altsammen vigtige begreber, som skaber begreber og kontekst for det vi skal i gang med.
 
-- [Intro til www's historie (13:03)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f3f1894d-05fc-4b9c-8b7f-b083010c1da1)
-- [Hvad er full stack we development? (18:57)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a17856b5-4dfd-4a9f-bb49-b08301221b06)
-- [Hvad er UX/UI? (11:18)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=3e8bfcf9-49ca-4587-890b-b08500ede1b6)
+1. [Intro til www's historie (13:03)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f3f1894d-05fc-4b9c-8b7f-b083010c1da1)
+2. [Hvad er full stack we development? (18:57)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=a17856b5-4dfd-4a9f-bb49-b08301221b06)
+3. [Hvad er UX/UI? (11:18)](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=3e8bfcf9-49ca-4587-890b-b08500ede1b6)
 
 **Figma**
 
