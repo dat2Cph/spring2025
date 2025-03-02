@@ -52,25 +52,27 @@ Download og installer mockup værktøjet **Figma**:
 
 Se disse videoer og kod med hele vejen. De er MEGET vigtige for at komme i gang med HTML og CSS:
 
-- [HTML basics](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b6652f11-6708-4e14-b892-b08801607448) - kod med tutorial. [Eksempelkode fra videoen](https://github.com/dat2Cph/content/blob/main/webstack/frontend/basic_html/index.html)
-- [CSS basics](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=e7566bb5-144e-45e0-b5c2-b1290156320a) - kod med tutorial
+1. [HTML basics](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=b6652f11-6708-4e14-b892-b08801607448) - kod med tutorial. [Eksempelkode fra videoen](https://github.com/dat2Cph/content/blob/main/webstack/frontend/basic_html/index.html)
+2. [CSS basics](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=e7566bb5-144e-45e0-b5c2-b1290156320a) - kod med tutorial
+3. Bonus: Hvis du er i stødet, så lav denne lille opgave for at teste din forståelse: [Booking formular](./exercises/bookingform.md)
 
 Læs dette dokument om paper prototyping:
 
-- [Paper Prototyping af Caroline Snyder](./docs/paper_prototyping.pdf)
+4. [Paper Prototyping af Caroline Snyder](./docs/paper_prototyping.pdf)
 
 ### I klassen til codelab
 
-1. [Carpool](./exercises/carpool.md)
+- [Carpool](./exercises/carpool.md)
 
 ## Torsdag (repsonsivt design)
 
 ### Forberedelse
 
-- [RWD: 10 basics you need to know (6:37)](https://www.youtube.com/watch?v=zF6VSky4SIc)
-- [Flexbox in 15 minutes](https://www.youtube.com/watch?v=fYq5PXgSsbE)
-- [A complete guide to flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-- [Media queries in 7 minutes](https://www.youtube.com/watch?v=yU7jJ3NbPdA)
+Se disse videoer:
+
+1. [RWD: 10 basics you need to know (6:37)](https://www.youtube.com/watch?v=zF6VSky4SIc)
+2. [Flexbox in 15 minutes](https://www.youtube.com/watch?v=fYq5PXgSsbE)
+3. [Media queries in 7 minutes](https://www.youtube.com/watch?v=yU7jJ3NbPdA)
 
 ### I klassen
 
