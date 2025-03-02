@@ -56,7 +56,7 @@ Se disse videoer og kod med hele vejen. De er MEGET vigtige for at komme i gang 
 2. [CSS basics](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=e7566bb5-144e-45e0-b5c2-b1290156320a) - kod med tutorial
 3. Bonus: Hvis du er i stødet, så lav denne lille opgave for at teste din forståelse: [Booking formular](./exercises/bookingform.md)
 4. Skim dette dokument om [Paper Prototyping](./docs/paper_prototyping.pdf) af Caroline Snyder
-5. Læs denne opsummering i vores værktøjskasse: [Paper Prototyping](./toolbox/sys/paper-prototyping.md)
+5. Læs denne opsummering i vores værktøjskasse: [Paper Prototyping](../toolbox/sys/prototyping/paper_prototyping.md)
 
 ### I klassen til codelab
 
