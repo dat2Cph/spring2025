@@ -62,7 +62,7 @@ Se disse videoer og kod med hele vejen. De er MEGET vigtige for at komme i gang 
 
 - [Carpool](./exercises/carpool.md)
 
-## Torsdag (repsonsivt design)
+## Torsdag (responsivt design)
 
 ### Forberedelse
 
