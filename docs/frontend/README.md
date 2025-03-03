@@ -79,3 +79,7 @@ Se disse videoer:
 ## Fredag (opgave)
 
 - [Cupcake frontend design](./exercises/cupcake.md)
+
+## Ressourcer
+
+- [Diverse links og materialer om Frontend](./resources.md)
