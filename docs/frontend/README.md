@@ -42,8 +42,8 @@ Download og installer mockup værktøjet **Figma**:
 
 ### I klassen (det gør vi sammen)
 
-1. UX/UI øvelse.
-2. Overraskelse. Vi får besøg af en "kunde" som vil have en hjemmeside.
+1. UX/UI øvelse. Vi bruger [Laws of UX](https://lawsofux.com/en/) og sætter os ind i begreberne.
+2. Overraskelse. Vi får besøg af en "kunde" som vil have en hjemmeside. Her er de [indholdselementer](./exercises/nyhedsbrev.md) vi skal bruge.
 3. Figma session.
 
 ## Onsdag (codelab)
