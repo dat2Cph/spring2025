@@ -46,7 +46,7 @@ Download og installer mockup værktøjet **Figma**:
 2. Overraskelse. Vi får besøg af en "kunde" som vil have en hjemmeside. Her er de [indholdselementer](./exercises/nyhedsbrev.md) vi skal bruge.
 3. Figma session.
 
-## Onsdag (codelab)
+## Onsdag (CodeLab)
 
 ### Forberedelse
 
@@ -58,7 +58,7 @@ Se disse videoer og kod med hele vejen. De er MEGET vigtige for at komme i gang 
 4. Skim dette dokument om [Paper Prototyping](./docs/paper_prototyping.pdf) af Caroline Snyder
 5. Læs denne opsummering i vores værktøjskasse: [Paper Prototyping](../toolbox/sys/prototyping/paper_prototyping.md)
 
-### I klassen til codelab
+### I klassen til CodeLab
 
 - [Carpool](./exercises/carpool.md)
 
@@ -74,7 +74,7 @@ Se disse videoer:
 
 ### I klassen
 
-- [Carpool Responsive](./exercises/carpoolresponsive.md)
+- [Carpool Responsive]()
 
 ## Fredag (opgave)
 
