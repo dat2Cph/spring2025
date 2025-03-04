@@ -4,6 +4,7 @@ description: Carpool Responsive HTML opgave
 layout: default
 nav_order: 3
 parent: Øvelser
+nav_exclude: true
 grand_parent: Frontend
 permalink: /frontend/exercises/carpool_responsive/
 ---
