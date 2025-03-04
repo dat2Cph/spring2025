@@ -78,7 +78,7 @@ Se disse videoer:
 
 ## Fredag (opgave)
 
-- [Cupcake frontend design](./exercises/cupcake.md)
+- [Justinas nyhedsbreve](./exercises/nyhedsbrev.md)
 
 ## Ressourcer
 

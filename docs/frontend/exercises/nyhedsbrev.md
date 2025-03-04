@@ -8,9 +8,26 @@ grand_parent: Frontend
 permalink: /frontend/exercises/newletter/
 ---
 
-# Opgave fra Justina - Assets = indholdselementer
+# Justinas nyhedsbreve
 
-## Nyhedsbreve
+## Opgaven
+
+Ud fra det "kundemøde" vi havde med Justina i tirsdags, skal I nu lave en mockup af en hjemmesideløsning.
+
+1. Lav en mockup i Figma, der viser hvordan løsningen kunne se ud.
+2. Lave en HTML / CSS prototype af løsningen. I behøver ikke at kode det hele. Men se hvor langt I kan komme. Prøv også at lave det reponsivt.
+3. Skriv de valg ned I foretager undervejs og indsæt dem i en README.md fil i jeres projekt.
+4. Gør klar til at lave en lille demo på mandag. Vi vil gerne se jeres Figma mockup,  jeres HTML / CSS prototype og høre om jeres valg undervejs.
+
+## Ikke funktionelle krav
+
+1. Designet skal være enkelt og overskueligt
+2. Designet skal være responsivt
+3. Designet skal (nogenlunde) være i overensstemmelse med CPH Business' designguide
+4. I skal ikke bekymre jer om at lave det funktionelt. Det er fint at lave en statisk side.
+5. Noter jeres valg undervejs i en **README.md** fil. F.eks. hvis dele af siden ikke kan nøjes med at være statisk. Det kunne en søgefunktion, login, upload etc.
+
+## Indholdselementer (assets)
 
 Her er nyhedsbrevene fra CPH Business. De er i PDF format og kan downloades:
 
@@ -26,6 +43,6 @@ Her er nyhedsbrevene fra CPH Business. De er i PDF format og kan downloades:
 - [Download logoer](https://www.cphbusiness.dk/kontakt/pressekontakt#-download-logo-item)
 - [Design guide](./docs/cphbusiness-designguide_final.pdf)
 
-## Noter
+## Noter fra mødet med Justina
 
 ![Notes](./images/newslettersystem.png){: width="50%" .mt-4}
