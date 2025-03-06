@@ -74,7 +74,7 @@ Se disse videoer:
 
 ### I klassen
 
-- [Carpool Responsive](./exercises/carpool.md)
+- [Carpool Responsive](./exercises/carpoolresponsive.md)
 
 ## Fredag (opgave)
 
