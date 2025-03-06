@@ -4,16 +4,15 @@ description: Carpool Responsive HTML opgave
 layout: default
 nav_order: 3
 parent: Øvelser
-nav_exclude: true
 grand_parent: Frontend
 permalink: /frontend/exercises/carpool_responsive/
 ---
 
 # Carpool II (responsiv version)
 
-Du skal lave en responsiv udgave af [designet fra opgaven](./carpool.md) vi lavede i Figma forleden. Dvs, at du skal bruge html og css.
+Du skal lave en responsiv udgave af [designet fra opgaven](./carpool.md) vi lavede i Figma i går. Dvs, at du skal bruge html og css.
 
-Hvis du selv har lavet en swag Figma-prototype, så lav en responsiv-version af den. Eller begynd med forsiden og se hvor langt du når.
+Hvis du selv har lavet en swag Figma-prototype og evt. html/css, så lav en responsiv-version af den. Eller begynd med forsiden og se hvor langt du når.
 
 Hvis du ikke har lavet Figma-opgaven, kan du evt. bruge denne version som inspiration: Figma artboard
 
