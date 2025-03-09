@@ -1,13 +1,12 @@
 ---
-title: Tilstandsdiagrammer
+title: UML Tilstandsdiagrammer
 description: State machine diagrammes
 layout: default
-permalink: /webstack/backend/statemachine/
-parent: Backend
-grand_parent: Webstack
-nav_exclude: true
+parent: SYS
+grand_parent: Toolbox
+nav_order: 3
+permalink: /toolbox/sys/uml/statemachines/
 ---
-
 
 # UML State Machine Diagrams
 

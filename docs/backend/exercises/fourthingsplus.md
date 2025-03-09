@@ -28,7 +28,7 @@ Vi skal bygge en huskeseddel applikation. Det er som bekendt svært at holde mer
 1. Først udarbejder vi et use-case diagram
 2. Dernæst beskrives hver use-case som en user story
 3. På baggrund af det laver vi en simpel domænemodel og på baggrund af den et ER-diagram (ERD) over databasen.
-4. Så går vi i gang med at kode. Først oprettes et Java / Maven projekt i IntelliJ ([instruktioner](./javalin/setup.md))
+4. Så går vi i gang med at kode. Først oprettes et Java / Maven projekt i IntelliJ ([instruktioner](../../toolbox/javalin/setup.md)
 5. Dernæst oprettes en database i Postgres og der lægges lidt fake data ind i tabellerne.
 6. Når alt dette er på plads begynder vi at implementere de enkelte user stories en ad gangen.
 7. Lidt efter lidt begynder vi også at style siderne, så udseende begynde at ligne de udleverede mockups.

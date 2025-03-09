@@ -5,7 +5,7 @@ layout: default
 parent: SYS
 grand_parent: Toolbox
 nav_order: 2
-permalink: /toolbox/sys/plantuml
+permalink: /toolbox/sys/uml/plantuml
 ---
 
 # PlantUML
