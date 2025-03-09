@@ -10,7 +10,7 @@ permalink: /backend/exercises/fourthingsplus/
 
 # Four Things Plus
 
-Denne tutorial er tænkt om et "selvstudium", hvor du sideløbende med undervisningen på skolen, kan sidde i ro og mag og arbejde dig igennem en længere sammenhængende case. F.eks. på de dage, hvor vi ikke har undervisning.
+Denne tutorial er tænkt om et "selvstudium", hvor du sideløbende med undervisningen på skolen, kan sidde i ro og mag og arbejde dig igennem en længere sammenhængende case.
 
 Sørg for at kode med i IntelliJ hele vejen, og tag lidt noter undervejs.
 Fx. med de spørgsmål du evt. måtte have.
@@ -19,7 +19,7 @@ Fx. med de spørgsmål du evt. måtte have.
 
 ## Nå men nu til opgaven
 
-Vi skal bygge en huskeseddel applikation. Det er som bekendt svært at holde mere end tre ting i hovedet, så derfor skal vi bygge en lille webapplikation, som  vi kalder for **"fourthingsplus"**.
+Vi skal bygge en huskeseddel applikation. Det er som bekendt svært at holde mere end tre ting i hovedet, så derfor skal vi bygge en lille web-applikation, som  vi kalder for **"fourthingsplus"**.
 
 - Her er en lille [mockup lavet i Figma](https://www.figma.com/proto/EAJhgUIiODZop8WOQHplUl/Todoist?page-id=0%3A1&node-id=1%3A3&viewport=593%2C479%2C1.26&scaling=scale-down&starting-point-node-id=1%3A3). Alternativt se mockups nederst på siden.
 

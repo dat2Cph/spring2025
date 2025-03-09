@@ -19,7 +19,7 @@ Learn how to get started building websites with Javalin and Thymeleaf.
 | Technology  | Version  |
 |---|---|
 | JDK | 17   |
-| Javalin  | 6.1.3  |
+| Javalin  | 6.1.4  |
 | Thymeleaf  | 3.1.2  |
 | Maven  | 3.9.2  |  
 | IntelliJ  | 2023.3.4 (Ultimate)  |
@@ -52,7 +52,7 @@ We need a load of dependencies and plugins. So override your default pom.xml fil
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <javalin.version>6.1.3</javalin.version>
-        <javalin-rendering.version>6.1.3</javalin-rendering.version>
+        <javalin-rendering.version>6.1.4</javalin-rendering.version>
         <thymeleaf.version>3.1.2.RELEASE</thymeleaf.version>
         <thymeleaf-extras.version>3.0.4.RELEASE</thymeleaf-extras.version>
         <slf4j.version>2.0.12</slf4j.version>
@@ -203,7 +203,7 @@ This is how to set up the parts to get started:
 
 First, add a package called `config` and add these two classes into it:
 
-```Java
+```java
 package app.config;
 
 import org.thymeleaf.TemplateEngine;
@@ -244,9 +244,9 @@ public class SessionConfig
 }
 ```
 
-Second, overwrite the main method in Main.class with this version:
+Second, overwrite the main method in `Main.class` with this version:
 
-```Java
+```java
 public static void main(String[] args)
     {
         // Initializing Javalin and Jetty webserver
