@@ -2,7 +2,7 @@
 title: Fourthingsplus
 description: Javalin tutorial
 layout: default
-nav_order: 2
+nav_order: 3
 parent: Øvelser
 grand_parent: Backend
 permalink: /backend/exercises/fourthingsplus/

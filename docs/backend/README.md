@@ -36,6 +36,8 @@ Indholdet er ikke klar endnu.
 
 Vi går i gang med at implementere en simpel backend til Justinas Nyhedsbrev. Helt fra bunden. Det giver os en praktisk tilgang til Javalin, MVC, ThymeLeaf (frontend) og meget mere. Ideen er at demonstrere, hvordan man udvikler en full-stack web-applikation fra start til slut.
 
+- [Full-stack nyhedsbrev](./exercises/nyhedsbrev.md)
+
 ### Sideløbende - Four Things Plus
 
 Der ligger en færdigpakket video-tutorial, der hedder **[Four Things Plus](./exercises/fourthingsplus.md)**. Det er et selvstudium, hvor I får ekstra træning i udvikling af en web-applikation fra start til slut. Login funktion, brugeroprettelse, fuld CRUD osv. Hvis I følger Four Things Plus sideløbende med den daglige undervisning, får I ekstra træning og forståelse i jeres eget tempo. Erfaringsmæssigt kræver det rigtig meget at få fat i full-stack web-udvikling. Så giv den gas - og sørg for at få fulgt op på denne tutorial. I kan sagtens følge videoerne henover hele ugen. Tag lidt ad gangen - og kod med hele vejen.
