@@ -26,39 +26,69 @@ Det bruger vi så resten af ugen på. Her er en cirka plan over hvad vi skal nå
 
 ### Tirsdag
 
-- [ ] Use-case diagram
-- [ ] User stories
+- [x] Use-case diagram
+- [x] User stories
 - [ ] Domænemodel
 - [ ] ER-diagram
-- [ ] Projekt setup
+- [x] Projekt setup
 - [ ] Database setup
 - [ ] Indsæt fake data i databasen
 - [ ] Implementer user story 1 osv
 
 Der hører en del teknikker til at udvikle Javalin webapplikationer. Vi skal blandt andet gennem følgende:
 
-- [ ] Opsætning af Javalin projekt
-- [ ] Opsætning af Thymeleaf
+- [x] Opsætning af Javalin projekt
+- [x] Opsætning af Thymeleaf
 - [ ] Opsætning af Postgres database og ConnectionPool
 - [ ] Opsætning af datamappere
-- [ ] Opsætning af routes
+- [x] Opsætning af routes
 - [ ] Opsætning af controllers
-- [ ] Opsætning af thymeleaf templates. Herunder layout, fragments, billeder, links, forms, knapper og diverse udtryk.
-  - [ ] Variable Expressions: `${}`
-  - [ ] Link (URL) Expressions: `@{}`
+- [x] Opsætning af thymeleaf templates. Herunder layout, fragments, billeder, links, forms, knapper og diverse udtryk.
+  - [x] Variable Expressions: `${}`
+  - [x] Link (URL) Expressions: `@{}`
   - [ ] For-each loop: `th:each`
-  - [ ] Conditional statements: `th:if`, `th:unless`, `th:switch`, `th:case`
-- [ ] Behandling af http requests (GET, POST, PUT, DELETE)
-- [ ] Behandling af form data
+  - [x] Conditional statements: `th:if`, `th:unless`, `th:switch`, `th:case`
+- [x] Behandling af http requests (GET, POST, PUT, DELETE)
+- [x] Behandling af form data
 - [ ] Brug af sessions
 
 ### Onsdag - codelab
 
-TBD -  det kommer an på hvor langt vi kommer tirsdag
+I dag skal vi arbejde videre på nyhedsbrevsiden. Vi skal implementere de user stories vi har lavet. Vi tænker ikke så meget over
+designet i dag. Det gemmer vi lidt. Vi vil gerne have noget funktionalitet op at køre.
+
+Her er  vores use-case diagram:
+
+![UC diagram](./images/newsletter_usecase_diagram.png)
+
+For at kunne implementere disse use-cases skal vi have skaffet os adgang til en database.
+
+Vi skal bruge en tabel til at gemme metainformation til nyhedsbrevene og en tabel til at gemme modtagere af nyhedsbrevene.
+Vi skal vel også have en tabel til at gemme brugerne (Justina) + det løse. Lad os se på det sammen:
+
+#### Opgave 1: Lav en domænemodel over de konceptuelle klasser og deres attributter
+
+#### Opgave 2: Lav et ER-diagram over databasen
+
+#### Opgave 3: Opret databasen i Postgres
+
+Der er hjælp at hente her: [DB setup](../../toolbox/javalin/javalin_how_to.md#3-how-to-add-a-database)
+
+#### Opgave 4: Indsæt fake data i tabellerne
+
+Det gør det lettere at komme hurtigt i gang med at vise data i applikationen. Dvs, at man ikke behøver at oprette brugere, nyhedsbreve og modtagere manuelt, men blot hælder nogle rækker data ind i tabellerne.
+
+#### Opgave 5: Implementer: Sign up for newsletter
+
+#### Opgave 6: Implementer: View archived newsletters
+
+#### Opgave 7: Implementer: View latest newsletter
+
+Så er der vist rigeligt at tage fat på. Vi tager en ting ad gangen og hjælper hinanden.
 
 ### Torsdag
 
-TBD -  det kommer an på hvor langt vi kommer torsdag
+TBD -  det kommer an på hvor langt vi kommer onsdag
 
 ## Indholdselementer (assets)
 
@@ -75,3 +105,8 @@ Her er nyhedsbrevene fra CPH Business. De er i PDF format og kan downloades:
 
 - [Download logoer](https://www.cphbusiness.dk/kontakt/pressekontakt#-download-logo-item)
 - [Design guide](../../frontend/exercises/docs/cphbusiness-designguide_final.pdf)
+
+## Jonathans Figma mockup
+
+- [Mockup - figma version](https://www.figma.com/proto/6E5WdfpD38vt9BpcILebE6/Newsletter_CPHBusiness?page-id=0%3A1&node-id=1-2&p=f&viewport=51%2C-451%2C0.95&t=vswb6lRQgjTvXCsd-1&scaling=min-zoom&content-scaling=fixed)
+- [Mockup - PDF version](./docs/Newsletter_CPHBusiness.pdf)

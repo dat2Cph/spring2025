@@ -46,6 +46,8 @@ Der ligger en færdigpakket video-tutorial, der hedder **[Four Things Plus](./ex
 
 Vi arbejder videre på Nyhedsbrev websiden.
 
+- [Full-stack nyhedsbrev onsdag](./exercises/nyhedsbrev.md#onsdag---codelab)
+
 ## Torsdag
 
 Forhåbentlig lægger vi sidste hånd på Nyhedsbrev websiden.
