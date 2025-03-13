@@ -28,19 +28,19 @@ Det bruger vi så resten af ugen på. Her er en cirka plan over hvad vi skal nå
 
 - [x] Use-case diagram
 - [x] User stories
-- [ ] Domænemodel
-- [ ] ER-diagram
+- [x] Domænemodel
+- [x] ER-diagram
 - [x] Projekt setup
-- [ ] Database setup
-- [ ] Indsæt fake data i databasen
-- [ ] Implementer user story 1 osv
+- [x] Database setup
+- [x] Indsæt fake data i databasen
+- [x] Implementer den første user story
 
 Der hører en del teknikker til at udvikle Javalin webapplikationer. Vi skal blandt andet gennem følgende:
 
 - [x] Opsætning af Javalin projekt
 - [x] Opsætning af Thymeleaf
-- [ ] Opsætning af Postgres database og ConnectionPool
-- [ ] Opsætning af datamappere
+- [x] Opsætning af Postgres database og ConnectionPool
+- [x] Opsætning af datamappere
 - [x] Opsætning af routes
 - [ ] Opsætning af controllers
 - [x] Opsætning af thymeleaf templates. Herunder layout, fragments, billeder, links, forms, knapper og diverse udtryk.
@@ -66,29 +66,39 @@ For at kunne implementere disse use-cases skal vi have skaffet os adgang til en 
 Vi skal bruge en tabel til at gemme metainformation til nyhedsbrevene og en tabel til at gemme modtagere af nyhedsbrevene.
 Vi skal vel også have en tabel til at gemme brugerne (Justina) + det løse. Lad os se på det sammen:
 
-#### Opgave 1: Lav en domænemodel over de konceptuelle klasser og deres attributter
+- [x] #### Opgave 1: Lav en domænemodel over de konceptuelle klasser og deres attributter
 
-#### Opgave 2: Lav et ER-diagram over databasen
+- [x] #### Opgave 2: Lav et ER-diagram over databasen
 
-#### Opgave 3: Opret databasen i Postgres
+- [x] #### Opgave 3: Opret databasen i Postgres
 
 Der er hjælp at hente her: [DB setup](../../toolbox/javalin/javalin_how_to.md#3-how-to-add-a-database)
 
-#### Opgave 4: Indsæt fake data i tabellerne
+- [x] #### Opgave 4: Indsæt fake data i tabellerne
 
 Det gør det lettere at komme hurtigt i gang med at vise data i applikationen. Dvs, at man ikke behøver at oprette brugere, nyhedsbreve og modtagere manuelt, men blot hælder nogle rækker data ind i tabellerne.
 
-#### Opgave 5: Implementer: Sign up for newsletter
-
-#### Opgave 6: Implementer: View archived newsletters
-
-#### Opgave 7: Implementer: View latest newsletter
+- [x] #### Opgave 5: Implementer: Sign up for newsletter
 
 Så er der vist rigeligt at tage fat på. Vi tager en ting ad gangen og hjælper hinanden.
 
 ### Torsdag
 
-TBD -  det kommer an på hvor langt vi kommer onsdag
+Vi begynder med at gøre status på hvor langt vi er nået og kører videre derfra.
+
+- [ ] #### Opgave 6: Add newsletter (add metadata + upload PDF + thumbnail)
+
+- [ ] #### Opgave 7: Implementer: View archived newsletters
+
+### Fredag
+
+- [ ] #### Opgave 8: Implementer: View latest newsletter
+
+- [ ] #### Opgave 9: Implementer: Search functionality
+
+- [ ] #### Opgave 10: Add styling
+
+- [ ] #### Forbered præsentation af hvor langt du nået til mandag
 
 ## Indholdselementer (assets)
 

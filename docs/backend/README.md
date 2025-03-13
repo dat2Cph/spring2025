@@ -50,11 +50,12 @@ Vi arbejder videre på Nyhedsbrev websiden.
 
 ## Torsdag
 
-Forhåbentlig lægger vi sidste hånd på Nyhedsbrev websiden.
+- [Full-stack nyhedsbrev tordag](./exercises/nyhedsbrev.md#torsdag)
 
 ## Fredag
 
-TBD
+- [Full-stack nyhedsbrev fredag](./exercises/nyhedsbrev.md#fredag)
+- Forbered præsentation af hvor langt du nået til mandag
 
 ## Ressourcer
 
