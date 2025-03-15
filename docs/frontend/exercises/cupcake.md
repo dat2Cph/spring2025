@@ -4,6 +4,7 @@ description: Cupcake Responsive HTML opgave
 layout: default
 nav_order: 4
 parent: Øvelser
+nav_exclude: true
 grand_parent: Frontend
 permalink: /frontend/exercises/cupcake/
 ---

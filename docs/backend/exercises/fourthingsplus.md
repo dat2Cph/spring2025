@@ -2,7 +2,7 @@
 title: Fourthingsplus
 description: Javalin tutorial
 layout: default
-nav_order: 2
+nav_order: 3
 parent: Øvelser
 grand_parent: Backend
 permalink: /backend/exercises/fourthingsplus/
@@ -10,7 +10,7 @@ permalink: /backend/exercises/fourthingsplus/
 
 # Four Things Plus
 
-Denne tutorial er tænkt om et "selvstudium", hvor du sideløbende med undervisningen på skolen, kan sidde i ro og mag og arbejde dig igennem en længere sammenhængende case. F.eks. på de dage, hvor vi ikke har undervisning.
+Denne tutorial er tænkt om et "selvstudium", hvor du sideløbende med undervisningen på skolen, kan sidde i ro og mag og arbejde dig igennem en længere sammenhængende case.
 
 Sørg for at kode med i IntelliJ hele vejen, og tag lidt noter undervejs.
 Fx. med de spørgsmål du evt. måtte have.
@@ -19,7 +19,7 @@ Fx. med de spørgsmål du evt. måtte have.
 
 ## Nå men nu til opgaven
 
-Vi skal bygge en huskeseddel applikation. Det er som bekendt svært at holde mere end tre ting i hovedet, så derfor skal vi bygge en lille webapplikation, som  vi kalder for **"fourthingsplus"**.
+Vi skal bygge en huskeseddel applikation. Det er som bekendt svært at holde mere end tre ting i hovedet, så derfor skal vi bygge en lille web-applikation, som  vi kalder for **"fourthingsplus"**.
 
 - Her er en lille [mockup lavet i Figma](https://www.figma.com/proto/EAJhgUIiODZop8WOQHplUl/Todoist?page-id=0%3A1&node-id=1%3A3&viewport=593%2C479%2C1.26&scaling=scale-down&starting-point-node-id=1%3A3). Alternativt se mockups nederst på siden.
 
@@ -28,7 +28,7 @@ Vi skal bygge en huskeseddel applikation. Det er som bekendt svært at holde mer
 1. Først udarbejder vi et use-case diagram
 2. Dernæst beskrives hver use-case som en user story
 3. På baggrund af det laver vi en simpel domænemodel og på baggrund af den et ER-diagram (ERD) over databasen.
-4. Så går vi i gang med at kode. Først oprettes et Java / Maven projekt i IntelliJ ([instruktioner](./javalin/setup.md))
+4. Så går vi i gang med at kode. Først oprettes et Java / Maven projekt i IntelliJ ([instruktioner](../../toolbox/javalin/setup.md)
 5. Dernæst oprettes en database i Postgres og der lægges lidt fake data ind i tabellerne.
 6. Når alt dette er på plads begynder vi at implementere de enkelte user stories en ad gangen.
 7. Lidt efter lidt begynder vi også at style siderne, så udseende begynde at ligne de udleverede mockups.

@@ -3,7 +3,7 @@ title: Linux & Deployment
 description: Opsætning af virtuelt miljø i "skyen" til deployment
 layout: default
 has_children: true
-nav_order: 11
+nav_order: 10
 permalink: /linux/
 ---
 

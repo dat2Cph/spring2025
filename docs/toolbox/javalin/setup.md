@@ -19,10 +19,10 @@ Learn how to get started building websites with Javalin and Thymeleaf.
 | Technology  | Version  |
 |---|---|
 | JDK | 17   |
-| Javalin  | 6.1.3  |
-| Thymeleaf  | 3.1.2  |
+| Javalin  | 6.1.4  |
+| Thymeleaf  | 3.1.3.RELEASE  |
 | Maven  | 3.9.2  |  
-| IntelliJ  | 2023.3.4 (Ultimate)  |
+| IntelliJ  | 2024.3.4.1 (Ultimate)  |
 
 ## 1. New project in IntelliJ
 
@@ -42,7 +42,7 @@ We need a load of dependencies and plugins. So override your default pom.xml fil
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>app</groupId>
-    <artifactId>fourthingsplusdb</artifactId>
+    <artifactId>myproject</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -51,16 +51,16 @@ We need a load of dependencies and plugins. So override your default pom.xml fil
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <javalin.version>6.1.3</javalin.version>
-        <javalin-rendering.version>6.1.3</javalin-rendering.version>
-        <thymeleaf.version>3.1.2.RELEASE</thymeleaf.version>
+        <javalin.version>6.5.0</javalin.version>
+        <javalin-rendering.version>6.5.0</javalin-rendering.version>
+        <thymeleaf.version>3.1.3.RELEASE</thymeleaf.version>
         <thymeleaf-extras.version>3.0.4.RELEASE</thymeleaf-extras.version>
-        <slf4j.version>2.0.12</slf4j.version>
-        <jackson.version>2.17.0-rc1</jackson.version>
-        <hikariCP.version>5.1.0</hikariCP.version>
-        <junit.version>5.10.2</junit.version>
-        <hamcrest.version>2.2</hamcrest.version>
-        <postgresql.version>42.7.2</postgresql.version>
+        <slf4j.version>2.0.17</slf4j.version>
+        <jackson.version>2.18.3</jackson.version>
+        <hikariCP.version>6.2.1</hikariCP.version>
+        <junit.version>5.12.0</junit.version>
+        <hamcrest.version>3.0</hamcrest.version>
+        <postgresql.version>42.7.5</postgresql.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -180,7 +180,7 @@ We need a load of dependencies and plugins. So override your default pom.xml fil
 
 Yup - it's a long one, but it will make us able to later add database connection, tests, logging, and a possibility for deployment build.
 
-Depending on your project-name, remember to rename `<artifactId>app-demo</artifactId>` to your liking.
+Depending on your project-name, remember to rename `<artifactId>myproject</artifactId>` to your liking.
 
 ## 3. Add a folder-structure for the frontend files
 
@@ -203,7 +203,7 @@ This is how to set up the parts to get started:
 
 First, add a package called `config` and add these two classes into it:
 
-```Java
+```java
 package app.config;
 
 import org.thymeleaf.TemplateEngine;
@@ -244,9 +244,9 @@ public class SessionConfig
 }
 ```
 
-Second, overwrite the main method in Main.class with this version:
+Second, overwrite the main method in `Main.class` with this version:
 
-```Java
+```java
 public static void main(String[] args)
     {
         // Initializing Javalin and Jetty webserver
@@ -268,22 +268,17 @@ Third, we need to add an `index.html` file in the `resources/templates` folder:
 ```html
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-
-  <title>Frontpage</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../public/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet"/>
+    <title>Frontpage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../public/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet"/>
 </head>
 
 <body>
-
-<h1>Welcome to the Javalin / Thymeleaf demo</h1>
-
-<p>This is your first web application in this world</p>
-
+    <h1>Welcome to the Javalin / Thymeleaf demo</h1>
+    <p>This is your first web application in this world</p>
 </body>
 </html>
-
 ```
 
 As the last step, we need to add this css file in the `/public/css` folder. Name it `styles.css`:
@@ -303,3 +298,16 @@ h1 {
 Run the main method and watch the running local demo-website on <http://localhost:7070/>
 
 Nice!
+
+## 6. Feature: automatic re-build on template updates
+
+Every time you make updates to a template file, you need to re-build the project to see the changes. But there is a way to make IntelliJ do this automatically for you.
+
+**Modify IntelliJ Compiler Settings:**
+
+1. **Go to IntelliJ Settings** (`Cmd + ,` on Mac or `Ctrl + Alt + S` on Windows/Linux).
+2. Navigate to **Build, Execution, Deployment → Compiler**.
+3. Enable **"Build project automatically"**.
+4. (If using IntelliJ Ultimate) Enable **"Allow auto-make to start even if developed application is running"**.
+
+After this, when you save a template, IntelliJ should automatically detect changes and recompile. Notice that you might need to refresh the browser to see the changes. But you don't need to re-build manually.

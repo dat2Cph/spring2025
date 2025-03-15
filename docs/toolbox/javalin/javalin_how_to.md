@@ -68,7 +68,7 @@ are made static for ease of use.
 
 ### 3. How to add a database
 
-Add a connection pool with 3 JDBC Postgresql connections. Create a package called `persistence` and drop the ConnectionPool class and the rest of DB classes into it:
+Add a thread-safe connection pool with 2-10 JDBC Postgresql connections. Create a package called `persistence` and drop the ConnectionPool class and the rest of DB classes into it:
 
 ```java
 package app.persistence;
@@ -84,91 +84,102 @@ import java.util.logging.Logger;
 /***
  * Singleton pattern applied to handling a Hikari ConnectionPool
  */
-public class ConnectionPool
-{
+public class ConnectionPool {
 
-    public static ConnectionPool instance = null;
-    public static HikariDataSource ds = null;
+    private static volatile ConnectionPool instance = null;
+    private static HikariDataSource ds = null;
+    private static final Logger LOGGER = Logger.getLogger(ConnectionPool.class.getName());
 
     /***
-     * Empty and private constructor due to single pattern. Use getInstance methods to
-     * instantiate and get a connection pool.
+     * Private constructor to enforce Singleton pattern.
      */
-    private ConnectionPool()
-    {
+    private ConnectionPool() {
+        // Prevent instantiation
     }
 
     /***
      * Getting a singleton instance of a Hikari Connection Pool with specific credentials
-     * and connection string. If an environment variable "DEPLOYED" exists then local
-     * environment variables will be inserted with user credentials and DB connection string
-     * @param user for Postgresql database user
-     * @param password for Postgresql database user
-     * @param url connection string for postgresql database. Remember to add currentSchema to string
-     * @param db database name for connection
-     * @return A ConnectionPool object
+     * and connection string. If an environment variable "DEPLOYED" exists, then environment variables
+     * will be used instead of provided parameters.
+     * @param user Database username
+     * @param password Database password
+     * @param url Database connection URL
+     * @param db Database name
+     * @return Singleton instance of ConnectionPool
      */
-    public static ConnectionPool getInstance(String user, String password, String url, String db)
-    {
-        if (instance == null)
-        {
-            if (System.getenv("DEPLOYED") != null)
-            {
-                ds = createHikariConnectionPool(
-                        System.getenv("JDBC_USER"),
-                        System.getenv("JDBC_PASSWORD"),
-                        System.getenv("JDBC_CONNECTION_STRING"),
-                        System.getenv("JDBC_DB"));
-            } else
-            {
-                ds = createHikariConnectionPool(user, password, url, db);
+    public static ConnectionPool getInstance(String user, String password, String url, String db) {
+        if (instance == null) {
+            synchronized (ConnectionPool.class) {
+                if (instance == null) {  // Double-checked locking
+                    if (System.getenv("DEPLOYED") != null) {
+                        ds = createHikariConnectionPool(
+                                System.getenv("JDBC_USER"),
+                                System.getenv("JDBC_PASSWORD"),
+                                System.getenv("JDBC_CONNECTION_STRING"),
+                                System.getenv("JDBC_DB"));
+                    } else {
+                        ds = createHikariConnectionPool(user, password, url, db);
+                    }
+                    instance = new ConnectionPool();
+                }
             }
-            instance = new ConnectionPool();
         }
         return instance;
     }
 
     /***
-     * Getting a live connection from a Hikari Connection Pool
-     * @return a database connection to be used in sql requests
-     * @throws SQLException
+     * Getting a live connection from the Hikari Connection Pool
+     * @return a database connection
+     * @throws SQLException if connection fails
      */
-    public synchronized Connection getConnection() throws SQLException
-    {
+    public Connection getConnection() throws SQLException {
+        if (ds == null) {
+            throw new SQLException("DataSource is not initialized. Call getInstance() first.");
+        }
         return ds.getConnection();
     }
 
     /***
-     * Closing a Hikari Connection Pool after use.
+     * Closing the Hikari Connection Pool
      */
-    public synchronized void close()
-    {
-        Logger.getLogger("web").log(Level.INFO, "Shutting down connection pool");
-        ds.close();
+    public void close() {
+        if (ds != null) {
+            LOGGER.log(Level.INFO, "Shutting down connection pool...");
+            ds.close();
+            ds = null;
+            instance = null;
+        }
     }
 
     /***
-     * Configuring a Hikari DataSource ConnectionPool. Default pool size is 3.
-     * @param user for Postgresql database user
-     * @param password for Postgresql database user
-     * @param url connection string for postgresql database. Remember to add currentSchema to string
-     * @param db database name for connection
-     * @return a Hikari DataSource
+     * Configuring a Hikari DataSource ConnectionPool
+     * @param user Database username
+     * @param password Database password
+     * @param url Database connection URL
+     * @param db Database name
+     * @return Configured HikariDataSource
      */
-    private static HikariDataSource createHikariConnectionPool(String user, String password, String url, String db)
-    {
-        Logger.getLogger("web").log(Level.INFO,
-                String.format("Connection Pool created for: (%s, %s, %s, %s)", user, password, url, db));
+    private static HikariDataSource createHikariConnectionPool(String user, String password, String url, String db) {
+        LOGGER.log(Level.INFO, "Initializing Connection Pool for database: {0}", db);
+
         HikariConfig config = new HikariConfig();
         config.setDriverClassName("org.postgresql.Driver");
         config.setJdbcUrl(String.format(url, db));
         config.setUsername(user);
         config.setPassword(password);
-        config.setMaximumPoolSize(3);
-        config.setPoolName("Postgresql Pool");
+
+        // Connection Pool Configurations
+        config.setMaximumPoolSize(10); // Default is 10
+        config.setMinimumIdle(2);      // Ensures some connections are always available
+        config.setIdleTimeout(30000);  // 30 seconds idle timeout
+        config.setConnectionTimeout(30000); // Max wait time for a connection
+        config.setPoolName("Postgresql-Pool");
+
+        // Optimizations
         config.addDataSourceProperty("cachePrepStmts", "true");
         config.addDataSourceProperty("prepStmtCacheSize", "250");
         config.addDataSourceProperty("prepStmtCacheSqlLimit", "2048");
+
         return new HikariDataSource(config);
     }
 }
@@ -177,13 +188,14 @@ public class ConnectionPool
 Add to beginning of Main-class:
 
 ```java
+private static final Logger LOGGER = Logger.getLogger(Main.class.getName());
+
 private static final String USER = "postgres";
 private static final String PASSWORD = "postgres";
 private static final String URL = "jdbc:postgresql://localhost:5432/%s?currentSchema=public";
 private static final String DB = "databasename";
 
 private static final ConnectionPool connectionPool = ConnectionPool.getInstance(USER, PASSWORD, URL, DB);
-
 ```
 
 Then the database can be accessed like this:

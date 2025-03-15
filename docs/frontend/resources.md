@@ -10,13 +10,6 @@ permalink: /webstack/frontend/resources/
 
 # Ressourcer
 
-## Opgaver
-
-- [Carpool](./carpool.md)
-- [Bookingformular](./bookingform.md)
-- [Cupcake template](./cupcake.md)
-- [Carpool Responsive Design](./carpoolresponsive.md)
-
 ## Slides
 
 - [Slides om UI/UX](UX_UI.pdf)
