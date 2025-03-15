@@ -12,8 +12,10 @@ permalink: /projekter/lifehack/learningobjectives/
 
 Efter denne uge er det målet at du:
 
-1. Har kendskab til Belbins roller
-2. Kan definere en kodestandard for et team
-3. Kan definere DOD (defintion of Done) for et projekt
-4. Kan styre et projekt via KanBan principper
-5. Kan anvende pull-requests i GitHub
+1. Kan udarbejde og anvende use case diagram, ERD og Figma
+2. Kan definere og overholde kodestandard for et projekt
+3. Kan definere og overholde DOD for et projekt
+4. Kan anvende pull requests i GitHub
+5. Kan lave en del-applikation som kan integreres i en større full stack applikation
+
+
