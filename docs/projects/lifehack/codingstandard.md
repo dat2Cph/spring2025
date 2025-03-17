@@ -1,4 +1,3 @@
 Kodestandard for LifeHack
-
-[] vigtigt 
-[] mere vigtigt
+- [ ] vigtigt 
+- [ ] mere vigtigt
