@@ -50,6 +50,9 @@ Vi mødes allesammen (begge hold) i de to DAT-lokaler.
 - Introduktion til projektet og startkode
 - Introduktion til pull requests
 
+### Resource
+[Kodestandard](./codingstandard.md)
+
 ## Onsdag: CodeLab
 
 Grupperne arbejder på deres projekter. I skal stadig checke ind i CodeLab.
