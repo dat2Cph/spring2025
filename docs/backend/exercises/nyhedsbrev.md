@@ -111,6 +111,15 @@ Her er nyhedsbrevene fra CPH Business. De er i PDF format og kan downloades:
 5. [05 Jan Feb 2025](../../frontend/exercises/docs/05_Nyhedsbrev_JanFeb_2025.pdf)
 6. [06 Feb Mar 2025](../../frontend/exercises/docs/06_Nyhedsbrev_FebMar_2025.pdf)
 
+Thumbnail filer:
+
+1. [01 sep-okt](./images/thumbs/01_thumb-sep-okt-2024.png)
+2. [02 okt-nov](./images/thumbs/02_thumb-okt-nov-2024.png)
+3. [03 nov-dec](./images/thumbs/03_thumb-nov-dec-2024.png)
+4. [04 dec-jan](./images/thumbs/04_thumb-dec-jan-2025.png)
+5. [05 jan-feb](./images/thumbs/05_thumb-jan-feb-2025.png)
+6. [06 feb-mar](./images/thumbs/06_thumb-feb-mar-2025.png)
+
 ## Logopakke og Designguide
 
 - [Download logoer](https://www.cphbusiness.dk/kontakt/pressekontakt#-download-logo-item)
