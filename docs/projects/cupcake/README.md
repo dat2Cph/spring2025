@@ -71,6 +71,7 @@ Her kan I finde rapportskabelonen. Medtag de artefakter I finder relevante (og r
 
 - [Rapportskabelon](./rapportskabelon.md)
 - [Gruppekontrakt](../../teamwork/gruppekontrakt.docx)
+- [Roller i teamet](./teamwork.md)
 
 #### UI stuff
 
