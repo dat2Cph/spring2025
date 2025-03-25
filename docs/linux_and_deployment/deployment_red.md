@@ -24,7 +24,7 @@ This is how you can deploy a [Javalin](https://javalin.io/) webproject on a virt
 
 ## Prerequstites
 
-- A configured Virtual Machine setup up after this [tutorial](../linux_and_deployment/) step 1-7. The VM is running on [Digital Ocean](https://www.digitalocean.com/)
+- A configured Virtual Machine setup up after this [tutorial](./README.md) step 1-7. The VM is running on [Digital Ocean](https://www.digitalocean.com/)
 - A Postgresql database running in a docker container on port 5432
 - A Javalin webproject ready to run on port 7070
 - A domain name or subdomain with DNS set to the IP of your VM. [Video-tutorial is here](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f8e7ebbb-8d17-480b-9ac2-b15600a699f2).
