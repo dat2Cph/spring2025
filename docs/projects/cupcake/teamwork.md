@@ -28,6 +28,7 @@ Product owner er kundens forlængede arm. Det vil i praksis sige, at product own
 Product owners konkrete opgaver er at
 
 - agere kunde, hvis I er i tvivl om noget, der har med kravene at gøre (fx vil Martin mon kunne se alle ordrer eller bare de 10 første?).
+- prioritere jeres opgaver. Hvad vil kunden have fokus på?
 - tage en beslutning i kraft af sin kunde-rolle. Husk at notere i jeres log hvilke beslutninger, der bliver taget og hvilke diskussioner I havde. Tag det med i rapporten. 
 - tage fat i vejlederen, hvis det er en større beslutning, I ikke selv kan tage. 
 
