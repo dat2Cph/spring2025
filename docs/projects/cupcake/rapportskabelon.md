@@ -52,7 +52,7 @@ Der er to dele i dette afsnit:
 
 ## Aktivitetsdiagram
 
-Tidligt i et projektforløb kan det være nyttigt at lave et aktivitetsdiagram, som beskriver det overordnede workflow i forretningen. Det kan være med eller uden svømmebaner. Det kan senere tjene som inspiration til domænemodellen og til at forstå hvad det er for nogle forretningsprocesser vi skal digitalisere. Nogle gange laver man to versioner. En som kaldes for "AS-IS", altså som deres forretning ser ud lige nu, og så en "TO-BE", som viser hvordan workflowet kan blive når vi har leveret vores system. Du kan se [tutorials om UML her](https://github.com/dat2Cph/content/tree/main/toolbox/sys/uml).
+Tidligt i et projektforløb kan det være nyttigt at lave et aktivitetsdiagram, som beskriver det overordnede workflow i forretningen. Det kan være med eller uden svømmebaner. Det kan senere tjene som inspiration til domænemodellen og til at forstå hvad det er for nogle forretningsprocesser vi skal digitalisere. Nogle gange laver man to versioner. En som kaldes for "AS-IS", altså som deres forretning ser ud lige nu, og så en "TO-BE", som viser hvordan workflowet kan blive når vi har leveret vores system. Du kan se [tutorials om UML her](../../toolbox/sys/uml).
 
 ## Domæne model og ER diagram
 
@@ -84,7 +84,7 @@ Det som brugeren oplever er en række websider, hvor man kan indtaste oplysninge
 - Hvis man har benyttet sig af en “fælles navigations bar” i toppen af alle sider, skal man forklare det.
 - Hvis nogle sider kun kan nåes af nogle brugere (dem der har konto, dem der er logget ind, dem der arbejder i butikken,…), så skal det fremgå.
 
-Navigationsdiagrammer laves som UML Tilstandsmaskiner [state machine diagram](https://github.com/dat2Cph/content/blob/main/webstack/backend/statemachinediagram.md). Bemærk specielt at det, der hedder “composite state”, er meget velegnet til at indkapsle at man er logget ind.
+Navigationsdiagrammer laves som UML Tilstandsmaskiner [state machine diagram](../../toolbox/sys/uml/statemachinediagram.md). Bemærk specielt at det, der hedder “composite state”, er meget velegnet til at indkapsle at man er logget ind.
 
 ## Særlige forhold
 

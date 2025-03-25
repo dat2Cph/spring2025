@@ -25,6 +25,7 @@ permalink: /network-threads-1/
     - Break it down: This week focuses on networking and server basics.
 
 ### Preparation before class
+
 - Watch video(s): 
     - [Video 1: Networking Basics](https://www.youtube.com/watch?v=v4sRKGarh5Q&ab_channel=WhiteboardDoodles)
     - Video 2: [Protocols and HTTP Basics (The exact format of each part of Request and Response, HTTP methods, HTTP status codes, HTTP headers)](https://www.youtube.com/watch?v=wW2A5SZ3GkI&ab_channel=FollowAndrew)
@@ -38,13 +39,19 @@ permalink: /network-threads-1/
 - Install Telnet on Mac: `brew install telnet`.
 
 ### Exercises to do in class
+
 #### Part 1
+
 - Kahoot Quiz: Networking Basics
+
 #### Part 2
+
 - In IntelliJ build a tcp server that can handle a single client and send a single message to the client.
 - Connect to the server with telnet and see the message.
 - Build a simple client that can connect to the server and receive the message.
+
 #### Part 3
+
 - Look at HTTP basics: `curl -v http://www.example.com`
 - And in the browsers network tab
 - Explore Real-World Servers
@@ -158,6 +165,7 @@ permalink: /network-threads-1/
   - Video 5: [Thread Safety and Synchronization (6:00)](https://www.youtube.com/watch?v=71dgtPrbToE&ab_channel=Geekific)
 
 ### In-class Exercises
+
   - Threaded Server (How to handle multiple clients using threads)
   - Working with text-based protocols (How to parse requests and send responses in java code)
 
@@ -173,7 +181,9 @@ permalink: /network-threads-1/
 - The server must evaluate the request and send back a response with the correct headers, status code and content (saying whether the request is valid http or not).
 
 ## Week 1 - Friday
+
 - Weekly Exercise
+
 Assignment Goal:
 
 - Implement a multithreaded HTTP server:
