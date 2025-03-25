@@ -44,7 +44,7 @@ One of the most widely used version control systems is Git, which is known for i
 
 ### Important Git Concepts
 
-![](images/Pro.svg)
+![](./exercises/images/Pro.svg)
 
 1. **Repository:** or **repo** or **working tree**, is a collection of files and folders that are tracked by a version control system. Each repository contains the entire history of changes to its files, along with metadata such as the author of each commit and the commit message. Repositories can be local (i.e., stored on your computer) or remote (i.e., stored on a server like github.com).
 2. **Commit:** is a snapshot of a repository's files at a specific point in time. Commits are created by the user to record changes to the repository. Each commit is associated with a commit message, which describes the changes made. Commits are the building blocks of Git repositories.
@@ -56,7 +56,7 @@ One of the most widely used version control systems is Git, which is known for i
 
 ### Most important skills
 
-![](images/gitstages.png)
+![](./exercises/images/gitstages.png)
 
 1. **Initalizing a Git repository**
 
@@ -79,7 +79,7 @@ One of the most widely used version control systems is Git, which is known for i
 
 - `.gitignore`: is a text file that tells Git which files or folders to ignore in a project. It is used to avoid committing transient files, build artifacts, and machine-specific settings that are not relevant to the project.
 - `.gitignore` files are usually committed to the repository and shared with other developers.
-- [gitignore.io](gitignore.io) is a useful tool for generating `.gitignore` files for different types of projects.
+- [gitignore.io](https://www.toptal.com/developers/gitignore) is a useful tool for generating `.gitignore` files for different types of projects. Enter "intellij", "java", "maven", "osx", windows" etc. to get a `.gitignore` file for those types of projects.
 - If you want to ignore a file that is already tracked by Git, you need to untrack it first: `git rm --cached <filename>` or you can move the file or folder outside the working tree, add and commit and then move it back in.
 
 6. Viewing the **commit history**

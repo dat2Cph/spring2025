@@ -10,8 +10,6 @@ permalink: /network-threads-1/exercises/codelab/
 
 # CodeLab: Network CodeLab exercise
 
-![](./images/network.png){: width="300px"}
-
 ## Purpose of the exercise
 
 - **Part 1: Recap from yeasterday** Setup and Hands-On with Networking

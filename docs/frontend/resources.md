@@ -12,7 +12,7 @@ permalink: /webstack/frontend/resources/
 
 ## Slides
 
-- [Slides om UI/UX](UX_UI.pdf)
+- [Slides om UI/UX](./docs/UX_UI.pdf)
 
 ## Jons videoserie til Frontend-ugen
 

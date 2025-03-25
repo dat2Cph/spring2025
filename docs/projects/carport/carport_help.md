@@ -48,7 +48,7 @@ Hvis din gruppe anvender en delt database på en af jeres Droplets, så kan I se
 
 Vi har tidligere på semestret sat en virtuel maskine op hos Digital Ocean.
 
-- Her ligger vejledningerne til [opsætning og deployment](../../linux_and_deployment/README.md). Og specielt delen om [deployment](../../linux_and_deployment/deployment.md) er relevant når I skal lægge jeres carport-projekt på internettet.
+- Her ligger vejledningerne til [opsætning og deployment](../../linux_and_deployment/README.md). Og specielt delen om [deployment](../../linux_and_deployment/deployment_red.md) er relevant når I skal lægge jeres carport-projekt på internettet.
 
 - I kan også følge disse deployment videoer, hvis I tager den ["røde pille"](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Sessions/List.aspx?folderID=322ab819-f0ca-4fc4-8e76-b15600a65ecd).
 

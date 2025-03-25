@@ -9,22 +9,22 @@ nav_exclude: true
 
 # Test af bibliotekssystem
 
-I dag skal vi lave integrationstest af vores bibliotekssystem. Det betyder, at vi skal bruge en testdatabase, som ligner vores produktionsdatabase (samme tabeller, datatyper, relationer mv.) men som indeholder testdata. 
+I dag skal vi lave integrationstest af vores bibliotekssystem. Det betyder, at vi skal bruge en testdatabase, som ligner vores produktionsdatabase (samme tabeller, datatyper, relationer mv.) men som indeholder testdata.
 
 Hvis du ikke har en biblioteksdatabase kørende i postgres, skal du lave en nu. Den kan fx se sådan ud:
 
 ![ER-diagram](https://i.imgur.com/9vOkudp.png)
 
-Du finder scriptet til [ovenstående tabeller her](../databases_1/exercises/bibliotek_sql_queries.sql). 
+Du finder scriptet til [ovenstående tabeller her](../../databases_1/exercises/solutions_bibliotek_queries.sql).
 
+## Dagens opgave
 
-## Dagens opgave. 
 1. Åbn dit biblioteksprojekt i IntelliJ. Hvis du ikke har et projekt, der fungerer, kand du [clone et herfra](https://github.com/KongCPH/Library.git).
-2. Under scr har du nok en mappe, der hedder test, med en undermappe java. Hvis ikke, så skal du lave dem nu. 
-3. Lav en pakke i test.java som du kalder persistence. 
+2. Under scr har du nok en mappe, der hedder test, med en undermappe java. Hvis ikke, så skal du lave dem nu.
+3. Lav en pakke i test.java som du kalder persistence.
 4. Hvis du ikke har en junit dependency i din pom.xml, skal du tilføje den nu og refreshe Maven:
 
-```xml	
+```xml 
  <dependency>
     <groupId>org.junit.jupiter</groupId>
     <artifactId>junit-jupiter-engine</artifactId>
@@ -37,7 +37,7 @@ Du finder scriptet til [ovenstående tabeller her](../databases_1/exercises/bibl
 6. Nu er vi klar til at lave test. Start med at lave nogle attributter:
 
 ```java
-	private final static String USER = "postgres";
+ private final static String USER = "postgres";
     private final static String PASSWORD = "postgres";
     private final static String URL = "jdbc:postgresql://localhost:5432/bibliotek?currentSchema=test";
 
@@ -45,7 +45,7 @@ Du finder scriptet til [ovenstående tabeller her](../databases_1/exercises/bibl
     private static BorrowerMapper borrowerMapper;
 ```
 
-Måske skal du tilpasse URL'en. Det kommer an på hvad din database hedder. Du har også brug for et schema "test" i din database. Der er fordi vi skal bruge tabeller, der hedder det samme som dem, der ligger i public og man kan ikke have flere tabeller med samme navn indenfor et schema. Det er også meget rart at få test- og produktionstabeller adskilt. Lav det nye schema vha. pgAdmin. 
+Måske skal du tilpasse URL'en. Det kommer an på hvad din database hedder. Du har også brug for et schema "test" i din database. Der er fordi vi skal bruge tabeller, der hedder det samme som dem, der ligger i public og man kan ikke have flere tabeller med samme navn indenfor et schema. Det er også meget rart at få test- og produktionstabeller adskilt. Lav det nye schema vha. pgAdmin.
 
 7. Nu skal vi lave en @BeforeEach-metode, som skal køres inden hver test. Metodens opgave er at slette eksisterende tabeller og indsætte nye med testdata. Du kan bruge nedenstående kode:
 
@@ -111,9 +111,9 @@ Måske skal du tilpasse URL'en. Det kommer an på hvad din database hedder. Du h
 
 ```
 
-Der kan være noget af kode, du skal tilpasse alt efter hvad dine tabeller hedder og hvilke autogenererede nøgler, du har. 
+Der kan være noget af kode, du skal tilpasse alt efter hvad dine tabeller hedder og hvilke autogenererede nøgler, du har.
 
-8. Vi skal også have lagt testdata i tabellerne. Før hver test fjerner vi al data fra tabellerne og indsætter frisk data, så vi ved hvad der ligger i hver tabel, når vi tester. 
+8. Vi skal også have lagt testdata i tabellerne. Før hver test fjerner vi al data fra tabellerne og indsætter frisk data, så vi ved hvad der ligger i hver tabel, når vi tester.
 
 ```java
 @BeforeEach
@@ -191,4 +191,4 @@ Der kan være noget af kode, du skal tilpasse alt efter hvad dine tabeller hedde
     }
 ```
 
-Fortsæt med at teste andre mappermetoder. 
+Fortsæt med at teste andre mappermetoder.

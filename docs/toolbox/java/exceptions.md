@@ -8,6 +8,8 @@ grand_parent: Toolbox
 permalink: /toolbox/java/exceptions/
 ---
 
+# Fejlfinding og debugging i IntelliJ
+
 # Exceptions in Java
 
 Lidt teori og eksempler på brug af exceptions i Java:
@@ -81,7 +83,7 @@ In Java there are exceptions
 
 When an exception occur the normal flow of the program is disrupted and the program/application terminates abnormally, which is not recommended, therefore, exceptions should be handled.
 
-![throwable](https://datsoftlyngby.github.io/dat2sem2019SpringBornholm/Modul5/Week4-Errorhandling/img/throwable.png)
+![throwable](./images/throwable.png)
 
 UNCHECKED EXCEPTIONS
 

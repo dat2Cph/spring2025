@@ -178,11 +178,11 @@ Du vil nok bemærke at applikationen ikke kører endnu. Det skyldes at vi mangle
 
 ## 6. Overfør din database til Dropletten - hvis den ikke allerede er der
 
-- [How to export and import a Postgres database](../webstack/backend/javalin/javalin_how_to.md#4-how-to-export-and-import-a-database)
+- [How to export and import a Postgres database](../toolbox/javalin/javalin_how_to.md#4-how-to-export-and-import-a-database)
 
 ## 7. Vis dit website
 
-Nu kan du tilgå dit website på <http://ip:7070>
+Nu kan du tilgå dit website på `http://ip:7070`
 
 ## Videre herfra
 

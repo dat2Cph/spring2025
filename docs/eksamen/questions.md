@@ -54,7 +54,7 @@ Emnerne fra 1. semester indgår implicit i pensum. Dvs, at det forventes at du h
 
 ### Database
 
-[Alt om normalisering her](../databases/normalisering/README.md)
+[Alt om normalisering her](../databases_1/README.md#torsdag-datamodellering)
 
 * Hvad er formålet med normalisering?
 * Forklar fordele og ulemper ved normalisering?
@@ -84,7 +84,7 @@ Emnerne fra 1. semester indgår implicit i pensum. Dvs, at det forventes at du h
 Beskriv hvordan I har anvendt følgende i Javalin:
 
 * Routing (get/post)
-* Kommunikation mellem Front og backend (hint: [tjek denne oversigt](../webstack/backend/javalin/javalin_how_to.md#1-how-to-transfer-data-between-frontend-and-backend))
+* Kommunikation mellem Front og backend (hint: [tjek denne oversigt](../toolbox/javalin/javalin_how_to.md#1b-from-frontend-to-backend)
 * Session scope
 * Request scope
 * Form parametre

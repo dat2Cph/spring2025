@@ -10,7 +10,7 @@ nav_order: 10
 
 # Deployment on Droplet with Docker and Caddy
 
-When you have a Javalin project ready to deploy, there are several ways to do it. In the old days, we deployed our Java projects on an [Apache Tomcat Server](https://tomcat.apache.org/), and we accessed it by <http://ip:port>. We called it the `blue pill` solution. But things have changed. So welcome to the days of the `red pill` solution.
+When you have a Javalin project ready to deploy, there are several ways to do it. In the old days, we deployed our Java projects on an [Apache Tomcat Server](https://tomcat.apache.org/), and we accessed it by `http://ip:port`. We called it the `blue pill` solution. But things have changed. So welcome to the days of the `red pill` solution.
 
 ![Red or Blue](./images/red.webp)
 

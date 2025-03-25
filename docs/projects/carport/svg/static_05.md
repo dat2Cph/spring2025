@@ -14,7 +14,7 @@ permalink: /projekter/carport/svg/static-05/
 
 At tegne pile er overraskende finurligt, da SVG er lavet sådan, at der kan bruges alle mulige former for pilehoveder (markers). Faktisk skal man selv tegne pilehovederne - de er små SVG tegninger i sig selv.
 
-<img src="./images/doublearrows.png" width="150"/>
+![Arrows](./images/doublearrows.png){: width="150"}
 
 Pilen er lavet med følgende SVG:
 
