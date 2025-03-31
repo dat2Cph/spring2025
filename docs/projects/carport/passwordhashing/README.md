@@ -12,6 +12,12 @@ permalink: /projekter/carport/password-hashing/
 
 **Hashing** is a one-way cryptographic function that transforms plaintext (like a password) into a fixed-length string of characters. It is *not* encryption (which is reversible); once a password is hashed, it cannot be turned back into the original plaintext.
 
+## Video
+
+This great video explains what it means to hash your passwords with salting:
+
+- [Password hashing with BCrypt](https://www.youtube.com/watch?v=O6cmuiTBZVs&t=1s)
+
 Example:
 
 - Input: `"mySecret123"`
