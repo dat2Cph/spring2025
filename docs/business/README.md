@@ -26,7 +26,7 @@ Se [læringsmål](./laeringsmaal.md) her.
 
 ## Tirsdag
 
-Forberedelse:
+### Forberedelse
 
 Se videoer og læs dokumenter:
 
@@ -57,7 +57,7 @@ Ingen undervisning - Hjemmearbejde
 
 ## Onsdag - CodeLab
 
-Forberedelse:
+### Forberedelse
 
 - Se videoer og læs artikel:
 
