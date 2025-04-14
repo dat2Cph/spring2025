@@ -69,7 +69,7 @@ Se gerne videoerne sammen i gruppen og tal om indholdet.
 
 ### Øvelser til CodeLab
 
-Vi arbejder med interessentanalyse og risikovurdering og  genbesøger User stories og beriger dem lidt mere.
+Vi arbejder med interessentanalyse og risikovurdering og genbesøger User stories og beriger dem lidt mere.
 
 ## Torsdag
 
@@ -77,4 +77,6 @@ Vi gennemgår eksempler på de foregående dages produkter/artefakter i plenum
 
 ## Fredag
 
-Online: Vi taler FOG projektets beskrivelse og krav igennem og svarer på dine spørgsmål. Vi skal også se på de tekniske krav.
+Kick-off for semesterprojektet online i Kims Zoomrum kl. 11.00 - 12.30 (nok færdig før). Her vil vi også præsentere de tekniske krav.
+
+Jon og Kim er værter
