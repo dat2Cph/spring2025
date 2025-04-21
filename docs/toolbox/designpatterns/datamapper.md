@@ -1,8 +1,12 @@
 ---
 title: Data Mapper
+description: Data Mapper design pattern
 layout: default
 parent: Design patterns
 nav_order: 3
+parent: Design patterns
+grand_parent: Toolbox
+permalink: /toolbox/designpatterns/datamapper/
 ---
 
 # Data Mapper Design Pattern

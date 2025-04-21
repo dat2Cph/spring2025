@@ -1,9 +1,12 @@
 ---
 title: Singleton
+description: Singleton design pattern
 layout: default
 parent: Design patterns
-grand_parent: Toolbox
 nav_order: 13
+parent: Design patterns
+grand_parent: Toolbox
+permalink: /toolbox/designpatterns/singleton/
 ---
 
 # Singleton Design Pattern

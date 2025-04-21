@@ -1,8 +1,12 @@
 ---
 title: SOLID
+description: The SOLID design principles
 layout: default
 parent: Design patterns
 nav_order: 14
+parent: Design patterns
+grand_parent: Toolbox
+permalink: /toolbox/designpatterns/solid/
 ---
 
 # The SOLID Design Principles

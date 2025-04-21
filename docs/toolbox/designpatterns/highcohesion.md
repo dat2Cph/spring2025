@@ -1,8 +1,12 @@
 ---
 title: High Cohesion
+description: High Cohesion design pattern
 layout: default
 parent: Design patterns
 nav_order: 7
+parent: Design patterns
+grand_parent: Toolbox
+permalink: /toolbox/designpatterns/high-cohesion/
 ---
 
 # The High Cohesion Principle

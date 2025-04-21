@@ -1,8 +1,12 @@
 ---
 title: Composition over inheritance
+description: Composition over inheritance design pattern
 layout: default
 parent: Design patterns
 nav_order: 2
+parent: Design patterns
+grand_parent: Toolbox
+permalink: /toolbox/designpatterns/composition-over-inheritance/
 ---
 
 

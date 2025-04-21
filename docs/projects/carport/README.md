@@ -16,9 +16,8 @@ Formålet med semesterprojektet er, at I skal anvende en lang række af de fagli
 
 Vigtige datoer
 
-* **Projektstart:** Mandag den 22 april (SYS og forretning) og 29. april (Programmering og teknik)
-* **Aflevering**: WISEflow d. 24. maj.
-* **Eksamen**: juni (Bornholm: 3. juni og Lyngby 6 + 7 juni)
+* **Projektstart:** Tirsdag den 22 april (SYS og forretning) og 25. april kl 11.00 (Programmering og teknik)
+* **Aflevering og eksamen**: Se [den officielle eksamensplan](https://eksamensplan.cphbusiness.dk/education).
 
 ## Ugeplaner
 

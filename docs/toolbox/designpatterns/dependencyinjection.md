@@ -1,8 +1,12 @@
 ---
 title: Dependency Injection
+description: Dependency Injection design pattern
 layout: default
 parent: Design patterns
 nav_order: 4
+parent: Design patterns
+grand_parent: Toolbox
+permalink: /toolbox/designpatterns/dependency-injection/
 ---
 
 # Dependency Injection Design Pattern

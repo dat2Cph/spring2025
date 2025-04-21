@@ -1,8 +1,12 @@
 ---
 title: Low Coupling
+description: Low Coupling design principle
 layout: default
 parent: Design patterns
 nav_order: 9
+parent: Design patterns
+grand_parent: Toolbox
+permalink: /toolbox/designpatterns/low-coupling/
 ---
 
 # Low Coupling Design Principle

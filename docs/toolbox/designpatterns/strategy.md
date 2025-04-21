@@ -1,8 +1,12 @@
 ---
 title: Strategy
+description: Strategy design pattern
 layout: default
 parent: Design patterns
 nav_order: 15
+parent: Design patterns
+grand_parent: Toolbox
+permalink: /toolbox/designpatterns/strategy/
 ---
 
 # Strategy Design Pattern

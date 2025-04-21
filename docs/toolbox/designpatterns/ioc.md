@@ -1,8 +1,12 @@
 ---
 title: IOC
+description: Inversion of Control design pattern
 layout: default
 parent: Design patterns
 nav_order: 8
+parent: Design patterns
+grand_parent: Toolbox
+permalink: /toolbox/designpatterns/ioc/
 ---
 
 # Inversion of Control Patterns

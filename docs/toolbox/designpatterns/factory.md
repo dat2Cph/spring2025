@@ -1,8 +1,12 @@
 ---
 title: Factory
+description: Factory design pattern
 layout: default
 parent: Design patterns
 nav_order: 6
+parent: Design patterns
+grand_parent: Toolbox
+permalink: /toolbox/designpatterns/factory/
 ---
 
 # Factory Design Pattern
