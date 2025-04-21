@@ -5,6 +5,7 @@ layout: default
 parent: Cupcake projekt
 grand_parent: Projekter
 nav_order: 1
+permalink: /projekter/cupcake/rapportskabelon/
 ---
 
 # Cupcake rapportskabelon
