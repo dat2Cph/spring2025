@@ -3,7 +3,7 @@ title: Opgave i integrationstest (bibliotek)
 description: Indledende opgave i integrationstest på localhost
 layout: default
 parent: Databaser II
-permalink: /databases_2/exercises/Library/
+permalink: /databases-2/exercises/library/
 nav_exclude: true
 ---
 

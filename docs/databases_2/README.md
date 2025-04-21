@@ -8,25 +8,29 @@ permalink: /databases-2/
 ---
 
 
-# Databaser 
+# Databaser
 
 ## Uge 2: JDBC og integrationstest
 
 ## Læringsmål
+
 - [Læringsmål for uge 2](./laeringsmaal.md#uge-2-java-jdbc-og-integrationstest)
 
 ## Mandag
-- Review af sidste uge. 
+
+- Review af sidste uge.
 
 ## Tirsdag: JDBC, Mapper og DTO
 
 ### Forberedelse
+
 Du skal læse følgende
+
 - [Introduktion til JDBC](https://www.geeksforgeeks.org/introduction-to-jdbc/)
 - [Data Mapper](https://martinfowler.com/eaaCatalog/dataMapper.html)
 - [Data Transfer Object](https://martinfowler.com/eaaCatalog/dataTransferObject.html)
 
-Hvis du ikke er blevet færdig med [biblioteksopgaven](../databases_1/exercises/exercise_bibliotek.md) fra i fredags, så lav den, da vi skal bruge den i undervisningen. Alternativt kan du hente et [script](../databases_1/exercises/solutions_bibliotek_create_db.sql) som kan generere tabellerne for dig og fylde dem med data. 
+Hvis du ikke er blevet færdig med [biblioteksopgaven](../databases_1/exercises/exercise_bibliotek.md) fra i fredags, så lav den, da vi skal bruge den i undervisningen. Alternativt kan du hente et [script](../databases_1/exercises/solutions_bibliotek_create_db.sql) som kan generere tabellerne for dig og fylde dem med data.
 
 ### Program
 
@@ -35,22 +39,26 @@ Vi bygger et Javaprogram sammen, som kan tilgå biblioteksdatabasen. Vi gør bru
 [Dagens opgave](./exercises/Library.md)
 
 ### Ressourcer
+
 Her er der kodestumper, som kan hjælpe dig: [JDBC templates](../toolbox/database/jdbc_templates.md)
 
 ## Onsdag
+
 Codelab øvelse:
 
 [Sportsclub](https://github.com/dat2Cph/dat2-sportsclub)
 
 Der er en gennemgang af hvordan opgaven kan løses i [denne video](https://cphbusiness.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=1d2e2b6c-6a04-4be4-b645-ae54014e2f79) (og i starten vises også hvordan man cloner startkoden fra git). Bemærk, at der bruges MySQL i videoen.
 
-
 ## Torsdag: Integrationstest
+
 ### Forberedelse
-Hvis du ikke har lavet biblioteksssystemet fra i tirsdags færdigt, så gør det nu. 
+
+Hvis du ikke har lavet biblioteksssystemet fra i tirsdags færdigt, så gør det nu.
 
 ### Program
-Vi laver integrationstests til det system, vi byggede i tirsdags. 
+
+Vi laver integrationstests til det system, vi byggede i tirsdags.
 
 [Dagens opgave](./exercises/Library_integrationstest.md)
 
