@@ -2,9 +2,9 @@
 title: Page Controller
 description: Page Controller design pattern
 layout: default
+nav_order: 12
 parent: Design patterns
 grand_parent: Toolbox
-nav_order: 12
 permalink: /toolbox/designpatterns/pagecontroller/
 ---
 

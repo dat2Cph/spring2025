@@ -1,10 +1,10 @@
 ---
-title: 5.3 SVG tutorial
+title: 5.4 SVG tutorial
 description: Tutorial, hvor du lærer at kode SVG
 layout: default
 parent: Carport projekt
 grand_parent: Projekter
-nav_order: 8
+nav_order: 9
 permalink: /projekter/carport/svg/
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: 5.4 Password hashing
+title: 5.5 Password hashing
 description: This is how to hash passwords with jBCrypt
 layout: default
 parent: Carport projekt
