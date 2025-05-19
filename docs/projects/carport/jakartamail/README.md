@@ -145,6 +145,24 @@ public class GmailEmailSender {
 
 Hvis du vil sende HTML emails, kan du bruge Thymeleaf til at generere HTML indholdet. I stil med hvordan vi gør det i Javalin. Det kan være en lidt større udfordring at sende billeder afsted, da de enten skal ligge online eller være vedhæftet emailen. Det udelader vi i første omgang.
 
+Her er den struktur vi foreslår og anvender i det følgende eksempel:
+
+```plaintext
+
+📦 your-project/
+├── 📁 src/
+│   └── 📁 main/
+│       ├── 📁 java/
+│       │   ├── 📁 config/
+│       │   │   └── ThymeleafConfig.java           ← Thymeleaf-konfiguration (deles med Javalin og e-mails)
+│       │   └── 📁 util/
+│       │       └── GmailEmailSenderHTML.java      ← Klasse der sender HTML-mails med Thymeleaf
+│       └── 📁 resources/
+│           └── 📁 templates/
+│               └── email.html                     ← Thymeleaf-skabelon til HTML-mail
+├── 📄 pom.xml                                     ← Dependencies til jakarta.mail, 
+```
+
 ## 8. Ny klasse til HTML emails
 
 For stadig at kunne sende simple mails laver vi en ny klasse `util/GmailEmailSenderHtml.java`:
